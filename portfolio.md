@@ -3,8 +3,19 @@ layout: page
 title: Publications
 permalink: /publications/
 ---
+<style>
+    a {
+    color: #007bff; /* Example color */
+    text-decoration: none; /* Removes underline */
+    /* Other styles */
+}
 
+    a:hover {
+        color: #0056b3; /* Example hover color */
+        text-decoration: underline; /* Adds underline on hover */
+}
 
+</style>
 <script>
 const journalList = [
     {
