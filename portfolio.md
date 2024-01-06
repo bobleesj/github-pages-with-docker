@@ -168,6 +168,7 @@ function displayPresentationList() {
     <p>
         *<strong>S. Lee</strong>, C. Chen, G. Garcia, and A. O. Oliynyk, 
         Machine learning descriptors in materials chemistry: prediction and experimental validation synthesis of novel intermetallic UCd<sub>3</sub> (2023).
+        <br>
         <a href="https://doi.org/10.26434/chemrxiv-2023-0nlzl">ChemRxiv</a>
     </p>
 </div>
@@ -181,7 +182,7 @@ function displayPresentationList() {
         1. R. Q. Topper, S. L. Topper, and <strong>S. Lee</strong>, 
         TransRot: A Portable Software Package for Simulated Annealing Monte Carlo Geometry Optimization of Atomic and Molecular Clusters
         in <em>ACS Symposium Series: Physical Chemistry Research at Undergraduate Institutions: Innovative and Impactful Approaches</em>, 
-        Volume 1, C. A. Parish and T. A. Hopkins, Eds., ACS Publications, <strong>1428</strong>, 2, 19-38 (2022). <a href="https://doi.org/10.1021/bk-2022-1428.ch002">DOI</a> |
+        Volume 1, C. A. Parish and T. A. Hopkins, Eds., ACS Publications, <strong>1428</strong>, 2, 19-38 (2022). <br><a href="https://doi.org/10.1021/bk-2022-1428.ch002">DOI</a> |
         <a href="https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&authuser=1&citation_for_view=L07HlVsAAAAJ:d1gkVwhDpl0C">Google Scholar</a> 
     </p>
 </div>
