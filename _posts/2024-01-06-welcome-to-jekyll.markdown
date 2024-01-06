@@ -1,6 +1,6 @@
 ---
 layout: post
-title:  "Dynamic Update Wow!"
+title:  "3:30 PM Test!"
 date:   2024-01-06 20:06:04 +0000
 categories: jekyll update
 ---
