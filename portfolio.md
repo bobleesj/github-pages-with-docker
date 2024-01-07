@@ -84,6 +84,16 @@ const presentationList = [
         abstract: ""
     },
     {
+        authors: "A. O. Oliynyk, S. Lee, G. Garcia",
+        title: "Machine learning descriptors in chemistry: prediction and experimental validation of UCd<sub>3</sub>",
+        conference: "Solid-State Materials Chemistry and Data Science Hackathon (SSMCDAT)",
+        type: "Oral",
+        location: "Virtual",
+        document: "",
+        abstract: "",
+        video: "https://www.youtube.com/watch?v=PsstodhuYPc"
+    },
+    {
         authors: "S. Lee, A. O. Oliynyk",
         title: "Machine-learned Features to Solve Crystal Structure Classification Problems",
         conference: "ACS Northeast Regional Meeting (NERM) 2022, Computational Tools for Materials Science",
@@ -198,6 +208,12 @@ function displayPresentationList() {
             }
             links += `<a href="/files/presentation/${entry.abstract}">Abstract</a>`;
         }
+        if (entry.video) {
+            if (links.length > 0) {
+                links += ' | ';
+            }
+            links += `<a href="${entry.video}" target="_blank">YouTube</a>`; // Add video link
+        }
 
         li.innerHTML = `
             <div><strong>${entry.title}</strong></div>
@@ -208,6 +224,7 @@ function displayPresentationList() {
         ol.appendChild(li); // Append the list item to the ordered list
     });
 }
+
 
 
 function displayBookChapterList() {
