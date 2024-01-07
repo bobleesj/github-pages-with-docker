@@ -15,7 +15,7 @@ permalink: /publications/
     }
 
     li {
-        margin-bottom: 20px; /* Adjust the value to the desired space between list items */
+        margin-bottom: 20px;
     }
 
 
@@ -117,7 +117,7 @@ const bookChapterList = [
         authors: "R. Q. Topper, S. L. Topper, and S. Lee",
         title: "TransRot: A Portable Software Package for Simulated Annealing Monte Carlo Geometry Optimization of Atomic and Molecular Clusters",
         year: "2023",
-        editors: "Todd A. Hopkins, Carol A. Parish",
+        editors: "T A. Hopkins, C A. Parish",
         publisher: "ACS Publications",
         volume: 1429,
         isbn13: 9780841297432,
