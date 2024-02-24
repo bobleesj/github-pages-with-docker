@@ -1,7 +1,7 @@
 ---
 layout: post
 title: How to generate elemental compositional features for compounds using CBFV for beginners
-categories: CBFV
+categories: tutorial
 ---
 
 ## Motivation
