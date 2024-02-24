@@ -9,7 +9,7 @@ permalink: /research/
 ### 1. Quasiparticle phonons analysis with neural network potential
 Current research at Columbia University as a master's student - to be added
 
-`phonons`, `deep potential`, `LAMMPS`, `Snakemake`, `HPC`
+**Keywords:** phonons, deep potential, LAMMPS, Snakemake, HPC
 
 <br>
 
@@ -24,7 +24,7 @@ For geometry optimization, the group developed an open-source geometry optimizer
 [GitHub](https://github.com/steventopper/TransRot)
 
 
-`optimizer`, `Monte Carlo`, `ab initio`, `TIP4P`, `Psi4`, `ORCA`
+**Keywords:** optimizer, Monte Carlo, ab initio, TIP4P, Psi4, ORCA
 
 
 
@@ -42,7 +42,7 @@ This geometric featurizer systematically processes raw Crystallographic Informat
 [GitHub](https://github.com/bobleesj/cif-cn-featurizer) | 
 [Journal of Alloys and Compounds](https://doi.org/10.1016/j.jallcom.2023.173241)
 
-`CIF`, `geometric descriptors`,  `crystal structure`, `feature engineering`, `solid-state`
+**Keywords:** CIF, geometric descriptors,  crystal structure, feature engineering, solid-state
 
 
 
@@ -59,5 +59,5 @@ Common featurizers suitable for generic chemical problems may not be effective i
 [Data in Brief](https://doi.org/10.1016/j.dib.2024.110178) |
 [Download dataset](https://data.mendeley.com/datasets/bt6gv5z6yv/2)
 
-`materials infomatics`, `feature engineering`, `GPR`, `elemental database`, `scikit-learn`
+**Keywords:** materials infomatics, feature engineering, GPR, elemental database, ML
 
