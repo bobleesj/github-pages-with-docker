@@ -5,7 +5,7 @@ categories: tutorial
 ---
 
 ## Motivation
-Before we talk about how to run the code, it is important to understand the philosophy of featurization projects. Each compound is made up of unique elements, For example, LiO<sub>2</sub>2 is made up of Li and O atoms and each Li and O has elemental properties such as radius, electronegativities, etc. How can we, humans, characterize a.k.a featurize LiO<sub>2</sub>2? We can attempt to add, subtract, multiply these elemental properties to generate our unique “features” or “descriptors” for the LiO<sub>2</sub>2 compound. This is illustrated with the figure below.
+Before we talk about how to run the code, it is important to understand the philosophy of featurization projects. Each compound is made up of unique elements, For example, LiO<sub>2</sub>2 is made up of Li and O atoms and each Li and O has elemental properties such as radius, electronegativities, etc. How can we, humans, characterize a.k.a featurize LiO<sub>2</sub>? We can attempt to add, subtract, multiply these elemental properties to generate our unique “features” or “descriptors” for the LiO<sub>2</sub>2 compound. This is illustrated with the figure below.
 
 ![Image 1](/files/blog/2024-02-19-tutorial-CBFV/1.png)
 
