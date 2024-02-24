@@ -17,10 +17,6 @@ permalink: /publications/
         margin-bottom: 20px;
     }
 
-/* color: #007bff; Example color */
-/* color: #0056b3; Example hover color */
-/* text-decoration: none; Adds underline on hover */
-
 </style>
 <script>
 const journalList = [
@@ -330,11 +326,7 @@ window.onload = function() {
 
     
 };
-
 </script>
-
-
-
 
 ### Journals
 <div id="journalList"></div>
