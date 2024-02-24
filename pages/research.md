@@ -14,7 +14,7 @@ Current research at Columbia University as a master's student - to be added
 <br>
 
 ### 2. Monte Carlo geometry optimization and first-principles nanoparticles study
-![](files/research/topper-transrot/1.png)
+![](/files/research/topper-transrot/1.png)
 From January 2022 to May 2023, I conducted three semesters of independent computational chemistry research with Dr. Robert Topper at the Chemistry Department at The Cooper Union. I was involved in the group's focus on using theoretical and computational tools to study the formation behavior of salt nanoparticles. I focused on the formation behavior of ammonium chloride solvated in two to eight water molecules.
 
 For geometry optimization, the group developed an open-source geometry optimizer called “TransRot”. I validated the accuracy and reliability of the open-source software by implementing water models such as TIP4P and TIP4P/2005. I used the TransRot software and conducted ab initio calculations in Psi4, ORCA, and SPARTAN to study the formation behavior with ammonium by determining the binding energy as one water molecule is added to the complex.
@@ -33,7 +33,7 @@ For geometry optimization, the group developed an open-source geometry optimizer
 ## **Research Area 2. Data-driven Methods for Materials Discovery**
 
 ### 1. High-throughput geometric crystal featurizer for binary and ternary compounds
-![Crystal data extraction schematic from raw CIF files and crystal databases by Dr. Anton Oliynyk](files/research/oliynyk-cif-structure-featurizer/1.png)
+![Crystal data extraction schematic from raw CIF files and crystal databases by Dr. Anton Oliynyk](/files/research/oliynyk-cif-structure-featurizer/1.png)
 
 In Summer 2023, in collaboration with Dr. Anton Oliynyk, we developed an open-source Python tool crafted for the high-throughput extraction of crystal structure features. Traditional ML models in solid-state materials have predominantly relied on composition data to predict properties. The lack of structural information in the model often leads to incomplete property mapping and predictive noise
 
@@ -50,7 +50,7 @@ This geometric featurizer systematically processes raw Crystallographic Informat
 <br>
 
 ### 2. Machine learning descriptors in materials chemistry used in multiple experimentally validated studies: Oliynyk elemental property dataset 
-![Crystal prediction with compositional data](files/research/oliynyk-composition-featurizer/2.png)
+![Crystal prediction with compositional data](/files/research/oliynyk-composition-featurizer/2.png)
 
 Materials informatics employs data-driven approaches for analysis and discovery of materials. Features also referred to as descriptors are essential in generating reliable and accurate machine-learning models. While general data can be obtained through public and commercial sources, features must be tailored to specific applications.
 
