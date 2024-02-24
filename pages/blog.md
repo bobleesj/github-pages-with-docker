@@ -4,8 +4,6 @@ title: Blog
 permalink: /blog/
 ---
 
-It's always good to document my learning journey hoping that I can always revisit and also provide tips for the community.
-
 <div class="blog">
   
   {% if site.paginate %}

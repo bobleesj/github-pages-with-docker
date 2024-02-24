@@ -1,10 +1,8 @@
 ---
 layout: post
 title: How to generate elemental compositional features for compounds using CBFV for beginners
-categories: misc
+categories: CBFV
 ---
-
-This tutorial has been designed for those who have only used Python on a Jupyter notebook or not comfortable with command-line interface.
 
 ## Motivation
 Before we talk about how to run the code, it is important to understand the philosophy of featurization projects. Each compound is made up of unique elements, For example, LiO2 is made up of Li and O atoms and each Li and O has elemental properties such as radius, electronegativities, etc. How can we, humans, characterize a.k.a featurize LiO2? We can attempt to add, subtract, multiply these elemental properties to generate our unique “features” or “descriptors” for the LiO2 compound. This is illustrated with the figure below.
@@ -28,7 +26,7 @@ We are now going to learn how to install and generate these features using CBFV.
 
 
 ## Download CBFV
-Download the Python CBFV folder from GitHub. For complete beginners, GitHub is analogous to Google Drive for programmers where you can easily track file changes. Visit https://github.com/Kaaiian/CBFV, download the ZIP file and unzip as shown below.
+Download the Python CBFV folder from GitHub. For complete beginners, GitHub is analogous to Google Drive for programmers where you can easily track file changes. Visit [https://github.com/Kaaiian/CBFV](https://github.com/Kaaiian/CBFV), download the ZIP file and unzip as shown below.
 
 Drag the CBFV folder to the Visual Studio opening interface.
 ![Image 4](/files/blog/2024-02-19-tutorial-CBFV/4.png)
@@ -61,10 +59,6 @@ One must install the following libraries to read csv files and use the CBFV func
 pip install pandas CBFV 
 ```
 
-If you want to use other databases, you can simply do this!
-```python
-X, y, formulas, skipped = composition.generate_features(dataframe, elem_prop="olinyk")
-```
 
 ## Copy the following code to main.py
 The code contains comments in which you can easily follow along. The code (1) reads the CSV file, (2) prints the outputs, and (3) saves the files. 
@@ -97,6 +91,12 @@ print("\nSkipped compounds\n", skipped)
 X.to_csv("output_X_features.csv", index=False)
 y.to_csv("output_y.csv", index=False)
 formulas.to_csv("output_formulas.csv", index=False)
+```
+
+If you want to use other databases to generate features, you can simply do this!
+
+```python
+X, y, formulas, skipped = composition.generate_features(dataframe, elem_prop="olinyk")
 ```
 
 ## Run main.py
