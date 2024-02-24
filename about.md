@@ -4,47 +4,60 @@ title: Research
 permalink: /research/
 ---
 
-## I. First Principles & Computational Materials Science
+## **Reseach Area 1. First Principles & Computational Materials Science**
 
-### Quasiparticle phonons analysis
-To be added
+### 1. Quasiparticle phonons analysis with neural network potential
+Current research at Columbia University as a master's student - to be added
 
-### TransRot: simulated annealing Monte Carlo geometry optimizer
+`phonons`, `deep potential`, `LAMMPS`, `Snakemake`, `HPC`
+
+<br>
+
+### 2. Monte Carlo geometry optimization and first-principles nanoparticles study
 ![](files/research/topper-transrot/1.png)
-![](files/research/topper-transrot/2.png)
+From January 2022 to May 2023, I conducted three semesters of independent computational chemistry research with Dr. Robert Topper at the Chemistry Department at The Cooper Union. I was involved in the group's focus on using theoretical and computational tools to study the formation behavior of salt nanoparticles. I focused on the formation behavior of ammonium chloride solvated in two to eight water molecules.
+
+For geometry optimization, the group developed an open-source geometry optimizer called “TransRot”. I validated the accuracy and reliability of the open-source software by implementing water models such as TIP4P and TIP4P/2005. I used the TransRot software and conducted ab initio calculations in Psi4, ORCA, and SPARTAN to study the formation behavior with ammonium by determining the binding energy as one water molecule is added to the complex.
+
 [Book chapter](https://doi.org/10.1021/bk-2022-1428.ch002) |
 [Poster](https://bobleesj.github.io/files/presentation/2022-MQM-poster.pdf) |
 [GitHub](https://github.com/steventopper/TransRot)
 
 
-Preliminary determination of the global minimum geometry of a nanocluster system through the use of an interaction force model prior to *ab initio* calculations is useful in the study of nanoparticles as well as in gas phase nano-solvation studies. To achieve this, our research group has developed a special purpose, open-source software package using our MW-SSA algorithm. TransRot is distributed through GitHub, is written in Java, is machine portable, and is actively supported and maintained. It can be natively installed in all major operating systems (Linux, macOS, and Windows) and is capable of parallel execution of multiple instances on a personal workstation. TransRot is numerically efficient and its behavior is easily controlled through edits to a single short, simple text file. The quasi-ergodicity issue of the original Metropolis-Hastings Monte Carlo algorithm is reduced with the incorporation of a move strategy with randomly magnified step-size and rotational movements (“mag-walking”), as well as a customizable simulated annealing schedule which enhances the probability of escape from local minima. The code’s ability to optimize small water clusters (2 to 8 molecules) described via the TIP3P, TIP4P, and TIP4P/2005 models are compared to the literature. Due to its machine portability, ease of use, and numerical efficiency, TransRot can be also used by an undergraduate or novice graduate student for computational chemistry research and educational purposes.
+`optimizer`, `Monte Carlo`, `ab initio`, `TIP4P`, `Psi4`, `ORCA`
 
-`geometry optimizer`, `Monte Carlo`, `ab initio`, `TIP4P`
+
 
 <br>
 
+## **Research Area 2. Data-driven Methods for Materials Discovery**
 
-## II. Data-driven Methods in Materials Science
-
-### High-throughput geometric crystal featurizer for binary and ternary compounds
+### 1. High-throughput geometric crystal featurizer for binary and ternary compounds
 ![Crystal data extraction schematic from raw CIF files and crystal databases by Dr. Anton Oliynyk](files/research/oliynyk-cif-structure-featurizer/1.png)
-[GitHub](https://github.com/bobleesj/cif-cn-featurizer) | [Journal of Alloys and Compounds](https://doi.org/10.1016/j.jallcom.2023.173241)
+
+In Summer 2023, in collaboration with Dr. Anton Oliynyk, we developed an open-source Python tool crafted for the high-throughput extraction of crystal structure features. Traditional ML models in solid-state materials have predominantly relied on composition data to predict properties. The lack of structural information in the model often leads to incomplete property mapping and predictive noise
+
+This geometric featurizer systematically processes raw Crystallographic Information Files (CIF) to construct supercells and meticulously extracts a comprehensive suite of descriptors, such as coordination numbers, interatomic distances, and atomic environments. These descriptors are not mere extrapolations from generic values but are tailored to the material's specific structure, reducing noise and enhancing the relevance of ML applications for binary and ternary compounds. The package has demonstrated its robustness, having processed more than 10,000 binary and ternary CIF files. Leveraging structure-property correlations, we believe this crystal structure featurizer can be a promising tool for increasing predictive capabilities for material property optimization.
+
+[GitHub](https://github.com/bobleesj/cif-cn-featurizer) | 
+[Journal of Alloys and Compounds](https://doi.org/10.1016/j.jallcom.2023.173241)
+
+`CIF`, `geometric descriptors`,  `crystal structure`, `feature engineering`, `solid-state`
 
 
 
-Traditional machine learning models in solid-state materials have predominantly relied on composition data to predict properties. The lack of structural information often leads to incomplete property mapping and predictive noise. The  open-source Python tool was built crafted for the high-throughput extraction of crystal structure features. This geometric featurizer  processes raw Crystallographic Information Files (CIF) to construct supercells and meticulously extracts a comprehensive suite of descriptors, such as coordination numbers, interatomic distances, and atomic environments. These descriptors are not mere extrapolations from generic values but are tailored to the material's specific structure, reducing noise and enhancing the relevance of ML applications for binary and ternary compounds. The package has demonstrated its robustness, having processed more than 10,000 binary and ternary CIF files. Leveraging structure-property correlations, we believe this crystal structure featurizer can be a promising tool for increasing predictive capabilities for material property optimization in machine learning application.
-
-`geometric descriptors`,  `crystal structure`, `feature engineering`, `machine learning`
 
 <br>
 
-### Composition-derived features for crystal structure prediction
-
+### 2. Machine learning descriptors in materials chemistry used in multiple experimentally validated studies: Oliynyk elemental property dataset 
 ![Crystal prediction with compositional data](files/research/oliynyk-composition-featurizer/2.png)
 
-[ChemRxiv](https://doi.org/10.26434/chemrxiv-2023-0nlzl) |
-[Download CSV](https://data.mendeley.com/datasets/bt6gv5z6yv/2)
+Materials informatics employs data-driven approaches for analysis and discovery of materials. Features also referred to as descriptors are essential in generating reliable and accurate machine-learning models. While general data can be obtained through public and commercial sources, features must be tailored to specific applications.
 
-This project addresses the challenge of mapping material compositions to corresponding properties, such as crystal structures. A critical aspect of this research involves effectively linking elemental data with compound properties and overcoming obstacles presented by incomplete raw elemental data from literature. At the heart of our methodology is the Oliynyk property list, which incorporates 98 unique properties for each element. This exhaustive list has proved vital in facilitating more than 20 studies that have undergone experimental validation. A pivotal element of our approach is the innovative application of Gaussian process regression, which was specifically utilized to tackle the issue of missing values in the elemental property list. This strategic implementation is essential as it enables the use of analytical methods such as Support Vector Machine (SVM) algorithms, which depend on a fully populated x-block devoid of any data voids. My research endeavor involved identifying the most efficacious machine learning model to predict missing entries in the compositional features of electronegativity and radii, following a thorough literature review. I conducted extensive trials with various ML models. Ultimately, Gaussian process regression was identified as the optimal solution. This method excelled at interpolating complex datasets, including the interpolation of 26 radii over five scales and 17 electronegativities over three scales. Our approach demonstrates that it is possible to aid the prediction of an unknown materials properties through compositional elemental properties aided with ML-driven interpolation. The successful synthesis and subsequent validation of a new intermetallic compound, UCd3, via x-ray powder diffraction, is a testament to the tangible outcomes. 
+Common featurizers suitable for generic chemical problems may not be effective in features-property mapping in solid-state materials with ML models. Here, we have assembled the Oliynyk property list for compositional feature generation, which performs well on limited datasets (50 to 1,000 training data points) in the solid-state materials domain. The dataset contains 98 elemental features for atomic numbers from 1 to 92, including thermodynamic properties, electronic structure data, size, electronegativity, and bulk properties such as melting point, density, and conductivity. The dataset has been utilized peer-reviewed publications in predicting material hardness, classification, discovery of novel Heusler compounds, band gap prediction, and determining the site preference of atoms using machine learning models including support vector machines, random forests for classification, and support vector regression for regression problems. We have compiled the dataset by parsing data from publicly available databases and literature and further supplementing it by interpolating values with Gaussian process regression (GPR).
 
-`materials infomatics`, `feature engineering`, `Gaussian process regression (GPR)`. `interpolation`
+[Data in Brief](https://doi.org/10.1016/j.dib.2024.110178) |
+[Download dataset](https://data.mendeley.com/datasets/bt6gv5z6yv/2)
+
+`materials infomatics`, `feature engineering`, `GPR`, `elemental database`, `scikit-learn`
+

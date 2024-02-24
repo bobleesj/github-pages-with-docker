@@ -5,25 +5,36 @@ permalink: /publications/
 ---
 <style>
     a {
-        color: #007bff; /* Example color */
+        
         text-decoration: none; /* Removes underline */
     }
 
     a:hover {
-        color: #0056b3; /* Example hover color */
-        text-decoration: underline; /* Adds underline on hover */
+        
     }
 
     li {
         margin-bottom: 20px;
     }
 
-
-    
+/* color: #007bff; Example color */
+/* color: #0056b3; Example hover color */
+/* text-decoration: none; Adds underline on hover */
 
 </style>
 <script>
 const journalList = [
+    {
+        authors: "S. Lee, C. Chen, G. Garcia, A. O. Oliynyk",
+        title: "Machine learning descriptors in materials chemistry used in multiple experimentally validated studies: Oliynyk elemental property dataset",
+        journal: "Data in Brief",
+        volume: "54",
+        pages: "110178",
+        year: "2024",
+        doi: "https://doi.org/10.1016/j.dib.2024.110178",
+        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&citation_for_view=L07HlVsAAAAJ:IjCSPb-OGe4C",
+        citations: "" // Add citation count if available
+    },
     {
         authors: "K. P. McGuinness, A. O. Oliynyk, S. Lee, B. Molero-Sanchez, P. K. Addo",
         title: "Machine-learning prediction of thermal expansion coefficient for perovskite oxides with experimental validation",
@@ -75,23 +86,13 @@ const preprintList = [
 
 const presentationList = [
     {
-        authors: "A. O. Oliynyk, S. Lee, N. K. Barua",
-        title: "TiNiSi-type vs. ZrNiAl-type: One More Time with Interpretable ML and Experimental Validation",
-        conference: "North American Solid State Chemistry Conference (NASSCC) 2023",
+        authors: "S. Lee, N. K. Barua, A. O. Oliynyk",
+        title: "High-throughput Crystal Structure Featurizer for Binary and Ternary Compounds",
+        conference: "2024 Gordon Research Conference on Solid State Chemistry",
         type: "Poster",
-        location: "Calgary, Canada",
-        document: "2023-NASSCC-poster.pdf",
-        abstract: ""
-    },
-    {
-        authors: "A. O. Oliynyk, S. Lee, G. Garcia",
-        title: "Machine learning descriptors in chemistry: prediction and experimental validation of UCd<sub>3</sub>",
-        conference: "Solid-State Materials Chemistry and Data Science Hackathon (SSMCDAT)",
-        type: "Oral",
-        location: "Virtual",
-        document: "",
-        abstract: "",
-        video: "https://www.youtube.com/watch?v=PsstodhuYPc"
+        location: "New London, NH",
+        document: "TBA",
+        abstract: "TBA"
     },
     {
         authors: "S. Lee, A. O. Oliynyk",
@@ -120,6 +121,29 @@ const presentationList = [
         document: "2022-ACS-NY-URS-slides.pdf",
         abstract: "2022-ACS-NY-URS-abstract.pdf"
     }
+];
+
+const presentationContributedList = [
+    
+    {
+        authors: "A. O. Oliynyk, S. Lee, N. K. Barua",
+        title: "TiNiSi-type vs. ZrNiAl-type: One More Time with Interpretable ML and Experimental Validation",
+        conference: "North American Solid State Chemistry Conference (NASSCC) 2023",
+        type: "Poster",
+        location: "Calgary, Canada",
+        document: "2023-NASSCC-poster.pdf",
+        abstract: ""
+    },
+    {
+        authors: "A. O. Oliynyk, S. Lee, G. Garcia",
+        title: "Machine learning descriptors in chemistry: prediction and experimental validation of UCd<sub>3</sub>",
+        conference: "Solid-State Materials Chemistry and Data Science Hackathon (SSMCDAT)",
+        type: "Oral",
+        location: "Virtual",
+        document: "",
+        abstract: "",
+        video: "https://www.youtube.com/watch?v=PsstodhuYPc"
+    },
 ];
 
 const bookChapterList = [
@@ -196,7 +220,51 @@ function displayPresentationList() {
             }
             return author;
         }).join(', ');
-        authorsFormatted = `<u>${authorsFormatted.split(', ')[0]}</u>${authorsFormatted.substring(authorsFormatted.indexOf(','))}`; // Underline the first author
+        // authorsFormatted = `<u>${authorsFormatted.split(', ')[0]}</u>${authorsFormatted.substring(authorsFormatted.indexOf(','))}`; // Underline the first author
+
+        let links = '';
+        if (entry.document) {
+            links += `<a href="/files/presentation/${entry.document}">PDF</a>`;
+        }
+        if (entry.abstract) {
+            if (links.length > 0) {
+                links += ' | ';
+            }
+            links += `<a href="/files/presentation/${entry.abstract}">Abstract</a>`;
+        }
+        if (entry.video) {
+            if (links.length > 0) {
+                links += ' | ';
+            }
+            links += `<a href="${entry.video}" target="_blank">YouTube</a>`; // Add video link
+        }
+
+        li.innerHTML = `
+            <div><strong>${entry.title}</strong></div>
+            <div>${authorsFormatted}</div>
+            ${entry.conference}. ${entry.type}. ${entry.location}
+            ${links.length > 0 ? '<br>' + links : ''}
+        `;
+        ol.appendChild(li); // Append the list item to the ordered list
+    });
+}
+
+function displayContributedPresentationList() {
+    const container = document.getElementById('presentationContributedList');
+    const ol = document.createElement('ol'); // Create an ordered list element
+    container.appendChild(ol); // Append the ordered list to the container
+
+    presentationContributedList.forEach((entry, index) => {
+        const li = document.createElement('li'); // Create a list item
+        li.classList.add('presentationContributed-entry');
+
+        let authorsFormatted = entry.authors.split(', ').map(author => {
+            if (author === "S. Lee") {
+                return `<strong>${author}</strong>`; // Bold "S. Lee"
+            }
+            return author;
+        }).join(', ');
+        // authorsFormatted = `<u>${authorsFormatted.split(', ')[0]}</u>${authorsFormatted.substring(authorsFormatted.indexOf(','))}`; // Underline the first author
 
         let links = '';
         if (entry.document) {
@@ -227,6 +295,8 @@ function displayPresentationList() {
 
 
 
+
+
 function displayBookChapterList() {
     const container = document.getElementById('bookChapter');
     const ol = document.createElement('ol'); // Create an ordered list element
@@ -251,21 +321,17 @@ function displayBookChapterList() {
 }
 
 
-
-
 window.onload = function() {
     displayJournalList();
     displayPresentationList();
     displayPreprintList();
     displayBookChapterList();
+    displayContributedPresentationList();
+
     
 };
 
 </script>
-
-
-### Preprint
-<div id="preprintList"></div>
 
 
 
@@ -275,5 +341,12 @@ window.onload = function() {
 
 ### Book chapter
 <div id="bookChapter"></div>
+
+### Preprint
+<div id="preprintList"></div>
+
 ### Presentations
 <div id="presentationList"></div>
+
+### Contributed presentations
+<div id="presentationContributedList"></div>
