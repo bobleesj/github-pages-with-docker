@@ -74,13 +74,13 @@ csv_file = "data/ael_log10_debye_temperature/train.csv"
 # Open up "Excel of Python" to read the CSV file.
 dataframe = pd.read_csv(csv_file)
 
-X -> features for each row (compound)
-y -> target value (like melting point defined in csv_file)
-formula -> formula
-skipped -> skipped file
-
 # Generate features
 X, y, formulas, skipped = composition.generate_features(dataframe, elem_prop="magpie")
+
+'''
+X -> compositional features for each row (compound)
+y -> target value (like melting point defined in csv_file)
+'''
 
 print("Features\n", X)
 print("\nTarget/physical properties\n", y)
