@@ -22,7 +22,7 @@ CBFV is a Python script that garners various databases and we can choose one of 
 ## Download Code Editor
 ![Image 3](/files/blog/2024-02-19-tutorial-CBFV/3.png)
 
-We are now going to learn how to install and generate these features using CBFV. The library does not provide a simple copy-paste method to run code with examples on a Jupyter notebook. First, download Visual Studio, an "text" editor that helps read and modify code easier. Download one here: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+We are now going to learn how to install and generate these features using CBFV. First, download Visual Studio, a "text" editor that helps read and modify code easier. Download one here: [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
 
 ## Download CBFV
