@@ -5,7 +5,7 @@ categories: tutorial
 ---
 
 ## Motivation
-Before we talk about how to run the code, it is important to understand the philosophy of featurization projects. Each compound is made up of unique elements, For example, LiO2 is made up of Li and O atoms and each Li and O has elemental properties such as radius, electronegativities, etc. How can we, humans, characterize a.k.a featurize LiO2? We can attempt to add, subtract, multiply these elemental properties to generate our unique “features” or “descriptors” for the LiO2 compound. This is illustrated with the figure below.
+Before we talk about how to run the code, it is important to understand the philosophy of featurization projects. Each compound is made up of unique elements, For example, LiO<sub>2</sub>2 is made up of Li and O atoms and each Li and O has elemental properties such as radius, electronegativities, etc. How can we, humans, characterize a.k.a featurize LiO<sub>2</sub>2? We can attempt to add, subtract, multiply these elemental properties to generate our unique “features” or “descriptors” for the LiO<sub>2</sub>2 compound. This is illustrated with the figure below.
 
 ![Image 1](/files/blog/2024-02-19-tutorial-CBFV/1.png)
 
@@ -16,7 +16,7 @@ One can write Python code to apply mathematical operations (combine, subtract, m
 
 
 ## What is CBFV
-CBFV is a Python script that garners various databases and we can choose one of the databases to generate features for each compound. It does the arithmetics behind the scenes for us.
+CBFV is a Python script that garners various databases and we can choose one of the databases to generate features for each compound. It does the mathematical oeprations behind the scenes for us.
 
 
 ## Download Code Editor
@@ -108,7 +108,7 @@ If you do not see the play button, just go to “Extensions”, type “Python�
 
 ![Image 9](/files/blog/2024-02-19-tutorial-CBFV/9.png)
 
-## Source Code:
-Here is the code that I used to generate CSV files. Simply run the “main.py” script after you have installed all the dependencies mentioned earlier. Please feel free to reach out if you have any questions!
+## Source Code
+Here is the code that I used to generate CSV files. Simply run the “main.py” script after you have installed all the dependencies mentioned earlier. Please feel free to reach out if you have any questions or suggestions!
 
 [Google Drive](https://drive.google.com/drive/folders/1QcMN87hN85iRwaGcS0N1UFtgCgkvieSs?usp=drive_link)
