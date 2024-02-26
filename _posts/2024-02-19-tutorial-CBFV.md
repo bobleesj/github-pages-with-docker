@@ -125,7 +125,7 @@ Here is the code that I used to generate CSV files. Simply run the `main.py` scr
 [Markdown](https://github.com/bobleesj/bobleesj.github.io/blob/main/_posts/2024-02-19-tutorial-CBFV.md)
 
 ### References
-1. **CBFV:** Wang, A.YT., Kauwe, S.K., Murdock, R.J., Sparks, T.D. (2021). Compositionally restricted attention-based network for materials property predictions. *npj Comput Mater*, **7**, 77. [https://doi.org/10.1038/s41524-021-00545-1](https://doi.org/10.1038/s41524-021-00545-1)
+1. **CBFV:** S.K. Kauwe, J. Graser, A. Vazquez, T.D. Sparks (2024). Machine learning prediction of heat capacity for solid inorganics. *Integrating Materials and Manufacturing Innovation* **7**, 43–51. [10.1007/s40192-018-0108-9](https://doi.org/10.1007/s40192-018-0108-9)
 
 2. **Oliynyk dataset:** Lee, S., Chen, C., Garcia, G., Oliynyk, A. (2024). Machine learning descriptors in materials chemistry used in multiple experimentally validated studies: Oliynyk Elemental Property Dataset. *Data in Brief*, **53**, 110178. [https://doi.org/10.1016/j.dib.2024.110178](https://doi.org/10.1016/j.dib.2024.110178)
 
