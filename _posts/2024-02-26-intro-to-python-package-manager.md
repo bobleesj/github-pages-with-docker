@@ -1,8 +1,8 @@
-# 2024-02-26-intro-to-python-package-manager
-
-Published
-
-# Intro to Python package manager for beginners (Featuring Conda with Cheatsheet)
+---
+layout: post
+title: Intro to Python package manager for beginners (Ft. Conda with Cheatsheet)
+categories: tutorial
+---
 
 ## Overview
 
@@ -31,7 +31,7 @@ NumPy is a Python collection of tools with functions and variables. However, we 
 pip install numpy
 ```
 
-![2024-02-26-intro-to-python-package-manager/Screenshot_2024-02-25_at_1.37.16_PM.png](files/blog/2024-02-26-intro-python-package-manager/img/Screenshot_2024-02-25_at_1.37.16_PM.png)
+![Image 1 - numpy version](/files/blog/2024-02-26-intro-python-package-manager/img/1.png)
 
 Imagine you have a specific version of `numpy` installed on your local machine prior. Now, you hypothetically attempt to download and run `bob-software.py`, which relies on NumPy version 1.26.4 and Python version 3.11 or higher
 
@@ -88,8 +88,7 @@ Conda is one of the widely used package managers for Python. It is free, well-ma
 
 To install, visit [https://docs.anaconda.com/free/miniconda/](https://docs.anaconda.com/free/miniconda/) and follow the listed steps to download and install. The process is straightforward—just copy and paste each line into your command line. It's always recommended to download the latest version directly from the website, as it's continually updated.
 
-![2024-02-26-intro-to-python-package-manager%2068ea6ae8627a41ccaf5c67ab5fb206a2/Screenshot_2024-02-25_at_3.25.53_PM.png](files/blog/2024-02-26-intro-python-package-manager/img/Screenshot_2024-02-25_at_3.25.53_PM.png)
-
+![Image 2 - conda download](/files/blog/2024-02-26-intro-python-package-manager/img/2.png)
 After successful installation, confirm by typing `conda --version`.
 
 ```bash
@@ -227,7 +226,7 @@ Enter your choice (1-6):
 
 However, do you see the `requirements.txt` file? 
 
-![2024-02-26-intro-to-python-package-manager%2068ea6ae8627a41ccaf5c67ab5fb206a2/Screenshot_2024-02-25_at_4.13.53_PM.png](2024-02-26-intro-to-python-package-manager%2068ea6ae8627a41ccaf5c67ab5fb206a2/Screenshot_2024-02-25_at_4.13.53_PM.png)
+![Image 3 - pip install requirements](/files/blog/2024-02-26-intro-python-package-manager/img/3.png)
 
 Well, when you run `pip install -r requirements.txt` instead of manually listing dozens of Python libraries with specific versions, the developer, “Bob” in this case, has simply laid out what to install.
 
