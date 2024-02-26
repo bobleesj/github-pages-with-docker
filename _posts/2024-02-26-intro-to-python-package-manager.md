@@ -108,7 +108,7 @@ conda create -n bob python=3.12
 
 ### Step 2. activate environment
 
-By activating the environment, you're instructing your machine to use the Python version and packages installed under "bob". You can name it as you wish.
+By activating the environment, you're instructing your machine to use the Python version and packages installed under `bob`. You can name it as you wish.
 
 ```bash
 conda activate bob
@@ -124,14 +124,12 @@ pip install numpy==1.26.4
 
 ### Test bob-software.py
 
-Now, let’s check this out!
-
 ```bash
 python bob-software.py
 "Good! Your Python version is 3.11 or higher and NumPy version is 1.26.4" 
 ```
 
-Great, you’ve mastered it. Now, if you want to deactivate or exit from using the `bob` environment, simply type
+Great, you’ve mastered it. Now, you may stop using the envionrment by deactivating `bob` environment by
 
 ```bash
  conda deactivate bob
@@ -139,16 +137,16 @@ Great, you’ve mastered it. Now, if you want to deactivate or exit from using t
 
 ### Test alice-software.py
 
-But now, imagine you have a `[alice-software.py](<http://alice-software.py>)` we have encountered previously. Alice is your collaborator and has a specific requirement for her code. This would not work with the current `bob` environment since our numpy version is different in that `bob` environment.
+But now, you also have to run `alice-software.py`. Alice is your collaborator and has a specific requirement for her code. This would not work with the current `bob` environment since our numpy version is different.
 
 ```bash
 python alice-software.py
 # FAIL to compile. Check your Python and NumPy versions
 ```
 
-It fails as expected if you use the `bob` environment since the numpy version is 1.26.4 but Alice requires we use `1.26.3` instead. Now, it’s best to simply create another environment shown below. Copy the line step by step except the comment
+It fails as expected if you use the `bob` environment since the numpy version is `1.26.4` but Alice requires we use `1.26.3` instead. Now, it’s best to simply create another environment shown below. Copy the line step by step except the comment
 
-you can create another environment called `alice` with the following lines of code as we have seen
+you can create another environment called `alice` with the following lines of code.
 
 ```bash
 # exit from the "bob' environment
@@ -169,14 +167,14 @@ python alice-software.py
 # Good! Your NumPy version is 1.26.3 and your Python version is 3.11 or higher!")
 ```
 
-Congratulations! Now, you’ve learned how to create Conda environments and switch between them. If you are interested, keep going! We will be using a real life example in the following.
+Congratulations! Now, you’ve learned how to create Conda environments and switch between them. If you are interested, keep going! We will be using a real life example in the following section.
 
 ## Bonus: relationship between Conda and pip
 
-What is the relationship between `Conda` and `pip`? An analogy can clarify this. Consider `Conda` as an island creator and `pip` as a ship that brings supplies (Python packages) from the outside world (the internet) to the island. For instance, `pip` delivers wonderful packages like numpy to the specific Python v3.11 island.
+Hang on. What is the relationship between `Conda` and `pip`? An analogy can clarify this. Consider `Conda` as an island creator and `pip` as a ship that brings supplies (Python packages) from the outside world (the internet) to the island. For instance, `pip` delivers wonderful packages like numpy to the specific Python v3.11 island.
 
 ## Real-life example with CIF Cleaner
-Here, we will be using one of my Python packages that filters a list of CIF **(Crystallographic Information File)**. A CIF is simply a file that stores information about a crystal. The details about the program are not important. The essence is that this package requires specific versions. Copy each line to your command-line and see if that works!
+Here, we will be using one of my Python packages that filters a list of CIF (Crystallographic Information File) A CIF is simply a file that stores information about a crystal. The details about the program are not important. The essence is that this package requires specific versions. Copy each line to your command-line and see if that works.
 
 ```bash
 # clone the software known as "cif-cleaner"
@@ -227,7 +225,7 @@ How are you? I find it helpful to test my understanding by formulating questions
 4. **Bonus:** Can you describe the step-by-step process of using Conda?
 5. **Extra Bonus:** Can you explain the relationship between `Conda` and `pip` by using an analogy?
 
-If you have found this tutorial useful for your scientific endeavor, please stay tuned for more by following me on [GitHub](https://github.com/bobleesj) or simply reaching out for any questions. Let's keep learning!
+If you have found this tutorial useful for your scientific endeavor, please stay tuned for more by following me on [GitHub](https://github.com/bobleesj) or simply reaching out for any questions or with suggestions how to make this tutorial better. Let's keep learning!
 
 ## Cheatsheet
 
