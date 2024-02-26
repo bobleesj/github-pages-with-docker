@@ -125,9 +125,8 @@ Here is the code that I used to generate CSV files. Simply run the `main.py` scr
 [Markdown](https://github.com/bobleesj/bobleesj.github.io/blob/main/_posts/2024-02-19-tutorial-CBFV.md)
 
 ### References
-1. **CBFV:** Wang, A.YT., Kauwe, S.K., Murdock, R.J. Sparks, T.D. (2021). Compositionally restricted attention-based network for materials property predictions. *npj Comput Mater*, **7**, 77. [https://doi.org/10.1038/s41524-021-00545-1](https://doi.org/10.1038/s41524-021-00545-1)
+1. **CBFV:** Wang, A.YT., Kauwe, S.K., Murdock, R.J., Sparks, T.D. (2021). Compositionally restricted attention-based network for materials property predictions. *npj Comput Mater*, **7**, 77. [https://doi.org/10.1038/s41524-021-00545-1](https://doi.org/10.1038/s41524-021-00545-1)
 
-2. **Oliynyk dataset:** Lee, S., Chen, C., Garcia, G. & Oliynyk, A. (2024). Machine learning descriptors in materials chemistry used in multiple experimentally validated studies: Oliynyk Elemental Property Dataset. *Data in Brief*, **53**, 110178. [https://doi.org/10.1016/j.dib.2024.110178](https://doi.org/10.1016/j.dib.2024.110178)
+2. **Oliynyk dataset:** Lee, S., Chen, C., Garcia, G., Oliynyk, A. (2024). Machine learning descriptors in materials chemistry used in multiple experimentally validated studies: Oliynyk Elemental Property Dataset. *Data in Brief*, **53**, 110178. [https://doi.org/10.1016/j.dib.2024.110178](https://doi.org/10.1016/j.dib.2024.110178)
 
-3. **Magpie dataset:** Ward, L., Agrawal, A., Choudhary, A. et al. (2016). A general-purpose machine learning framework for predicting properties of inorganic materials. *npj Comput Mater*, **2**, 16028. [https://doi.org/10.1038/npjcompumats.2016.28](https://doi.org/10.1038/npjcompumats.2016.28)
-
+3. **Magpie dataset:** Ward, L., Agrawal, A., Choudhary, A., Wolverton, C. (2016). A general-purpose machine learning framework for predicting properties of inorganic materials. *npj Comput Mater*, **2**, 16028. [https://doi.org/10.1038/npjcompumats.2016.28](https://doi.org/10.1038/npjcompumats.2016.28)
