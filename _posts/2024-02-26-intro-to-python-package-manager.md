@@ -6,7 +6,7 @@ categories: tutorial
 
 ## Overview
 
-By the end of this tutorial, you should be able to answer the following questions in about 10-15 minutes.
+By the end of this tutorial, you should be able to answer the following questions in about 10 to 15 minutes.
 
 1. What is the core problem in open-source development?
 2. What is a package manager and why do we need one?
@@ -14,9 +14,7 @@ By the end of this tutorial, you should be able to answer the following question
 
 ## Motivation
 
-Before we delve into the core concept of a package manager and its usage, let's first discuss why we need to use one.
-
-You might have used tools such as `numpy` for mathematical functions, as demonstrated in the following simple example:
+Let's first discuss why we need a package manager. You might have used tools such as `numpy` for mathematical functions as shown below.
 
 ```python
 # my-fancy-code.py
@@ -24,7 +22,7 @@ from numpy import pi
 print(pi) # 3.14...
 ```
 
-NumPy is a Python collection of tools with functions and variables. However, we must **import** this library, also broadly referred to as a “dependency”. If a program uses `numpy`, it “depends” on the functions provided by `numpy`.
+NumPy is a Python collection of tools with functions and variables. However, we must **import** this library or also known as “dependency”. If a program uses `numpy`, it “depends” on the functions provided by `numpy`. One can install `numpy` via a command-line interface such as terminal as shown below.
 
 ```bash
 # install numpy (will download 1.26.4 as of Feb 2024)
@@ -33,7 +31,7 @@ pip install numpy
 
 ![Image 1 - numpy version](/files/blog/2024-02-26-intro-python-package-manager/img/1.png)
 
-Imagine you have a specific version of `numpy` installed on your local machine prior. Now, you hypothetically attempt to download and run `bob-software.py`, which relies on NumPy version 1.26.4 and Python version 3.11 or higher
+Imagine you are required to run `bob-software.py`, which relies on NumPy version 1.26.4 and Python version 3.11 or higher as shown below.
 
 ```bash
 # bob-software.py (Python v3.11 or higher and NumPy v1.26.4)
@@ -61,48 +59,46 @@ else:
     print("Failed to compile. Check your Python and NumPy versions")
 ```
 
-Here, we see a simple difference. However, in reality, there can be dozens of dependencies with varying requirements.
+Here, we see a simple difference. However, in reality, there can be dozens of dependencies with varying requirements. When collaborating as a team, your script may work on your local machine because you're using specific versions. Yet, when you share your code with colleagues, it might not work due to their different software versions.
 
-When collaborating as a team, your script may work on your local machine because you're using specific versions. Yet, when you share your code with colleagues, it might not work due to their different software versions.
+We want to avoid situations like this:
+> “Dear Lee, Please install these 12 libraries with versions a, b, and c”.
 
-We want to avoid situations like this: “Dear Lee, Please install these 12 libraries with versions a, b, and c”. This message can easily be lost in our email chain, leaving the collaborator unable to run the code.
+This message can easily be lost in our email chain, leaving the collaborator unable to run the code.
 
-## Introduction to Package Managers
+## Introducing package manager
 
 The core issue is the difficulty of manually tracking each dependency requirement. Understanding this issue helps us appreciate what a package manager resolves.
 
-In just four lines of code, while also running `bob-software.py`, a package manager:
+In just four lines of code, we can graecfully both handle executing `alice-software.py` and `bob-software.py` in just a few lines of commands. The package manager will
 
-1. Creates a folder (environment) with a specific Python version
-2. Activates the folder and installs Python libraries with specific versions within it
-3. Uses the environment (Python and libraries inside the folder) to run `bob-software.py`
+1. create a folder (environment) with a specific Python version
+2. activate the folder and installs Python libraries with specific versions within it
+3. use the environment (Python and libraries inside the folder) to run `bob-software.py`
 
-## Python package manager - Conda
-
-Now, let's delve into the practical aspect. I spent time on the background information because the concept here transcends platforms and languages. The tutorials below are mainly for memorization or record-keeping of the introduced syntax, but the concept and motivation are universal.
+### Python package manager - Conda
 
 Conda is one of the widely used package managers for Python. It is free, well-maintained, and favored by the scientific community.
 
-### Prerequisite: Download & Install
+### Prerequisite: download & install
 
-To install, visit [https://docs.anaconda.com/free/miniconda/](https://docs.anaconda.com/free/miniconda/) and follow the listed steps to download and install. The process is straightforward—just copy and paste each line into your command line. It's always recommended to download the latest version directly from the website, as it's continually updated.
+To install, visit [https://docs.anaconda.com/free/miniconda/](https://docs.anaconda.com/free/miniconda/) and follow the listed steps to download and install. The process is straightforward—just copy and paste each line into your command line. It's always recommended to download the latest version directly from the official website.
 
 ![Image 2 - conda download](/files/blog/2024-02-26-intro-python-package-manager/img/2.png)
 After successful installation, confirm by typing `conda --version`.
 
-```bash
+```**bash**
 conda --version
 # conda 23.11.0
 ```
 
-> In case of any difficulties during installation, feel free to reach out via email!
-> 
+> In case of any difficulties during installation, feel free to reach out via email.
 
 ## Run bob-software.py with Conda
 
 Now, we will run `bob-software.py` with Conda.
 
-### Step 1. Create Environment
+### Step 1. create environment
 
 For simplicity, let's create an environment called "bob", as in our hypothetical example. Note that we're installing Python version 3.12.
 
@@ -110,7 +106,7 @@ For simplicity, let's create an environment called "bob", as in our hypothetical
 conda create -n bob python=3.12
 ```
 
-### Step 2. Activate Environment
+### Step 2. activate environment
 
 By activating the environment, you're instructing your machine to use the Python version and packages installed under "bob". You can name it as you wish.
 
@@ -118,7 +114,7 @@ By activating the environment, you're instructing your machine to use the Python
 conda activate bob
 ```
 
-### Step 3. Download Python Libraries
+### Step 3. download Python libraries
 
 Next, you'll download the exact version of NumPy required by `bob-software.py`.
 
@@ -126,7 +122,7 @@ Next, you'll download the exact version of NumPy required by `bob-software.py`.
 pip install numpy==1.26.4
 ```
 
-## Test bob-software.py
+### Test bob-software.py
 
 Now, let’s check this out!
 
@@ -141,7 +137,7 @@ Great, you’ve mastered it. Now, if you want to deactivate or exit from using t
  conda deactivate bob
 ```
 
-## Test alice-software.py
+### Test alice-software.py
 
 But now, imagine you have a `[alice-software.py](<http://alice-software.py>)` we have encountered previously. Alice is your collaborator and has a specific requirement for her code. This would not work with the current `bob` environment since our numpy version is different in that `bob` environment.
 
@@ -180,9 +176,6 @@ Congratulations! Now, you’ve learned how to create Conda environments and swit
 What is the relationship between `Conda` and `pip`? An analogy can clarify this. Consider `Conda` as an island creator and `pip` as a ship that brings supplies (Python packages) from the outside world (the internet) to the island. For instance, `pip` delivers wonderful packages like numpy to the specific Python v3.11 island.
 
 ## Real-life example with CIF Cleaner
-
-Now, how do you apply this in practice? We will be using one of my packages for this.
-
 Here, we will be using one of my Python packages that filters a list of CIF **(Crystallographic Information File)**. A CIF is simply a file that stores information about a crystal. The details about the program are not important. The essence is that this package requires specific versions. Copy each line to your command-line and see if that works!
 
 ```bash
@@ -218,15 +211,15 @@ Welcome! Please choose an option to proceed:
 Enter your choice (1-6):
 ```
 
-However, do you see the `requirements.txt` file? 
+One moment, do you see the `requirements.txt` file as shown below?
 
 ![Image 3 - pip install requirements](/files/blog/2024-02-26-intro-python-package-manager/img/3.png)
 
-Well, when you run `pip install -r requirements.txt` instead of manually listing dozens of Python libraries with specific versions, the developer, “Bob” in this case, has simply laid out what to install.
+Well, when you run `pip install -r requirements.txt` instead of manually listing dozens of Python libraries with specific versions, the developer, “Bob” in this case, has simply laid out what to install. This makes everyone's life simple and easy.
 
 ## Final remarks
 
-As a grad student in the early stages of my coursework, I find it helpful to test my understanding by formulating questions and answering them mentally. I encourage you to gauge your learning with the following questions:
+How are you? I find it helpful to test my understanding by formulating questions and answering them mentally. I encourage you to gauge your learning with the following questions:
 
 1. What is the main challenge in open-source development?
 2. Can you define a package manager and explain its necessity?
@@ -234,15 +227,11 @@ As a grad student in the early stages of my coursework, I find it helpful to tes
 4. **Bonus:** Can you describe the step-by-step process of using Conda?
 5. **Extra Bonus:** Can you explain the relationship between `Conda` and `pip` by using an analogy?
 
-## Source code
+If you have found this tutorial useful for your scientific endeavor, please stay tuned for more by following me on [GitHub](https://github.com/bobleesj) or simply reaching out for any questions. Let's keep learning!
 
-[GitHub](https://github.com/bobleesj/bobleesj.github.io/tree/tutorial-conda/files/blog/2024-02-26-intro-python-package-manager/source-code)
+## Cheatsheet
 
-[Markdown](https://github.com/bobleesj/bobleesj.github.io/blob/main/_posts/2024-02-26-intro-to-python-package-manager.md)
-
-# Cheatsheet
-
-Here is a list of commands that I use the most during development.
+Here is a list of commands I use frequently.
 
 ```bash
 # create an environment called "bob"
@@ -257,7 +246,7 @@ pip install numpy==1.26.4
 # install a package with a version compatible with Python version
 pip install numpy
 
-# install packages in requirements.txt (if available)
+# install packages in requirements.txt (only if the txt file is available)
 pip install -r requirements.txt
 
 # update your Python version in the activated environment
@@ -273,4 +262,7 @@ conda env list
 conda env remove --name bob
 ```
 
-If you have found this tutorial useful for your scientific endeavor, please stay tuned for more by following me on [GitHub](https://github.com/bobleesj) or simply reaching out for any questions.
+## Source code
+
+[GitHub](https://github.com/bobleesj/bobleesj.github.io/tree/main/files/blog/2024-02-26-intro-python-package-manager/source-code) |
+[Markdown](https://github.com/bobleesj/bobleesj.github.io/blob/main/_posts/2024-02-26-intro-to-python-package-manager.md)
