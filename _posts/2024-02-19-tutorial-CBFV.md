@@ -14,6 +14,7 @@ One can write Python code to apply mathematical operations (combine, subtract, m
 [Oliynyk](https://data.mendeley.com/datasets/bt6gv5z6yv/2)
 [Magpie](https://github.com/Kaaiian/CBFV/blob/master/cbfv/element_properties/magpie.csv)
 
+> Learn more about our paper on Oliynyk dataset here [https://doi.org/10.1016/j.dib.2024.110178](https://doi.org/10.1016/j.dib.2024.110178), a peer-reviewed dataset used in data-driven discovery since the mid-2010s.
 
 ## What is CBFV
 CBFV is a Python script that garners various databases and we can choose one of the databases to generate features for each compound. It does the mathematical oeprations behind the scenes for us.
@@ -45,7 +46,7 @@ Notice that if you go inside the “data” folder, there are many csv files. Tr
 
 <img src="/files/blog/2024-02-19-tutorial-CBFV/img/6.png"  style="max-width:50%; height:auto;">
 
-Each csv file contains compound formulas and the “target”. Using the compound formula alone, we can generate features since we know their elements and we have properties for each element from databases such as “magpie” and “oliynyk” as discussed earlier.
+Each csv file contains compound formulas and the “target”. Using the compound formula alone, we can generate features since we know their elements and we have properties for each element from databases such as `magpie` and `oliynyk` as discussed earlier.
 
 <img src="/files/blog/2024-02-19-tutorial-CBFV/img/7.png"  style="max-width:40%; height:auto;">
 
@@ -108,8 +109,25 @@ If you do not see the play button, just go to “Extensions”, type “Python�
 
 ![Image 9](/files/blog/2024-02-19-tutorial-CBFV/img/9.png)
 
-## Source Code
-Here is the code that I used to generate CSV files. Simply run the “main.py” script after you have installed all the dependencies mentioned earlier. Please feel free to reach out if you have any questions or suggestions!
+## Check result
+[output_formulas.csv](/files/blog/2024-02-19-tutorial-CBFV/source-code/output_formulas.csv) |
+[output_X_features.csv](/files/blog/2024-02-19-tutorial-CBFV/source-code/output_X_features.csv)
+
+
+We are done. Take a look at `output_X_features.csv`. Notice features in the columns are produced for each CIF compound found in `ouput_formulas.csv`.
+
+![Image 10 - CVS ](/files/blog/2024-02-19-tutorial-CBFV/img/10.png)
+
+## Source code
+Here is the code that I used to generate CSV files. Simply run the `main.py` script after you have installed all the dependencies mentioned earlier. Please feel free to reach out if you have any questions or suggestions!
 
 [Google Drive](https://drive.google.com/drive/folders/1QcMN87hN85iRwaGcS0N1UFtgCgkvieSs?usp=drive_link) |
 [Markdown](https://github.com/bobleesj/bobleesj.github.io/blob/main/_posts/2024-02-19-tutorial-CBFV.md)
+
+### References
+1. **CBFV:** Wang, A.YT., Kauwe, S.K., Murdock, R.J. Sparks, T.D. (2021). Compositionally restricted attention-based network for materials property predictions. *npj Comput Mater*, **7**, 77. [https://doi.org/10.1038/s41524-021-00545-1](https://doi.org/10.1038/s41524-021-00545-1)
+
+2. **Oliynyk dataset:** Lee, S., Chen, C., Garcia, G. & Oliynyk, A. (2024). Machine learning descriptors in materials chemistry used in multiple experimentally validated studies: Oliynyk Elemental Property Dataset. *Data in Brief*, **53**, 110178. [https://doi.org/10.1016/j.dib.2024.110178](https://doi.org/10.1016/j.dib.2024.110178)
+
+3. **Magpie dataset:** Ward, L., Agrawal, A., Choudhary, A. et al. (2016). A general-purpose machine learning framework for predicting properties of inorganic materials. *npj Comput Mater*, **2**, 16028. [https://doi.org/10.1038/npjcompumats.2016.28](https://doi.org/10.1038/npjcompumats.2016.28)
+

@@ -139,7 +139,7 @@ Great, you’ve mastered it. Now, if you want to deactivate or exit from using t
 
 ### Test alice-software.py
 
-But now, imagine you have a `[alice-software.py](<http://alice-software.py>)` we have encountered previously. Alice is your collaborator and has a specific requirement for her code. This would not work with the current `bob` environment since our numpy version is different in that `bob` environment.
+But now, imagine you have `alice-software.py` we have encountered previously. Alice is your collaborator and has a specific requirement for her code. This would not work with the current `bob` environment since our numpy version is different in that `bob` environment.
 
 ```bash
 python alice-software.py
