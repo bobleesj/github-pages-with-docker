@@ -8,7 +8,21 @@ dl, dd, ol, ul, figure {
   padding: 0;
 }
 
+p {
+  font-size: 18px;
+}
 
+p code {
+  font-size: 15px;
+}
+
+pre code {
+  font-size: 14px;
+}
+
+blockquote p {
+  font-style: normal;
+}
 
 /**
  * Basic styling
