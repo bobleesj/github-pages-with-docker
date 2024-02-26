@@ -7,7 +7,7 @@ categories: tutorial
 ## Motivation
 Before we talk about how to run the code, it is important to understand the philosophy of featurization projects. Each compound is made up of unique elements, For example, LiO<sub>2</sub> is made up of Li and O atoms and each Li and O has elemental properties such as radius, electronegativities, etc. How can we, humans, characterize a.k.a featurize LiO<sub>2</sub>? We can attempt to add, subtract, multiply these elemental properties to generate our unique “features” or “descriptors” for the LiO<sub>2</sub> compound. This is illustrated with the figure below.
 
-![Image 1](/files/blog/2024-02-19-tutorial-CBFV/1.png)
+![Image 1](/files/blog/2024-02-19-tutorial-CBFV/img/1.png)
 
 One can write Python code to apply mathematical operations (combine, subtract, multiply) to generate a set of features as a form of CSV files (the goal of this tutorial) but we must first provide the database that contains the elemental properties. Please see the Oliynyk database and Magpie below.
 
@@ -20,7 +20,7 @@ CBFV is a Python script that garners various databases and we can choose one of 
 
 
 ## Download Code Editor
-![Image 4](/files/blog/2024-02-19-tutorial-CBFV/4.png)
+![Image 4](/files/blog/2024-02-19-tutorial-CBFV/img/4.png)
 
 We are now going to learn how to install and generate these features using CBFV. First, download Visual Studio, a "text" editor that helps read and modify code easier. Download one here: [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
@@ -29,13 +29,13 @@ We are now going to learn how to install and generate these features using CBFV.
 Download the Python CBFV folder from GitHub. For complete beginners, GitHub is analogous to Google Drive for programmers where you can easily track file changes. Visit [https://github.com/Kaaiian/CBFV](https://github.com/Kaaiian/CBFV), download the ZIP file and unzip as shown below.
 
 Drag the CBFV folder to the Visual Studio opening interface.
-![Image 3](/files/blog/2024-02-19-tutorial-CBFV/3.png)
+![Image 3](/files/blog/2024-02-19-tutorial-CBFV/img/3.png)
 
 
 ## Create main.py
 Create a file called “main.py” or with a filename that ends with “.py” shown below. Do not worry about other files that are scary looking at the moment. We will not touch any of them.
 
-<img src="/files/blog/2024-02-19-tutorial-CBFV/5.png"  style="max-width:40%; height:auto;">
+<img src="/files/blog/2024-02-19-tutorial-CBFV/img/5.png"  style="max-width:40%; height:auto;">
 
 
 ## Find example compounds
@@ -43,11 +43,11 @@ In main.py, we are going to import a list of compounds that have been already pr
 
 Notice that if you go inside the “data” folder, there are many csv files. Try to inspect them using Excel. I won’t cover why they are structured as test/train/val but they are simply unique data divided into 3 categories. Each CSV file contains compounds and “target values”. Think of the target value as a number that represents a certain property. It could be a physical property, as simple as melting point.
 
-<img src="/files/blog/2024-02-19-tutorial-CBFV/6.png"  style="max-width:50%; height:auto;">
+<img src="/files/blog/2024-02-19-tutorial-CBFV/img/6.png"  style="max-width:50%; height:auto;">
 
 Each csv file contains compound formulas and the “target”. Using the compound formula alone, we can generate features since we know their elements and we have properties for each element from databases such as “magpie” and “oliynyk” as discussed earlier.
 
-<img src="/files/blog/2024-02-19-tutorial-CBFV/7.png"  style="max-width:40%; height:auto;">
+<img src="/files/blog/2024-02-19-tutorial-CBFV/img/7.png"  style="max-width:40%; height:auto;">
 
 In the main.py file, we are going to generate “features” for each compound. We first need to import csv files. Let us use one provided in the data folder. 
 
@@ -102,11 +102,11 @@ X, y, formulas, skipped = composition.generate_features(dataframe, elem_prop="ol
 ## Run main.py
 To run the code, you can simply click on the play button.
 
-![Image 8](/files/blog/2024-02-19-tutorial-CBFV/8.png)
+![Image 8](/files/blog/2024-02-19-tutorial-CBFV/img/8.png)
 
 If you do not see the play button, just go to “Extensions”, type “Python”, and install Python.
 
-![Image 9](/files/blog/2024-02-19-tutorial-CBFV/9.png)
+![Image 9](/files/blog/2024-02-19-tutorial-CBFV/img/9.png)
 
 ## Source Code
 Here is the code that I used to generate CSV files. Simply run the “main.py” script after you have installed all the dependencies mentioned earlier. Please feel free to reach out if you have any questions or suggestions!
