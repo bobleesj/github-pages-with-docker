@@ -59,7 +59,6 @@ if np.__version__ == "1.26.3" and sys.version_info >= (3, 11):
     print("Good! Your NumPy version is 1.26.3 and your Python version is 3.11 or higher!")
 else:
     print("Failed to compile. Check your Python and NumPy versions")
-
 ```
 
 Here, we see a simple difference. However, in reality, there can be dozens of dependencies with varying requirements.
@@ -109,7 +108,6 @@ For simplicity, let's create an environment called "bob", as in our hypothetical
 
 ```bash
 conda create -n bob python=3.12
-
 ```
 
 ### Step 2. Activate Environment
@@ -118,7 +116,6 @@ By activating the environment, you're instructing your machine to use the Python
 
 ```bash
 conda activate bob
-
 ```
 
 ### Step 3. Download Python Libraries
@@ -144,7 +141,7 @@ Great, you’ve mastered it. Now, if you want to deactivate or exit from using t
  conda deactivate bob
 ```
 
-## Test [alice-software.py](http://alice-software.py/)
+## Test alice-software.py
 
 But now, imagine you have a `[alice-software.py](<http://alice-software.py>)` we have encountered previously. Alice is your collaborator and has a specific requirement for her code. This would not work with the current `bob` environment since our numpy version is different in that `bob` environment.
 
@@ -167,7 +164,6 @@ conda activate alice
 
 # install numpy 1.26.3, recall bob required 1.26.4
 pip install numpy==1.26.3
-
 ```
 
 Now, finally run
@@ -191,7 +187,7 @@ Here, we will be using one of my Python packages that filters a list of CIF **(C
 
 ```bash
 # clone the software known as "cif-cleaner"
-git clone <https://github.com/bobleesj/cif-cleaner.git>
+git clone https://github.com/bobleesj/cif-cleaner.git
 
 # go to the folder
 cd cif-cleaner
@@ -207,7 +203,6 @@ pip install -r requirements.txt
 
 # run the code
 python main.py
-
 ```
 
 When you run `python main.py` you should be able to see the following welcome message
@@ -221,7 +216,6 @@ Welcome! Please choose an option to proceed:
 [5] Get file info in the folder
 [6] Check CIF folder content against Excel file
 Enter your choice (1-6):
-
 ```
 
 However, do you see the `requirements.txt` file? 
@@ -277,7 +271,6 @@ conda env list
 
 # remove the environment called "bob"
 conda env remove --name bob
-
 ```
 
 If you have found this tutorial useful for your scientific endeavor, please stay tuned for more by following me on [GitHub](https://github.com/bobleesj) or simply reaching out for any questions.
