@@ -20,21 +20,21 @@ One can write Python code to apply mathematical operations (combine, subtract, m
 CBFV is a Python script that garners various databases and we can choose one of the databases to generate features for each compound. It does the mathematical oeprations behind the scenes for us.
 
 
-## Download Code Editor
+## Download code editor
 ![Image 4](/files/blog/2024-02-19-tutorial-CBFV/img/4.png)
 
-We are now going to learn how to install and generate these features using CBFV. First, download Visual Studio, a "text" editor that helps read and modify code easier. Download one here: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+We are now going to learn how to install and generate these features using CBFV. For complete beginners, download Visual Studio, a "text" editor that helps read and modify code easier. Download one here: [https://code.visualstudio.com/](https://code.visualstudio.com/)
 
 
 ## Download CBFV
-Download the Python CBFV folder from GitHub. For complete beginners, GitHub is analogous to Google Drive for programmers where you can easily track file changes. Visit [https://github.com/Kaaiian/CBFV](https://github.com/Kaaiian/CBFV), download the ZIP file and unzip as shown below.
+Download the Python CBFV folder from GitHub. Again, for complete beginners, GitHub is analogous to Google Drive for programmers where you can easily track file changes. Visit [https://github.com/Kaaiian/CBFV](https://github.com/Kaaiian/CBFV), download the ZIP file and unzip as shown below.
 
 Drag the CBFV folder to the Visual Studio opening interface.
 ![Image 3](/files/blog/2024-02-19-tutorial-CBFV/img/3.png)
 
 
 ## Create main.py
-Create a file called “main.py” or with a filename that ends with “.py” shown below. Do not worry about other files that are scary looking at the moment. We will not touch any of them.
+Create a file called `main.py` or with a filename that ends with `.py` shown below. Do not worry about other files that are scary looking at the moment. We will not touch any of them.
 
 <img src="/files/blog/2024-02-19-tutorial-CBFV/img/5.png"  style="max-width:40%; height:auto;">
 
