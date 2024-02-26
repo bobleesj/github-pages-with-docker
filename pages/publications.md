@@ -84,11 +84,11 @@ const presentationList = [
     {
         authors: "S. Lee, N. K. Barua, A. O. Oliynyk",
         title: "High-throughput Crystal Structure Featurizer for Binary and Ternary Compounds",
-        conference: "2024 Gordon Research Conference on Solid State Chemistry",
+        conference: "2024 Gordon Research Conference on Solid State Chemistry (July 2024)",
         type: "Poster",
-        location: "New London, NH",
-        document: "TBA",
-        abstract: "TBA"
+        location: "New London, NH ",
+        document: "",
+        abstract: ""
     },
     {
         authors: "S. Lee, A. O. Oliynyk",

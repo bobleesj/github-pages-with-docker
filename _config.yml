@@ -16,7 +16,7 @@
 title: Sangjoon Bob Lee
 email: sl5400@columbia.edu
 description: >- # this means to ignore newlines until "baseurl:"
-  This website is built using Docker and Jekyll. The website is built and maintained by Sangjoon Bob Lee
+  Sangjoon Bob Lee's website and blog
 baseurl: "" # the subpath of your site, e.g. /blog
 url: "https://bobleesj.github.io" # the base hostname & protocol for your site, e.g. http://example.com
 
