@@ -4,6 +4,11 @@ title: How to generate elemental compositional features for compounds using CBFV
 categories: tutorial
 ---
 
+## Overview
+By the end of this tutorial, you will be able to accomplish the following tasks
+1. Generate features and save as `.csv` from compound chemical formulas
+2. Use Code Editor to execute `.py`
+
 ## Motivation
 Before we talk about how to run the code, it is important to understand the philosophy of featurization projects. Each compound is made up of unique elements, For example, LiO<sub>2</sub> is made up of Li and O atoms and each Li and O has elemental properties such as radius, electronegativities, etc. How can we, humans, characterize a.k.a featurize LiO<sub>2</sub>? We can attempt to add, subtract, multiply these elemental properties to generate our unique “features” or “descriptors” for the LiO<sub>2</sub> compound. This is illustrated with the figure below.
 

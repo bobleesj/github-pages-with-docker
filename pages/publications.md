@@ -44,7 +44,7 @@ const journalList = [
     },
     {
         authors: "Y. Tyvanchuk, V. Babizhetskyy, S. Baran, A. Szytula, V. Smetana, S. Lee, A. O. Oliynyk, A. Mudring",
-        title: "The crystal and electronic structure of RE23Co6.7In20.3 (RE = Gd–Tm, Lu): A new structure type based on intergrowth of AlB<sub>2</sub>- and CsCl-type related slabs",
+        title: "The crystal and electronic structure of RE<sub>23</sub>Co<sub>6.7</sub>In<sub>20.3</sub> (RE = Gd–Tm, Lu): A new structure type based on intergrowth of AlB<sub>2</sub>- and CsCl-type related slabs",
         journal: "Journal of Alloys and Compounds",
         volume: "976",
         pages: "173241",
