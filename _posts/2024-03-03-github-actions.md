@@ -1,18 +1,25 @@
 ---
 layout: post
-title: GitHub Actions guideline for open-source development
+title: GitHub Actions guideline for Python open-source development
 categories: tutorial
 ---
 
 ## Why use GitHub Actions
-GitHub Actions automates tasks for your program, such as compiling blog posts into HTML and uploading them to your domain. It runs in GitHub's environment, automatically building and testing code changes made to your repository. This includes installing necessary packages and executing tests. If there's an error during the process, it alerts you; if everything runs smoothly, it confirms success with a green checkbox. GitHub Actions streamlines the build and deployment process, making it efficient for both owners and contributors.
+GitHub Actions **automates** tasks for your program, such as compiling blog posts into HTML and uploading them to your domain. It runs in GitHub's environment, automatically building and testing code changes made to your repository.
 
-Here, we will learn how to use GitHub Actions to run our program locally. Here, I assume you have a basic understanding of GitHub and you use GitHub for your project development.
+This includes installing necessary packages and executing tests. If there's an error during the process, it alerts you; if everything runs smoothly, it confirms success with a green checkbox. GitHub Actions streamlines the build and deployment process, making it efficient for both owners and contributors.
+
+Here, we will learn how to use GitHub Actions to run our program locally. 
+
+### Prerequisite
+I assume you have a basic understanding of GitHub and you use GitHub for your project development.
 
 ## First step - create a `yml` file
-Create a file `your-folder/.github/workflows/python-run-pytest.yml`. See an example from one of my repos here (https://github.com/bobleesj/cif-cleaner/blob/main/.github/workflows/python-run-pytest.yml).
+Create a file called `python-run-pytest.yml` located at `your-folder/.github/workflows/python-run-pytest.yml`.
 
-Copy and paste the following to `python-run-pytest.yml`
+![Image 6 - GitHub Actions YAML file](/files/blog/2024-03-04-github-actions/img/6.png)
+
+See an example from a repository [here](https://github.com/bobleesj/cif-cleaner/blob/main/.github/workflows/python-run-pytest.yml). Copy and paste the following to `python-run-pytest.yml`
 
 ```yaml
 name: Python Package using Pip and Venv
@@ -53,10 +60,10 @@ jobs:
         python -m pytest
 ```
 
-![Image 6 - GitHub Actions YAML file](/files/blog/2024-03-04-github-actions/img/6.png)
 
-## Understanding keywords
-It is important to be able to adjust your GitHub Actions based on each project. We shall understand the flow here. Let's go through block by block.
+
+## Understand keywords
+We shall be able to adjust GitHub Actions for each project. Let's go through block by block.
 
 ### 1. Step Trigger
 ```yaml
@@ -87,6 +94,7 @@ steps:
       with:
         python-version: '3.12'
 ```
+
 - `uses: actions/checkout@v3` checks out the repository so it can be accessed by the workflow.
 - `uses: actions/setup-python@v3` with `python-version: '3.12'` sets up Python 3.12.
 
@@ -100,8 +108,9 @@ steps:
         source venv/bin/activate
         pip install -r requirements.txt
 ```
-   - Creates a Python virtual environment (`python -m venv venv`) and activates it (`source venv/bin/activate`). 
-   - Installs dependencies with `pip install -r requirements.txt`.
+
+- Creates a Python virtual environment (`python -m venv venv`) and activates it (`source venv/bin/activate`). 
+- Installs dependencies with `pip install -r requirements.txt`.
 
 ### 5. Lint with flake8
 ```yaml
@@ -113,8 +122,8 @@ steps:
       flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 ```
 
-   - The `flake8` linting step is commented out, indicating a temporary disablement of linting to focus on testing or troubleshooting.
-   - Typically used for catching errors and enforcing coding standards, but skipped in this workflow.
+- Typically used for catching errors and enforcing coding standards, but skipped in this workflow.
+- The `flake8` linting step is commented out, indicating a temporary disablement of linting to focus on testing or troubleshooting.
 
 ### 6 Test with pytest
 ```yaml
@@ -124,12 +133,13 @@ steps:
         pip install pytest
         python -m pytest
 ```
-   - Activates the virtual environment and installs `pytest` (`pip install pytest`).
-   - Runs tests using `python -m pytest` to verify expected behavior.
+
+- Activates the virtual environment and installs `pytest` (`pip install pytest`).
+- Runs tests using `python -m pytest` to verify expected behavior.
 
 
 ## View GitHub Actions
-After you've created the file and pushed your code on, click on `Actions` on your repository. For my example, https://github.com/bobleesj/cif-cleaner/actions. 
+After you've created the file and uploaded `python-run-pytest.yml` to your repository, click on `Actions` on your repository. For my example, visit [https://github.com/bobleesj/cif-cleaner/actions](https://github.com/bobleesj/cif-cleaner/actions). 
 
 ![Image 1 - Github Actions Page](/files/blog/2024-03-04-github-actions/img/1.png)
 
@@ -137,12 +147,11 @@ Click on one of the runs. Explore as you wish.
 
 ![Image 2 - GitHub Actions page 2](/files/blog/2024-03-04-github-actions/img/2.png)
 
-### Bonus - GitHub Actions on VS Code
+### Bonus - GitHub Actions via VS Code
 
 Go to `extensions` and download GitHub Actions
 
 ![Image 5 - VS Code Extensions](/files/blog/2024-03-04-github-actions/img/5.png)
-
 
 Press `cmd-shift-p` and click on GitHub Actions
 

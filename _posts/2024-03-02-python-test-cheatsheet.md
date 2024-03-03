@@ -231,10 +231,6 @@ def test_quick_function():
 def test_feature_x():
     # test logic here
 
-@pytest.mark.skip(reason="not implemented yet")
-def test_feature_x():
-    # test logic here
-
 @pytest.mark.parametrize("input,expected", [(1, 2), (3, 4)])
 def test_addition(input, expected):
     assert input + 1 == expected
