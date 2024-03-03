@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python Testing Guide and Cheatsheet (Ft. Pytest)
+title: Python unit test guide and cheatsheet (Ft. Pytest)
 categories: tutorial
 ---
 

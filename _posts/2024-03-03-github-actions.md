@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Leveraging GitHub Actions for effective testing in Python open-source projects
+title: How to use GitHub Actions for effective testing in Python open-source projects
 categories: tutorial
 ---
 

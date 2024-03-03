@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Intro to Python package manager for beginners (Ft. Conda with Cheatsheet)
+title: How to use Python package manager for beginners (Ft. Conda with Cheatsheet)
 categories: tutorial
 ---
 
