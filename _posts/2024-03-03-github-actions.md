@@ -1,6 +1,6 @@
 ---
 layout: post
-title: GitHub Actions guideline for Python open-source development
+title: Leveraging GitHub Actions for effective testing in Python open-source projects
 categories: tutorial
 ---
 
