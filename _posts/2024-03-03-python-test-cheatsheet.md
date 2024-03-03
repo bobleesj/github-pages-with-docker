@@ -99,5 +99,48 @@ def test_cif_folder_info():
     remove_file(csv_file_path)
 ```
 
+### Pytest Collectonly
+In pytest, collectonly is a command-line option that allows you to quickly gather information about the test cases in your project without actually running them.
 
+```bash
+pytest --collect-only
+pytest --collectonly tests/test_fixture.py
+```
 
+### Pytest Fixture
+A fixture in pytest is a function that sets up a test environment before the tests run and cleans it up afterwards. This is extremely handy for handling repetitive tasks like establishing database connections, creating test data, or preparing system state before executing tests.
+
+Our use of the `conftest.py` file is central to our fixture strategy. This special file is recognized by pytest and is used for sharing fixtures across multiple test files. By defining fixtures in conftest.py, we make them accessible to any test in the same directory or subdirectories without the need for imports.
+
+```python
+#conttest.py
+import pytest
+
+@pytest.fixture
+def resource_setup():
+    print("Setup resource")
+    resource = {"data": 123}  # Setup code
+    yield resource  # This value is passed to the test function
+    # Teardown code follows
+    print("Teardown resource")
+    del resource
+
+@pytest.fixture
+def initial_value():
+    return 5
+```
+
+```python
+# test_fixture.py
+import pytest
+
+def square(num):
+    return num * num
+
+def test_square(initial_value):
+    result = square(initial_value)
+    assert result == initial_value**2
+
+def test_using_fixture(resource_setup):
+    assert resource_setup["data"] == 123
+```
