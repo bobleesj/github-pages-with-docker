@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bob's Python Testing Cheatsheet (Ft. Pytest, Pandas)
+title: Bob's Python Testing Guide and Cheatsheet (Ft. Pytest)
 categories: tutorial
 ---
 
@@ -113,7 +113,7 @@ A fixture in pytest is a function that sets up a test environment before the tes
 Our use of the `conftest.py` file is central to our fixture strategy. This special file is recognized by pytest and is used for sharing fixtures across multiple test files. By defining fixtures in conftest.py, we make them accessible to any test in the same directory or subdirectories without the need for imports.
 
 ```python
-#conttest.py
+#conftest.py
 import pytest
 
 @pytest.fixture
@@ -144,3 +144,109 @@ def test_square(initial_value):
 def test_using_fixture(resource_setup):
     assert resource_setup["data"] == 123
 ```
+
+> No need for a `del` statement to release resources in pytest fixtures. Resource management is handled by the setup and teardown logic encapsulated within the fixture itself, using the pattern of initializing resources before yield and cleaning them up after `yield`.
+
+
+### Get test coverage
+```bash
+pip install pytest-cov
+pytest --cov
+
+# create an html file
+coverage html
+```
+
+### Path error
+
+```
+ERROR tests/test_format.py
+ERROR tests/test_info.py
+ERROR tests/test_occupancy.py
+ERROR tests/test_supercell_size.py
+ERROR tests/test_tags.py
+```
+
+If your project's directory isn't being recognized like above, you might need to add it to the PYTHONPATH environment variable. You can do this by running the following command in your terminal (adjust the path as necessary for your project):
+
+```
+export PYTHONPATH="${PYTHONPATH}:/Users/imac/Documents/GitHub/cif-cleaner-main"
+```
+
+## Concept of `yield`
+```python
+import pytest
+
+@pytest.fixture
+def setup_database():
+    # Setup code for database, e.g., creating a temp test database
+    print("Setting up database")
+
+    yield  # Here you can return a database connection if needed
+
+    # Teardown code for database, e.g., deleting the test database
+    print("Tearing down database")
+```
+
+## Cheatsheet for command line
+```bash
+# Run tests marked as 'slow'
+pytest -m slow
+
+# Disable output capturing, allowing print statements to show up in the console
+pytest -s
+
+# Increase verbosity for more detailed test output
+pytest -v
+
+# Reduce verbosity for a more concise test output
+pytest -q
+
+# Control traceback printing for test failures (options: long, short, line, native, no, auto)
+pytest --tb=style
+
+# Report the durations of the N slowest tests
+pytest --durations=N
+
+# Measure code coverage (requires pytest-cov plugin)
+pytest --cov
+
+# Ignore a specific file or directory during test discovery
+pytest --ignore=path
+
+# Stop the test session after N failures
+pytest --maxfail=num
+```
+
+```python
+@pytest.mark.slow
+def test_some_slow_process():
+    # slow test logic here
+
+@pytest.mark.fast
+def test_quick_function():
+    # fast test logic here
+
+@pytest.mark.skip(reason="not implemented yet")
+def test_feature_x():
+    # test logic here
+
+@pytest.mark.skip(reason="not implemented yet")
+def test_feature_x():
+    # test logic here
+
+@pytest.mark.parametrize("input,expected", [(1, 2), (3, 4)])
+def test_addition(input, expected):
+    assert input + 1 == expected
+
+@pytest.mark.usefixtures("setup_database")
+def test_database_query():
+    # use the fixtures 
+```
+
+## References
+I have collected the examples from many places.
+
+- https://www.youtube.com/watch?v=mTMu8AtdG-E
+- https://docs.pytest.org/
+- ChatGPT
