@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Bob's Python Testing Guide and Cheatsheet (Ft. Pytest)
+title: Python Testing Guide and Cheatsheet (Ft. Pytest)
 categories: tutorial
 ---
 
