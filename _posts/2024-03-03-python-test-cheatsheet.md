@@ -5,7 +5,7 @@ categories: tutorial
 ---
 
 ## Note
-I am currently using this post as a cheatshet for my development. In the future, I will turn this into a tutorial.
+I am currently using this post as a cheatsheet for my development. In the future, I will turn this into a tutorial. This current document is updated constantly and is not meant to be used as a tutorial but rather a "cheatsheet".
 
 ## Test types
 
