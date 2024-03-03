@@ -186,7 +186,7 @@ git clone https://github.com/bobleesj/cif-cleaner.git
 cd cif-cleaner
 
 # create an environment called "cif" with the specific Python
-conda create -n cif python=3.10
+conda create -n cif python=3.12
 
 # activate the environment
 conda activate cif
