@@ -4,9 +4,9 @@ title: Python Best Practices and Cheatsheet (Ft. Numpy, Sympy)
 categories: tutorial
 ---
 
-I have been producing code. Due to the nature of scientific code, often we are focused on getting the final result done within a limited time, I have been priotizing producing the outputs. Now that the code has been more matured in terms of featured to be built, I have decided to study and apply best practices in Python.
+Due to the nature of scientific coding, where we often focus on achieving the final result within a limited time frame, I have prioritized producing the outputs. Now that the code has matured in terms of features to be built, I have decided to study and apply best practices in Python. I will use this documentation as the main reference to refactor and improve my code.
 
-This blog post is constantly updated. Examples here are acquired from online sources and documentations provided in the references section.
+This blog post is constantly updated. Examples here are acquired from online sources and documentation, as noted in the references section."
 
 ## Section 1. Best practices
 
@@ -350,6 +350,7 @@ print(T_prime_elements) # Symbolic answers
 - Matplotlib
 - Generator for memory management
 - Scipy - Optimization
+- Logging
 
 ## Other tips
 
