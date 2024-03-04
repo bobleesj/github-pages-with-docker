@@ -5,6 +5,7 @@ categories: tutorial
 ---
 
 ## Why use GitHub Actions
+
 GitHub Actions **automates** tasks for your program, such as compiling blog posts into HTML and uploading them to your domain. It runs in GitHub's environment, automatically building and testing code changes made to your repository.
 
 This includes installing necessary packages and executing tests. If there's an error during the process, it alerts you; if everything runs smoothly, it confirms success with a green checkbox. GitHub Actions streamlines the build and deployment process, making it efficient for both owners and contributors.
@@ -12,9 +13,11 @@ This includes installing necessary packages and executing tests. If there's an e
 Here, we will learn how to use GitHub Actions to run our program locally. 
 
 ### Prerequisite
+
 I assume you have a basic understanding of GitHub and you use GitHub for your project development.
 
 ## First step - create a `yml` file
+
 Create a file called `python-run-pytest.yml` located at `your-folder/.github/workflows/python-run-pytest.yml`.
 
 ![Image 6 - GitHub Actions YAML file](/files/blog/2024-03-04-github-actions/img/6.png)
@@ -63,15 +66,19 @@ jobs:
 
 
 ## Understand keywords
+
 We shall be able to adjust GitHub Actions for each project. Let's go through block by block.
 
 ### 1. Step Trigger
+
 ```yaml
 on: [push]
 ```
+
 - The workflow runs every time code is pushed to the repository.
 
 ### 2. Setup OS and job execution strategy
+
 ```yaml
 jobs:
   build-linux:
@@ -98,9 +105,8 @@ steps:
 - `uses: actions/checkout@v3` checks out the repository so it can be accessed by the workflow.
 - `uses: actions/setup-python@v3` with `python-version: '3.12'` sets up Python 3.12.
 
-
 ### 4. Create virtual environment and install dependencies
-   
+
 ```yaml
  - name: Create virtual environment and install dependencies
       run: |
@@ -113,6 +119,7 @@ steps:
 - Installs dependencies with `pip install -r requirements.txt`.
 
 ### 5. Lint with flake8
+
 ```yaml
   - name: Lint with flake8
     run: |
@@ -126,6 +133,7 @@ steps:
 - The `flake8` linting step is commented out, indicating a temporary disablement of linting to focus on testing or troubleshooting.
 
 ### 6 Test with pytest
+
 ```yaml
     - name: Test with pytest
       run: |
@@ -137,8 +145,8 @@ steps:
 - Activates the virtual environment and installs `pytest` (`pip install pytest`).
 - Runs tests using `python -m pytest` to verify expected behavior.
 
-
 ## View GitHub Actions
+
 After you've created the file and uploaded `python-run-pytest.yml` to your repository, click on `Actions` on your repository. For my example, visit [https://github.com/bobleesj/cif-cleaner/actions](https://github.com/bobleesj/cif-cleaner/actions). 
 
 ![Image 1 - Github Actions Page](/files/blog/2024-03-04-github-actions/img/1.png)
@@ -161,8 +169,8 @@ No need to visit the repository as shown below just to check whether your code r
 
 ![Image 4 - GitHub Actions on panel](/files/blog/2024-03-04-github-actions/img/4.png)
 
-
 ## Source code
+
 [Markdown](https://github.com/bobleesj/bobleesj.github.io/blob/main/_posts/2024-03-03-github-actions.md)
 
 If you have any questions, feel free to shoot me an email at [sl5400@columbia.edu](mailto:sl5400@columbia.edu).
