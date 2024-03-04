@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python unit test guide and cheatsheet (Ft. Pytest)
+title: Python unit test guide and cheatsheet
 categories: tutorial
 ---
 
@@ -10,11 +10,13 @@ I am currently using this post as a cheatsheet for my development. In the future
 ## Test types
 
 ### Expect a value
+
 ```python
 assert full_occupancy_dir_cif_count == 2, "Not all expected files were copied."
 ```
 
 ### Expect no error 
+
 ```python
 for cif_file_path in cif_file_path_list:
     try:
@@ -24,6 +26,7 @@ for cif_file_path in cif_file_path_list:
 ```
 
 ### Expect error to occur
+
 ```python
 for cif_file_path in cif_file_path_list:
     with pytest.raises(Exception):
@@ -31,6 +34,7 @@ for cif_file_path in cif_file_path_list:
 ```
 
 ## Folder and file management
+
 ```python
 def get_file_count_from_directory(directory):
     return len(glob.glob(join(directory, "*.pdf")))
@@ -53,6 +57,7 @@ def move_files(to_directory, file_path_list):
     for file_path in file_path_list:
         move(file_path, to_directory)
 ```
+
 ```python
 def remove_file(file_path):
     if exists(file_path):
@@ -100,6 +105,7 @@ def test_cif_folder_info():
 ```
 
 ### Pytest Collectonly
+
 In pytest, collectonly is a command-line option that allows you to quickly gather information about the test cases in your project without actually running them.
 
 ```bash
@@ -108,6 +114,7 @@ pytest --collectonly tests/test_fixture.py
 ```
 
 ### Pytest Fixture
+
 A fixture in pytest is a function that sets up a test environment before the tests run and cleans it up afterwards. This is extremely handy for handling repetitive tasks like establishing database connections, creating test data, or preparing system state before executing tests.
 
 Our use of the `conftest.py` file is central to our fixture strategy. This special file is recognized by pytest and is used for sharing fixtures across multiple test files. By defining fixtures in conftest.py, we make them accessible to any test in the same directory or subdirectories without the need for imports.
@@ -159,7 +166,7 @@ coverage html
 
 ### Path error
 
-```
+```bash
 ERROR tests/test_format.py
 ERROR tests/test_info.py
 ERROR tests/test_occupancy.py
@@ -169,11 +176,12 @@ ERROR tests/test_tags.py
 
 If your project's directory isn't being recognized like above, you might need to add it to the PYTHONPATH environment variable. You can do this by running the following command in your terminal (adjust the path as necessary for your project):
 
-```
+```bash
 export PYTHONPATH="${PYTHONPATH}:/Users/imac/Documents/GitHub/cif-cleaner-main"
 ```
 
 ## Concept of `yield`
+
 ```python
 import pytest
 
@@ -189,6 +197,7 @@ def setup_database():
 ```
 
 ## Cheatsheet for command line
+
 ```bash
 # Run tests marked as 'slow'
 pytest -m slow
@@ -241,8 +250,9 @@ def test_database_query():
 ```
 
 ## References
+
 I have collected the examples from many places.
 
-- https://www.youtube.com/watch?v=mTMu8AtdG-E
-- https://docs.pytest.org/
+- [https://www.youtube.com/watch?v=mTMu8AtdG-E](https://www.youtube.com/watch?v=mTMu8AtdG-E)
+- [https://docs.pytest.org/](https://docs.pytest.org/)
 - ChatGPT

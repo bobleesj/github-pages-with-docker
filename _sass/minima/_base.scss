@@ -1,6 +1,7 @@
 /**
  * Reset some basic elements
  */
+
 body, h1, h2, h3, h4, h5, h6,
 p, blockquote, pre, hr,
 dl, dd, ol, ul, figure {
@@ -12,8 +13,42 @@ p {
   font-size: 18px;
 }
 
+
 p code {
   font-size: 15px;
+  background-color: #f5f5f5;; /* Light grey background */
+  padding: 2px 6px;            /* Add some padding */
+  border-radius: 5px;       /* Rounded corners */
+}
+
+blockquote p {
+  font-size: 16px;
+  font-family: monospace;
+}
+
+h3 code {
+  font-size: 22px;
+  background-color:  #f5f5f5;; /* Light grey background */
+  padding: 2px 6px;            /* Add some padding */
+  border-radius: 5px;       /* Rounded corners */
+}
+
+h4 code {
+  font-size: 18px;
+  background-color:  #f5f5f5;; /* Light grey background */
+  padding: 2px 6px;            /* Add some padding */
+  border-radius: 5px;       /* Rounded corners */
+}
+
+ol li  {
+  font-size: 17px;
+}
+
+ol li code {
+  font-size: 15px;
+  background-color:  #f5f5f5;; /* Light grey background */
+  padding: 2px 6px;            /* Add some padding */
+  border-radius: 5px;       /* Rounded corners */
 }
 
 pre code {

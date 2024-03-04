@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python Best Practices and Cheatsheet
+title: Python best practices and cheatsheet
 categories: tutorial
 ---
 
@@ -59,7 +59,7 @@ print(two_most_common)
 # [(12, 5), (15, 3)]
 ```
 
-### Sort dictionary with lambda function
+### Sort `dict` with `lambda` function
 
 ```python
 # Sort complex iterables with sorted()
@@ -75,7 +75,7 @@ print(sorted_data)
 # [{'name': 'Alice', 'age': 12}, {'name': 'Charlie', 'age': 17}, {'name': 'Bob', 'age': 56}]
 ```
 
-### Use enumerate instead of range for loop
+### Use `enumerate` instead of `range` for loop
 
 ```python
 # List data
@@ -90,7 +90,7 @@ for idx, num in enumerate(my_list):
     print(idx, num)
 ```
 
-### enumerate for dict
+### `enumerate` for `dict`
 
 ```python
 # Dictionary data
@@ -147,7 +147,7 @@ for pair in zipped:
     print(pair)  # (1, 4), (2, 5), and (3, 6)
 ```
 
-#### Example 2. enumerate
+#### Example 2. `enumerate`
 
 ```python
 a = [1, 2, 3]
