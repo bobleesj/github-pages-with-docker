@@ -1,12 +1,12 @@
 ---
 layout: post
-title: Python Best Practices and Cheatsheet (Ft. Numpy, Sympy)
+title: Python Best Practices and Cheatsheet
 categories: tutorial
 ---
 
 Due to the nature of scientific coding, where we often focus on achieving the final result within a limited time frame, I have prioritized producing the outputs. Now that the code has matured in terms of features to be built, I have decided to study and apply best practices in Python. I will use this documentation as the main reference to refactor and improve my code.
 
-This blog post is constantly updated. Examples here are acquired from online sources and documentation, as noted in the references section."
+This blog post is constantly updated. Examples here are acquired from online sources and documentation, as noted in the references section.
 
 ## Section 1. Best practices
 
@@ -35,7 +35,7 @@ print(merged_dict)
 # {'name': 'Bob', 'age': 56, 'city': 'New York', 'country': 'USA'}
 ```
 
-### Get most common elements and count from list
+### Get most common elements and count with `Counter`
 
 ```python
 from collections import Counter
@@ -131,6 +131,59 @@ print("Set Comprehension:", set_comp)
 # Set Comprehension: {0, 1, 2, 3, 4}
 ```
 
+### Zip
+
+The `zip()` function combines several iterables (like lists, tuples, etc.) element-wise, creating a new iterator of tuples.
+
+#### Example 1. iterate two arrays
+
+```python
+a = [1, 2, 3]
+b = [4, 5, 6]
+
+zipped = zip(a, b)  # Creates an iterator of tuples
+
+for pair in zipped:
+    print(pair)  # (1, 4), (2, 5), and (3, 6)
+```
+
+#### Example 2. enumerate
+
+```python
+a = [1, 2, 3]
+b = [4, 5, 6]
+
+for i, (av, bv) in enumerate(zip(a, b)):
+    # 'i' is the index, 'av' is the element from 'a', 'bv' is the element from 'b'
+    print(f"Index: {i}, a: {av}, b: {bv}")
+```
+
+### Use `perf_counter()` for time
+
+```python
+import time
+
+# :( Using time.time()
+start_time = time.time()
+time.sleep(1)  # Sleep for 1 second
+end_time = time.time()
+time_duration = end_time - start_time
+
+# :) Using time.perf_counter()
+start_perf = time.perf_counter()
+time.sleep(1)  # Sleep for 1 second
+end_perf = time.perf_counter()
+perf_duration = end_perf - start_perf
+
+print(time_duration)
+print(perf_duration)
+```
+
+`time.perf_counter()` provides the highest available resolution timer to measure a short duration. It includes time elapsed during sleep and is system-wide
+
+`time.time()` returns the current time in seconds since the Epoch (a fixed point in time used for time calculations, typically January 1, 1970, 00:00:00 (UTC)). It's suitable for getting the current timestamp.
+
+
 ## Section 2. NumPy
 
 ### Create array
@@ -139,6 +192,7 @@ print("Set Comprehension:", set_comp)
 # Create an empty 1D array
 arr_1d = np.arange(10)
 # [0, 1, ..., 8, 9]
+
 arr_1d = np.empty(5)
 # [0, 0, 0, 0, 0]
 
@@ -248,37 +302,6 @@ else:
     return
 ```
 
-### Choose folder containing specific file type
-
-```python
-# Allows the user to select a directory from the given path.
-# Here, I list folders containing .cif
-def choose_CIF_directory(directory):
-    directories = [d for d in os.listdir(directory) 
-                   if os.path.isdir(join(directory, d)) 
-                   and any(file.endswith('.cif') for file in os.listdir(join(directory, d)))]
-    
-    if not directories:
-        print("No directories found in the current path containing .cif files!")
-        return None
-
-    print("\nAvailable folders containing CIF files:")
-
-    for idx, dir_name in enumerate(directories, start=1):
-        num_of_cif_files = get_cif_file_count_from_directory(dir_name)
-        print(f"{idx}. {dir_name}, {num_of_cif_files} files")
-
-    while True:
-        try:
-            choice = int(input("\nEnter the number corresponding to the folder containing .cif files: "))
-            if 1 <= choice <= len(directories):
-                return join(directory, directories[choice-1])
-            else:
-                print(f"Please enter a number between 1 and {len(directories)}.")
-        except ValueError:
-            print("Invalid input. Please enter a number.")
-```
-
 ## Section 4. Pandas
 
 ### Read CSV
@@ -315,7 +338,7 @@ def save_to_csv_directory(folder_info, df, base_filename):
     print(csv_filename, "saved")
 ```
 
-## Section **5**. Math
+## Section 5. Math
 
 ### Sympy
 
@@ -345,7 +368,7 @@ print(T_prime_elements) # Symbolic answers
 # [[-a21*(a11*t12 + a12*t22)/(a11*a22 - a12*a21)...]]
 ```
 
-## Other topics not covered
+## Topics not covered
 
 - Matplotlib
 - Generator for memory management
@@ -356,6 +379,8 @@ print(T_prime_elements) # Symbolic answers
 
 - Do not import specific functions, but modules
 - Do not use getter/setter if it does not add any extra value
+- Do not code without a test in mind or implemented
+- Use NumPy for numerical operations, optimized using C code
 
 ## Source Code
 
