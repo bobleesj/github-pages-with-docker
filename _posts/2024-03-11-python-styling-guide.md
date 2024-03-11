@@ -1,14 +1,12 @@
 ---
 layout: post
 title: Python styling guide automation tool (Ft. Black)
-categories: cheatsheet
+categories: tutorial
 ---
 
 ### Motivation
 
 I began factoring my code and implement tests at a project level. I shall check my work agaisnt the convention followed by the Python community.
-
-> Examples below are derived from personal Python projects, Google's Python style guide and the official PEP 8 guide. Examples have been modified to enhance my understanding and learning.
 
 ### Automate formatting
 
@@ -57,7 +55,6 @@ To lint multiple files and folders,
 black -l 80 postprocess preprocess tests util main.py filter
 ```
 
-
 ### Line-width debate
 
 I have noticed that every linter often has a differnt line-width limitation. PEP 8 concludes:
@@ -67,9 +64,3 @@ I have noticed that every linter often has a differnt line-width limitation. PEP
 ### My decision on line-width
 
 I choose the below 80 character limit for two reasons. First, I do not use a dual monitor to minimize neck strain and mouse usage. Second, I carry a laptop as a student. I want to maximize productivity using the limited screen real estate. I must be able to view content with Temrinal and two panels open.
-
-### References
-
-- PEP 8 – Style Guide for Python Code (https://peps.python.org/pep-0008/)
-- https://google.github.io/styleguide/pyguide.html
-- https://docs.python-guide.org/
