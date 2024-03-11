@@ -6,7 +6,7 @@ categories: tutorial
 
 My materials science projects matured with features. Now, I acquire and apply best practices in Python.
 
-Often the best way to learn or improve one's skill requires a  map of **what not to do**. We shall know the consequences ill-practices may induce for ourselves and others.
+Often the best way to learn or improve one's skill acquring the ability to discern bad and good practices.
 
 I use this documentation as the main reference to refactor and improve *my code*.
 
