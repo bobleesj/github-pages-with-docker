@@ -1,9 +1,6 @@
-Within Text: If an equation is part of a sentence or ends a sentence, you should treat it as any other word in the sentence and use appropriate punctuation.
-
-## Math
-- Sentences shall not begin with a symbol
-- No use of "if and only if"
-- Avoid "Clearly" "Obviously" to start a sentence. Use "It follows directly from this definition that", etc.
+## Writing tips
+- Do not start a sentence with a symbol.
+- Avoid "Clearly" "Obviously" to start a sentence.
 
 Source:
 [Wikipedia:Manual of Style/Mathematics](https://en.wikipedia.org/wiki/Wikipedia:Manual_of_Style/Mathematics#Writing_style_in_mathematics)
