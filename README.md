@@ -2,6 +2,7 @@
 
 | Title                                                                                   | Date Published | URL                                                                                                 |
 | ----------------------------------------------------------------------------------------| -------------- | --------------------------------------------------------------------------------------------------- |
+| GitHub best practices and cheatsheet                                                    | Mar 12, 2024   | [Link](https://bobleesj.github.io/cheatsheet/2024/03/12/github-best-practices.html)                 |
 | How to test multiple Python versions with GitHub Actions                                | Mar 12, 2024   | [Link](https://bobleesj.github.io/tutorial/2024/03/12/python-test-multiple-versions.html)           |
 | Python styling guide automation tool (Ft. Black)                                        | Mar 11, 2024   | [Link](https://bobleesj.github.io/tutorial/2024/03/11/python-styling-guide.html)                    |
 | Python best practices and cheatsheet                                                    | Mar 4, 2024    | [Link](https://bobleesj.github.io/tutorial/2024/03/03/python-cheatsheet.html)                       |
