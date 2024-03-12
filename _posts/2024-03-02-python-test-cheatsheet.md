@@ -12,17 +12,17 @@ I am currently using this post as a cheatsheet for my development. In the future
 
 ### Write tests before (Test-driven development)
 
-Instead of listing pass and fail cases as comments, writing tests first organizes action steps and serves as both documentation and a checklist.
+Instead of listing pass and fail cases as comments, writing tests first organizes action steps and serves as both a documentation and a checklist.
 
 It follows 3 phases: A red phase, writing a failing test, a green phase, making the test pass, and a refactor phase.
 
 ### Avoid testing trivial code
 
-Over-testing can lead to a bloated test suite by testing trivial code (like getters/setters). Let's return to first principles: the goal of unit testing is to ensure robustness, not to achieve 100% coverage. However, writing tests before often prevent us writing bloated code despite the mental energy required to form a plan.
+Over-testing can lead to a bloated test suite by testing trivial code (like getters/setters). Let's return to first principles: the goal of unit testing is to ensure robustness, not to achieve 100% coverage. However, writing tests before often prevent us writing bloated code despite the mental energy required to make a plan.
 
 ### Integration testing is essential due to mocking
 
-While unit testing checks whether functions pass or fail based on criteria, integration testing—starting from scratch and checking the outputs by the end of the run—is crucial. Even if unit tests pass, possibly due to the use of mocking, the entire software system must remain integrated and functional.
+While unit testing checks whether functions pass or fail based on criteria, integration testing—starting from scratch and checking the outputs by the end of the run—is crucial. Even if unit tests pass, possibly due to the use of mocking (jargon for "simulating" heavy latency tasks such as database connection) , the entire software system must remain integrated and functional.
 
 ## Test types
 
