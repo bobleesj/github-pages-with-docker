@@ -418,7 +418,6 @@ print(perf_duration)
 
 `time.time()` returns the current time in seconds since the Epoch (a fixed point in time used for time calculations, typically January 1, 1970, 00:00:00 (UTC)). It's suitable for getting the current timestamp.
 
-
 #### Use comprehension
 
 - When creating a list, set, dictionary from existing iterables and applying conditions to filter or transform the elements.

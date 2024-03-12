@@ -249,6 +249,55 @@ def test_database_query():
     # use the fixtures 
 ```
 
+### GitHub Actions with Pytest and Codecov
+
+I use Python [Codecov](https://about.codecov.io/) to visualize the percentage of my lines of code covered with tests. The following is used for the GitHub Actions yaml file. If you are new to GitHub Actions, you may read my tutorial [here](https://bobleesj.github.io/tutorial/2024/03/03/github-actions.html). No tutorial has been covered on Codecov at the moment.
+
+```yaml
+name: Python Package using Pip and Venv
+
+on: [push]
+
+jobs:
+  build-linux:
+    runs-on: ubuntu-latest
+    strategy:
+      max-parallel: 5
+
+    steps:
+    - uses: actions/checkout@v3
+
+    - name: Set up Python 3.12
+      uses: actions/setup-python@v3
+      with:
+        python-version: '3.12'
+
+    - name: Create virtual environment and install dependencies
+      run: |
+        python -m venv venv
+        source venv/bin/activate
+        pip install -r requirements.txt
+
+    # - name: Lint with flake8
+    #   run: |
+    #     source venv/bin/activate
+    #     pip install flake8
+    #     flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+    #     flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+
+    - name: Test with pytest and generate coverage report
+      run: |
+        source venv/bin/activate
+        pip install pytest pytest-cov
+        python -m pytest --cov=./ --cov-report=xml
+  
+    - name: Upload coverage reports to Codecov
+      uses: codecov/codecov-action@v4.0.1
+      with:
+        token: ${{ secrets.CODECOV_TOKEN }}
+        slug: bobleesj/cif-cleaner
+```
+
 ## References
 
 I have collected the examples from many places.
@@ -256,3 +305,5 @@ I have collected the examples from many places.
 - [https://www.youtube.com/watch?v=mTMu8AtdG-E](https://www.youtube.com/watch?v=mTMu8AtdG-E)
 - [https://docs.pytest.org/](https://docs.pytest.org/)
 - ChatGPT
+
+
