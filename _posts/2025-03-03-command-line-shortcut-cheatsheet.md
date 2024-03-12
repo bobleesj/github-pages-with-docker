@@ -25,7 +25,7 @@ categories: tutorial
 ### Code edit
 
 - `ctrl-a or e` to go to the left/right end of the line
-- `ctrl-n or p` to move the cursor up/down by one line
+- `ctrl-n or p` to move cursor up/down by a line
 - `ctrl-k`  to delete on the right
 - `ctrl-j` to delete after the current line
 - `cmd-l` to highlight a line(s) - better than `shift-↓`
@@ -33,5 +33,3 @@ categories: tutorial
 
 Set 2- Search filename and modify
 Replace names of all variables and functions globally
-
-- `cmd-F12` to change

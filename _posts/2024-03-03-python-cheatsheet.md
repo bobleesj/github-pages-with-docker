@@ -4,6 +4,7 @@ title: Python best practices and cheatsheet
 categories: tutorial
 ---
 
+
 My materials science projects matured with features. Now, I acquire and apply best practices in Python.
 
 Often the best way to learn or improve one's skill acquring the ability to discern bad and good practices.
@@ -11,6 +12,68 @@ Often the best way to learn or improve one's skill acquring the ability to disce
 I use this documentation as the main reference to refactor and improve *my code*.
 
 This blog post remains updated. Examples were acquired from online sources and documentation, as noted in the references section.
+****
+- [Section 1. Best practices](#section-1-best-practices)
+  - [`isClose` instead of `round` for comparing values](#isclose-instead-of-round-for-comparing-values)
+  - [Check for simpler solutions](#check-for-simpler-solutions)
+    - [Adding two arrays](#adding-two-arrays)
+    - [Whether an element exists](#whether-an-element-exists)
+    - [Applying element-wise simple operations](#applying-element-wise-simple-operations)
+  - [`|` to merge two dictionaries](#-to-merge-two-dictionaries)
+  - [`Counter` to find frequency](#counter-to-find-frequency)
+  - [`lambda` function](#lambda-function)
+    - [Example 1. Sort `dict`](#example-1-sort-dict)
+    - [Example 2. Sort `list`](#example-2-sort-list)
+  - [`open` instead of `finally`](#open-instead-of-finally)
+  - [`enumerate` instead of `range` for loop](#enumerate-instead-of-range-for-loop)
+    - [Example 1. `list`](#example-1-list)
+    - [Example 2. `dict`](#example-2-dict)
+  - [Use `_` for large numbers](#use-_-for-large-numbers)
+  - [Return `None`](#return-none)
+  - [`main()`](#main)
+  - [Documentation](#documentation)
+  - [Use type hints](#use-type-hints)
+  - [Comprehensions](#comprehensions)
+    - [Example 1. Modify](#example-1-modify)
+    - [Example 2. Add condition](#example-2-add-condition)
+  - [Zip](#zip)
+    - [Example 1. iterate two arrays](#example-1-iterate-two-arrays)
+    - [Example 2. `enumerate`](#example-2-enumerate)
+  - [Use `perf_counter()` for time](#use-perf_counter-for-time)
+    - [Use comprehension](#use-comprehension)
+    - [Use Lambda](#use-lambda)
+- [Section 2. NumPy](#section-2-numpy)
+  - [Create array](#create-array)
+  - [Reshape array](#reshape-array)
+  - [Broadcast](#broadcast)
+    - [Example 1. Constant addition](#example-1-constant-addition)
+    - [Example 2. Addition between two arrays](#example-2-addition-between-two-arrays)
+    - [Example 3. Multiplication between two arrays](#example-3-multiplication-between-two-arrays)
+  - [Apply universal functions](#apply-universal-functions)
+- [Section 3. Prompt](#section-3-prompt)
+  - [Get user input with option selection](#get-user-input-with-option-selection)
+- [Section 4. Pandas](#section-4-pandas)
+  - [Read CSV](#read-csv)
+  - [Save CSV](#save-csv)
+- [Section 5. Math](#section-5-math)
+  - [Sympy](#sympy)
+- [Section 6. Object-oriented programming](#section-6-object-oriented-programming)
+  - [General cons of OOP](#general-cons-of-oop)
+  - [General pros of OOP](#general-pros-of-oop)
+  - [General OOP best practices](#general-oop-best-practices)
+  - [Python OOP examples from official documentation](#python-oop-examples-from-official-documentation)
+    - [Object initialization and class variable](#object-initialization-and-class-variable)
+    - [Class method](#class-method)
+    - [Method by another method](#method-by-another-method)
+    - [Inheritance](#inheritance)
+    - [Data class](#data-class)
+    - [Abstract class](#abstract-class)
+    - [Property decorator](#property-decorator)
+- [Topics not covered](#topics-not-covered)
+- [Other tips](#other-tips)
+- [Source code](#source-code)
+- [References](#references)
+
 
 ## Section 1. Best practices
 
@@ -618,6 +681,275 @@ print(T_prime_elements) # Symbolic answers
 # [[-a21*(a11*t12 + a12*t22)/(a11*a22 - a12*a21)...]]
 ```
 
+## Section 6. Object-oriented programming
+
+For the project of my scale, I did not feel the urgency to implement object-oriented programming. When I used Python for training neural networks and material science projects, calling functions directly with variables passed through parameters was sufficient for implementation and testing.
+
+In addition, from the "Stop Writing Classes" video on [YouTube](https://www.youtube.com/watch?v=o9pEzgHorH0), I agree with the following bullet points directly from the video:
+
+- Simple is better than complex.
+- Flat is better than nested.
+- Readability counts.
+- Ship features not code.
+- Customers love features, not code.
+
+Whether to use OOP depends on the above points. For my projects, I didn't need to. However, I may consider OOP later if I need to build projects that can be easily exported and imported. 
+
+### General cons of OOP
+
+- Hidden states within objects make it hard to reason about what is contained within an object from outside a function. By design, this is a feature known as encapsulation, a principle of OOP. It provides safety preventing external entities from directly changing the object's state.
+- OOP tends to give a feeling of being more organized, like an organization. It also means modules and tasks are more tightly coupled.
+- OOP tends to create boilerplate code such as getters and setters often employed in JAVA without adding significant value.
+
+### General pros of OOP
+
+- A well-designed object can be reused in other projects, like `ndarray` in NumPy.
+
+### General OOP best practices
+
+- Each class should have a single responsibility
+- Avoid deep inheritance
+
+### Python OOP examples from official documentation
+
+#### Object initialization and class variable
+
+```python
+# Example source - https://docs.python.org/3/tutorial/classes.html
+class Dog:
+
+    kind = 'canine'         # class variable shared by all instances
+
+    def __init__(self, name):
+        self.name = name    # instance variable unique to each instance
+
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+>>> d.kind                  # shared by all dogs
+'canine'
+>>> e.kind                  # shared by all dogs
+'canine'
+>>> d.name                  # unique to d
+'Fido'
+>>> e.name                  # unique to e
+'Buddy'
+```
+
+#### Class method
+
+```python
+# Example source - https://docs.python.org/3/tutorial/classes.html
+class Dog:
+
+    tricks = []             # mistaken use of a class variable
+
+    def __init__(self, name):
+        self.name = name
+
+    def add_trick(self, trick):
+        self.tricks.append(trick)
+
+>>> d = Dog('Fido')
+>>> e = Dog('Buddy')
+>>> d.add_trick('roll over')
+>>> e.add_trick('play dead')
+>>> d.tricks                # unexpectedly shared by all dogs
+['roll over', 'play dead']
+```
+
+#### Method by another method
+
+```python
+# Example source - https://docs.python.org/3/tutorial/classes.html
+class Bag:
+    def __init__(self):
+        self.data = []
+
+    def add(self, x):
+        self.data.append(x)
+
+    def addtwice(self, x):
+        self.add(x)
+        self.add(x)
+```
+
+#### Inheritance
+
+```python
+# Example source - https://realpython.com/python-classes/
+class Vehicle:
+    def __init__(self, make, model, year):
+        self.make = make
+        self.model = model
+        self.year = year
+        self._started = False
+
+    def start(self):
+        print("Starting engine...")
+        self._started = True
+
+    def stop(self):
+        print("Stopping engine...")
+        self._started = False
+```
+
+```python
+# Example source - https://realpython.com/python-classes/
+class Car(Vehicle):
+    def __init__(self, make, model, year, num_seats):
+        super().__init__(make, model, year)
+        self.num_seats = num_seats
+
+    def drive(self):
+        print(f'Driving my "{self.make} - {self.model}" on the road')
+
+    def __str__(self):
+        return f'"{self.make} - {self.model}" has {self.num_seats} seats'
+
+>>> tesla = Car("Tesla", "Model S", 2022, 5)
+>>> tesla.start() # Starting engine...
+>>> tesla.drive() # Driving my "Tesla - Model S" on the road
+>>> tesla.stop() # Stopping engine...
+>>> print(tesla) # "Tesla - Model S" has 5 seats
+
+
+class Motorcycle(Vehicle):
+    def __init__(self, make, model, year, num_wheels):
+        super().__init__(make, model, year)
+        self.num_wheels = num_wheels
+
+    def ride(self):
+        print(f'Riding my "{self.make} - {self.model}" on the road')
+
+    def __str__(self):
+        return f'"{self.make} - {self.model}" has {self.num_wheels} wheels'
+
+>>> harley = Motorcycle("Harley-Davidson", "Iron 883", 2021, 2)
+>>> harley.start() # Starting engine...
+>>> harley.ride() # Riding my "Harley-Davidson - Iron 883" on the road.
+>>> harley.stop() # Stopping engine...
+>>> print(harley) # "Harley-Davidson - Iron 883" has 2 wheels
+```
+
+#### Data class
+
+```python
+# Source- https://docs.python.org/3/tutorial/classes.html#
+from dataclasses import dataclass
+
+@dataclass
+class Employee:
+    name: str
+    dept: str
+    salary: int
+
+john = Employee('john', 'computer lab', 1000)
+>>> john.dept
+'computer lab'
+>>> john.salary
+1000
+```
+
+#### Abstract class
+
+```python
+# Example source - https://www.geeksforgeeks.org/abstract-classes-in-python/
+from abc import ABC, abstractmethod 
+  
+
+class Polygon(ABC): 
+  
+    @abstractmethod
+    def print_sides(self): 
+        pass
+  
+  
+class Triangle(Polygon): 
+  
+    # overriding abstract method 
+    def print_sides(self): 
+        print("I have 3 sides") 
+  
+  
+class Pentagon(Polygon): 
+  
+    # overriding abstract method 
+    def print_sides(self): 
+        print("I have 5 sides") 
+```
+
+#### Property decorator
+
+```python
+# Example source - https://www.programiz.com/python-programming/property
+class Celsius:
+    def __init__(self, temperature=0):
+        self.temperature = temperature
+
+    def to_fahrenheit(self):
+        return (self.temperature * 1.8) + 32
+
+    # getter
+    def get_temperature(self):
+        print("Getting value...")
+        return self._temperature
+
+    # setter
+    def set_temperature(self, value):
+        print("Setting value...")
+        if value < -273.15:
+            raise ValueError("Temperature below -273.15 is not possible")
+        self._temperature = value
+
+    # creating a property object
+    temperature = property(get_temperature, set_temperature)
+```
+
+The above code can be improved using `@property`
+
+```python
+# Example source - https://www.programiz.com/python-programming/property
+# Using @property decorator
+class Celsius:
+    def __init__(self, temperature=0):
+        self.temperature = temperature
+
+    def to_fahrenheit(self):
+        return (self.temperature * 1.8) + 32
+
+    @property
+    def temperature(self):
+        print("Getting value...")
+        return self._temperature
+
+    @temperature.setter
+    def temperature(self, value):
+        print("Setting value...")
+        if value < -273.15:
+            raise ValueError("Temperature below -273 is not possible")
+        self._temperature = value
+```
+
+Output
+
+```bash
+>>> human = Celsius(37)
+>>>  print(human.temperature)
+>>>  print(human.to_fahrenheit())
+>>>  human.temperature = -300
+Output: 
+Setting value...
+Getting value...
+37
+Getting value...
+98.60000000000001
+Setting value...
+Traceback (most recent call last):
+  File "<string>", line 31, in <module>
+  File "<string>", line 18, in set_temperature
+ValueError: Temperature below -273 is not possible
+```
+
 ## Topics not covered
 
 - Matplotlib
@@ -632,7 +964,7 @@ print(T_prime_elements) # Symbolic answers
 - Do not code without a test in mind or being implemented
 - Use NumPy for numerical operations, optimized C code
 
-## Source Code
+## Source code
 
 [Google Codelab](https://colab.research.google.com/drive/1vgFlN-33wQKpQFoG1aaiRklZnNidlZtK?usp=sharing)
 
@@ -640,3 +972,6 @@ print(T_prime_elements) # Symbolic answers
 
 - https://www.youtube.com/watch?v=qUeud6DvOWI
 - https://google.github.io/styleguide/pyguide.html
+- https://www.programiz.com/python-programming/property
+- https://www.geeksforgeeks.org/python-property-decorator-property/
+- https://www.geeksforgeeks.org/abstract-classes-in-python/
