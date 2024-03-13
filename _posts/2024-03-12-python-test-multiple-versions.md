@@ -12,8 +12,6 @@ If you are new to Python package management, I have a tutorial for you. [How to 
 
 Python packages can be installed using `pip3` if a `requirements.txt` file exists in the project directory.
 
-In one of my projects, which focuses on pre-processing crystal files ([see here](https://github.com/bobleesj/cif-cleaner)), the `freeze` command listed 76 packages.
-
 ```bash
 pip3 install -r requirements.txt
 ```
@@ -26,7 +24,7 @@ I discovered 3 ways to generate `requirements.txt`.
 pip3 freeze > requirements.txt
 ```
 
-`freeze` lists all libraries installed regardless usage in the project.
+`freeze` lists all libraries installed regardless usage in the project. In one of my projects, which focuses on pre-processing crystal files ([see here](https://github.com/bobleesj/cif-cleaner)), the `freeze` command listed 76 packages.
 
 ### Method 2. `pipreqs`
 

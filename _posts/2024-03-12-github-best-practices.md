@@ -8,7 +8,7 @@ I will update the document as I learn more about GitHub and best practices.
 
 - [Project checklist](#project-checklist)
 - [Pull request tips](#pull-request-tips)
-  - [Template for Pull request](#template-for-pull-request)
+  - [Template for pull request](#template-for-pull-request)
 - [GitHub commands](#github-commands)
 - [References](#references)
 
@@ -44,12 +44,12 @@ The checklist below can be used to improve usability, marketability, and open-so
 ## Pull request tips
 
 - Write small pull requests for faster and easier review
-- Use or provide a pull request template like above
-- For major changes, consult via `Issues` first
+- For major changes, consult with the maintainer via `Issues` first
+- Use or provide a pull request template like below
   
-### Template for Pull request
+### Template for pull request
 
-GitHub may display `pull_request_template.md` content when you request a pull request like here. 
+GitHub may display `pull_request_template.md` content when you request a pull request like here.
 
 ![Pull request template](/files/blog/2024-03-12-github-best-practices/img/1.png)
 

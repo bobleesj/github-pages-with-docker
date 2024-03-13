@@ -12,6 +12,7 @@ Often the best way to learn or improve one's skill acquring the ability to disce
 I use this documentation as the main reference to refactor and improve *my code*.
 
 This blog post remains updated. Examples were acquired from online sources and documentation, as noted in the references section.
+
 ****
 - [Section 1. Best practices](#section-1-best-practices)
   - [`isClose` instead of `round` for comparing values](#isclose-instead-of-round-for-comparing-values)
@@ -959,7 +960,7 @@ ValueError: Temperature below -273 is not possible
 
 ## Other tips
 
-- Do not import your functions, but modules
+- Do not import functions, but modules
 - Do not use getter/setter if it does not add any extra value
 - Do not code without a test in mind or being implemented
 - Use NumPy for numerical operations, optimized C code

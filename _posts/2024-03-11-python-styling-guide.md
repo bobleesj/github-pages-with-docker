@@ -28,7 +28,7 @@ I use "Black" for two reasons. First, Black does not offer customization but the
 
 - YAPF scales quadratically ([Case 1](https://github.com/google/yapf/issues/39), [Case 2](https://github.com/google/yapf/issues/264))
 - Black produces deterministic codes amongst collaborators by design. We do not argue on single quote vs. double quote, etc. No "point" of argument. ([Case 1](https://www.reddit.com/r/Python/comments/sidqze/black_vs_yapf_vs/?rdt=61802))
-- Black is used by Facebook, Dropbox Lyft, Tesla. ([README.md](https://github.com/psf/black?tab=readme-ov-file))
+- Black is used by Facebook, Dropbox, Lyft, and Tesla. ([README.md](https://github.com/psf/black?tab=readme-ov-file))
 - Black is an official Python community project shown below.
 
 ![Black Python VS Code](/files/blog/2024-03-11-python-styling-guide/1.png)
@@ -63,4 +63,4 @@ I have noticed that every linter often has a differnt line-width limitation. PEP
 
 ### My decision on line-width
 
-I choose the below 80 character limit for two reasons. First, I do not use a dual monitor to minimize neck strain and mouse usage. Second, I carry a laptop as a student. I want to maximize productivity using the limited screen real estate. I must be able to view content with Temrinal and two panels open.
+I choose the below 80 character limit for two reasons. First, I do not use a dual monitor to minimize neck strain and mouse usage. Second, I carry a laptop as a student. I want to maximize productivity using the limited screen real estate. I must be able to view content with Terminal and two panels open.
