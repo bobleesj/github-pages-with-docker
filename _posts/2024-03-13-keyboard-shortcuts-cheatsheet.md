@@ -15,17 +15,17 @@ Hence, I rely on shortcuts to accomplish efficiency and reduce pain. I have list
 
 ## VS Code cusotmization
 
-One may add customized keyboard shortcuts via `cmd-K-S`.
+One may add customized keyboard shortcuts via `cmd-k-s`.
 
 ## Mastering at the moment
 
-- **Delete Word Right**: `ctrl-shift-D` (customized)
-- **Cursor Page Up/Down**: `ctr-cmd-N/P` (customized)
+- **Delete Word Right**: `ctrl-shift-d` (customized)
+- **Cursor Page Up/Down**: `ctr-cmd-n/p` (customized)
 - **Cursor Down Select:** `ctrl-shift-n/p` (customizepd)
 - **Delete Right**: `opt-K` (customized)
-- **Cursor Word End Right**: `opt-B` (customized)
-- **Cursor Word End Left**: `opt-H` (customized)
-- **Delete All Left:** `ctr-shift-H` (customized)
+- **Cursor Word End Right**: `opt-b` (customized)
+- **Cursor Word End Left**: `opt-h` (customized)
+- **Delete All Left:** `ctr-shift-h` (customized)
 - **Highlight Multiple Lines with Mouse**: `shift-opt-mouse-drag`
 - **Duplicate a Line**: `opt-shift-↑/↓`
 - **Highlight a Line**: `cmd-l`
