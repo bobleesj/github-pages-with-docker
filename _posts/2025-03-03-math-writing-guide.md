@@ -41,7 +41,24 @@ $$
 $$
 ```
 
+### Break a line with quad
+$$
+\begin{align}
+  ∆H_{mix}^{QCM} &\approx U_{sol} - U_{ini} \\
+  &=  X_A X_A \frac{N_{Avo}Z}{2} \epsilon_{AA} + X_B X_B \frac{N_{Avo}Z}{2} \epsilon_{BB} + X_A X_B N_{Avo}Z \epsilon_{AB} \\
+  &\quad - X_A\left[\frac{Z N_{Avo}}{2} \epsilon_{AA}\right] - X_B \left[\frac{Z N_{Avo}}{2} \epsilon_{BB}\right]
+\end{align}
+$$
 
+```md
+$$
+\begin{align}
+  ∆H_{mix}^{QCM} &\approx U_{sol} - U_{ini} \\
+  &=  X_A X_A \frac{N_{Avo}Z}{2} \epsilon_{AA} + X_B X_B \frac{N_{Avo}Z}{2} \epsilon_{BB} + X_A X_B N_{Avo}Z \epsilon_{AB} \\
+  &\quad - X_A\left[\frac{Z N_{Avo}}{2} \epsilon_{AA}\right] - X_B \left[\frac{Z N_{Avo}}{2} \epsilon_{BB}\right]
+\end{align}
+$$
+```
 
 ### Overline
 

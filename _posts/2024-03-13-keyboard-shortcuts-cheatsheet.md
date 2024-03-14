@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Visual Studio and Terminal keyboard shortcuts cheatsheet
-categories: tutorial
+categories: cheatsheet
 ---
 
 
@@ -13,19 +13,21 @@ I minimize mouse and trackpad usage. I maintain my two palms rested without exte
 
 Hence, I rely on shortcuts to accomplish efficiency and reduce pain. I have listed both default and customized shortcuts that I am trying to master and become embedded in my subconscious brain.
 
-## VS Code cusotmization
+## VS Code customization
 
-One may add customized keyboard shortcuts via `cmd-k-s`.
+One may add customized keyboard shortcuts via `cmd-K`.
 
 ## Mastering at the moment
 
-- **Delete Word Right**: `ctrl-shift-d` (customized)
-- **Cursor Page Up/Down**: `ctr-cmd-n/p` (customized)
+- **Move Line Up/Down:** `ctrl-opt-n/p` (customized)
+- **Delete Word Right**: `opt-d` (customized)
+- **Cursor Page Up/Down**: `ctrl-cmd-n/p` (customized)
 - **Cursor Down Select:** `ctrl-shift-n/p` (customizepd)
+- **Delete Word Right**: `ctrl-opt-h` (customized)
 - **Delete Right**: `opt-K` (customized)
 - **Cursor Word End Right**: `opt-b` (customized)
 - **Cursor Word End Left**: `opt-h` (customized)
-- **Delete All Left:** `ctr-shift-h` (customized)
+- **Delete All Left:** `ctrl-shift-h` (customized)
 - **Highlight Multiple Lines with Mouse**: `shift-opt-mouse-drag`
 - **Duplicate a Line**: `opt-shift-↑/↓`
 - **Highlight a Line**: `cmd-l`
