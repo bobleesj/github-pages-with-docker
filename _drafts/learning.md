@@ -3,8 +3,7 @@ layout: post
 title: Learning notes (Draft)
 categories: cheatsheet
 ---
-
-I document my learning for my future usage. Expressions may remain terse. Analogy is often employed to comphrehend the concept. The documentation is not meant to be used as a tutorial. The content is updated regularly as I am taking physics and materials science courses at Columbia University.
+ns may remain terse. Analogy is often employed to comphrehend the concept. The documentation is not meant to be used as a tutorial. The content is updated regularly as I am taking physics and materials science courses at Columbia University.
 
 ## To do
 
