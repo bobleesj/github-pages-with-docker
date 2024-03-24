@@ -1,0 +1,5 @@
+# Ignore artifacts:
+_posts/2024-03-22-mathematical-typesetting.md
+
+# Ignore all HTML files:
+# **/*.html
