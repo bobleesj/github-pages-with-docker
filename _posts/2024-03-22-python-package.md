@@ -1,10 +1,10 @@
 ---
 layout: post
-title: How to distribute Python package with pip (Ft. Twine)
+title: How to distribute Python package via pip (Ft. Twine)
 categories: tutorial
 ---
 
-## Package Distribution Guide
+## Motivation
 
 This guide provides steps for packaging your Python code and installing it via `pip`.
 
@@ -96,4 +96,6 @@ pip install bobtwine==0.1
 # Run main.py
 python main.py  # This prints 4
 ```
+
+## Source code
 

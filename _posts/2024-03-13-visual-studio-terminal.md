@@ -120,6 +120,13 @@ phonopy-bandplot -o "frequency-born.png" band.yaml
 
 ### Unix-like OS commands
 
+####
+
+```bash
+which twine
+```
+
+
 #### Get folders size
 
 ```bash
