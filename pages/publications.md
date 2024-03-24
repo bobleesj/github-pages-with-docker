@@ -3,14 +3,15 @@ layout: page
 title: Publications
 permalink: /publications/
 ---
+
 <style>
     a {
-        
+
         text-decoration: none; /* Removes underline */
     }
 
     a:hover {
-        
+
     }
 
     li {
@@ -67,8 +68,6 @@ const journalList = [
     // Add other entries in the same format if needed
 ];
 
-
-
 const preprintList = [
     {
         authors: "S. Lee, C. Chen, G. Garcia, A. O. Oliynyk",
@@ -120,7 +119,7 @@ const presentationList = [
 ];
 
 const presentationContributedList = [
-    
+
     {
         authors: "A. O. Oliynyk, S. Lee, N. K. Barua",
         title: "TiNiSi-type vs. ZrNiAl-type: One More Time with Interpretable ML and Experimental Validation",
@@ -157,7 +156,6 @@ const bookChapterList = [
     }
 ]
 
-
 function displayJournalList() {
     const container = document.getElementById('journalList');
     const ol = document.createElement('ol'); // Create an ordered list element
@@ -173,7 +171,7 @@ function displayJournalList() {
         li.innerHTML = `
             <strong>${entry.title}</strong> </br>
             ${formattedAuthors} </br>
-            ${entry.journal}, ${entry.volume}, ${entry.pages} (${entry.year})</br> 
+            ${entry.journal}, ${entry.volume}, ${entry.pages} (${entry.year})</br>
             <a href="https://doi.org/${entry.doi}">DOI</a> | <a href="${entry.gscholar}">Google Scholar</a> ${citationString}
         `;
         ol.appendChild(li); // Append the list item to the ordered list
@@ -200,7 +198,6 @@ function displayPreprintList() {
     });
 }
 
-
 function displayPresentationList() {
     const container = document.getElementById('presentationList');
     const ol = document.createElement('ol'); // Create an ordered list element
@@ -216,7 +213,7 @@ function displayPresentationList() {
             }
             return author;
         }).join(', ');
-        // authorsFormatted = `<u>${authorsFormatted.split(', ')[0]}</u>${authorsFormatted.substring(authorsFormatted.indexOf(','))}`; // Underline the first author
+        // authorsFormatted = `<u>${authorsFormatted.split[', '](0)}</u>${authorsFormatted.substring(authorsFormatted.indexOf(','))}`; // Underline the first author
 
         let links = '';
         if (entry.document) {
@@ -260,7 +257,7 @@ function displayContributedPresentationList() {
             }
             return author;
         }).join(', ');
-        // authorsFormatted = `<u>${authorsFormatted.split(', ')[0]}</u>${authorsFormatted.substring(authorsFormatted.indexOf(','))}`; // Underline the first author
+        // authorsFormatted = `<u>${authorsFormatted.split[', '](0)}</u>${authorsFormatted.substring(authorsFormatted.indexOf(','))}`; // Underline the first author
 
         let links = '';
         if (entry.document) {
@@ -289,10 +286,6 @@ function displayContributedPresentationList() {
     });
 }
 
-
-
-
-
 function displayBookChapterList() {
     const container = document.getElementById('bookChapter');
     const ol = document.createElement('ol'); // Create an ordered list element
@@ -316,7 +309,6 @@ function displayBookChapterList() {
     });
 }
 
-
 window.onload = function() {
     displayJournalList();
     displayPresentationList();
@@ -324,21 +316,25 @@ window.onload = function() {
     displayBookChapterList();
     displayContributedPresentationList();
 
-    
 };
 </script>
 
 ### Journals
+
 <div id="journalList"></div>
 
 ### Book chapter
+
 <div id="bookChapter"></div>
 
 ### Preprint
+
 <div id="preprintList"></div>
 
 ### Presentations
+
 <div id="presentationList"></div>
 
 ### Contributed presentations
+
 <div id="presentationContributedList"></div>

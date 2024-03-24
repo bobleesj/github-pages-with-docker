@@ -4,16 +4,20 @@ title: Python best practices and cheatsheet
 categories: tutorial
 ---
 
+My materials science projects matured with features. Now, I acquire and apply
+best practices in Python.
 
-My materials science projects matured with features. Now, I acquire and apply best practices in Python.
+Often the best way to learn or improve one's skill acquring the ability to
+discern bad and good practices.
 
-Often the best way to learn or improve one's skill acquring the ability to discern bad and good practices.
+I use this documentation as the main reference to refactor and improve _my
+code_.
 
-I use this documentation as the main reference to refactor and improve *my code*.
+This blog post remains updated. Examples were acquired from online sources and
+documentation, as noted in the references section.
 
-This blog post remains updated. Examples were acquired from online sources and documentation, as noted in the references section.
+---
 
-****
 - [Section 1. Best practices](#section-1-best-practices)
   - [`isClose` instead of `round` for comparing values](#isclose-instead-of-round-for-comparing-values)
   - [Check for simpler solutions](#check-for-simpler-solutions)
@@ -75,7 +79,6 @@ This blog post remains updated. Examples were acquired from online sources and d
 - [Source code](#source-code)
 - [References](#references)
 
-
 ## Section 1. Best practices
 
 ### `isClose` instead of `round` for comparing values
@@ -94,7 +97,8 @@ print(np.isclose(URhIn_shortest_dist, 2.69678, atol=1e-4))
 
 ### Check for simpler solutions
 
-It is our job to validate whether the implementation is optimized for human communication and performance.
+It is our job to validate whether the implementation is optimized for human
+communication and performance.
 
 #### Adding two arrays
 
@@ -178,7 +182,10 @@ print(merged_dict)
 
 ### `Counter` to find frequency
 
-In scientific computing, we like to count and draw histograms. For one of my projects, I determine a set of atoms from the supercell to determine the coordination number. The reference is chosen with the atoms with the greatest number of atoms surrounding it. Here, `Counter` is our friend.
+In scientific computing, we like to count and draw histograms. For one of my
+projects, I determine a set of atoms from the supercell to determine the
+coordination number. The reference is chosen with the atoms with the greatest
+number of atoms surrounding it. Here, `Counter` is our friend.
 
 ```python
 from collections import Counter
@@ -206,7 +213,8 @@ print(two_most_common)
 
 ### `lambda` function
 
-Lambda functions or called "closure" in Swift, a function. It must be defined after `lamdba`. 
+Lambda functions or called "closure" in Swift, a function. It must be defined
+after `lamdba`.
 
 ```python
 # Return "even" or "odd" based on the value
@@ -215,9 +223,10 @@ print(classify_number(2))
 print(classify_number(3))
 ```
 
-#### Example 1. Sort `dict` 
+#### Example 1. Sort `dict`
 
-The way to sort or modifying values across a collection of items in Pything is using `lambda` function.
+The way to sort or modifying values across a collection of items in Pything is
+using `lambda` function.
 
 ```python
 # Sort complex iterables with sorted()
@@ -294,19 +303,20 @@ with open('my_file.txt', 'r') as file:
     # process data
 ```
 
-We simply do not forget to close the file. It is handled automatically with `open`.
+We simply do not forget to close the file. It is handled automatically with
+`open`.
 
 ### `enumerate` instead of `range` for loop
 
 #### Example 1. `list`
 
-We want both the index and the value without the need to use  `[i]`.
+We want both the index and the value without the need to use `[i]`.
 
 ```python
 # List data
 my_list = [1, 2, 3]
 
-# :( 
+# :(
 for i in range(len(my_list)):
     print(i, my_list[i])
 
@@ -356,7 +366,8 @@ def function_that_does_not_return_value():
 
 ### `main()`
 
-Certain code is only executed when the script is run directly, and not when it's imported as a module.
+Certain code is only executed when the script is run directly, and not when it's
+imported as a module.
 
 ```python
 def main():
@@ -384,9 +395,14 @@ def calculate_means(numbers1, numbers2):
 
 ### Use type hints
 
-Python infers types automaticlaly. But it is difficult for us to infer them based on variable names. I am hoping to implement this in my next Python project. Cons are increased maintenance if type hints need to be updated.
+Python infers types automaticlaly. But it is difficult for us to infer them
+based on variable names. I am hoping to implement this in my next Python
+project. Cons are increased maintenance if type hints need to be updated.
 
-Regardless, with my first in-depth programming background in Swift where the type must be defined before complication, I generally like the ability to know types ahead. This is particulalry important for projects with many clases which are found in mobile development SDKs.
+Regardless, with my first in-depth programming background in Swift where the
+type must be defined before complication, I generally like the ability to know
+types ahead. This is particulalry important for projects with many clases which
+are found in mobile development SDKs.
 
 ```python
 from typing import List, Dict
@@ -400,7 +416,8 @@ def merge_dicts(dict1: Dict[str, int], dict2: Dict[str, int]) -> Dict[str, int]:
 
 ### Comprehensions
 
-A comprehension in Python is a concise syntax for constructing a new sequence based on the values from an existing sequence or iterable.
+A comprehension in Python is a concise syntax for constructing a new sequence
+based on the values from an existing sequence or iterable.
 
 #### Example 1. Modify
 
@@ -432,7 +449,8 @@ print(list_comp)
 
 ### Zip
 
-The `zip()` function combines several iterables (like lists, tuples, etc.) element-wise, creating a new iterator of tuples.
+The `zip()` function combines several iterables (like lists, tuples, etc.)
+element-wise, creating a new iterator of tuples.
 
 #### Example 1. iterate two arrays
 
@@ -478,17 +496,22 @@ print(time_duration)
 print(perf_duration)
 ```
 
-`time.perf_counter()` provides the highest available resolution timer to measure a short duration. It includes time elapsed during sleep and is system-wide
+`time.perf_counter()` provides the highest available resolution timer to measure
+a short duration. It includes time elapsed during sleep and is system-wide
 
-`time.time()` returns the current time in seconds since the Epoch (a fixed point in time used for time calculations, typically January 1, 1970, 00:00:00 (UTC)). It's suitable for getting the current timestamp.
+`time.time()` returns the current time in seconds since the Epoch (a fixed point
+in time used for time calculations, typically January 1, 1970, 00:00:00 (UTC)).
+It's suitable for getting the current timestamp.
 
 #### Use comprehension
 
-- When creating a list, set, dictionary from existing iterables and applying conditions to filter or transform the elements.
+- When creating a list, set, dictionary from existing iterables and applying
+  conditions to filter or transform the elements.
 
 #### Use Lambda
 
-- When a function is needed for an argumnet such as `filtere()`, `sorted()`, `map()`.
+- When a function is needed for an argumnet such as `filtere()`, `sorted()`,
+  `map()`.
 
 ```python
 even_numbers = list(filter(lambda x: x % 2 == 0, range(10)))
@@ -635,7 +658,7 @@ def save_to_csv_directory(folder_info, df, base_filename):
     """
     Saves the dataframe as a CSV inside a 'csv' sub-directory of the provided folder.
     """
-        
+
     csv_directory = join(folder_info, "csv")
     if not os.path.exists(csv_directory):
         os.mkdir(csv_directory)
@@ -684,9 +707,14 @@ print(T_prime_elements) # Symbolic answers
 
 ## Section 6. Object-oriented programming
 
-For the project of my scale, I did not feel the urgency to implement object-oriented programming. When I used Python for training neural networks and material science projects, calling functions directly with variables passed through parameters was sufficient for implementation and testing.
+For the project of my scale, I did not feel the urgency to implement
+object-oriented programming. When I used Python for training neural networks and
+material science projects, calling functions directly with variables passed
+through parameters was sufficient for implementation and testing.
 
-In addition, from the "Stop Writing Classes" video on [YouTube](https://www.youtube.com/watch?v=o9pEzgHorH0), I agree with the following bullet points directly from the video:
+In addition, from the "Stop Writing Classes" video on
+[YouTube](https://www.youtube.com/watch?v=o9pEzgHorH0), I agree with the
+following bullet points directly from the video:
 
 - Simple is better than complex.
 - Flat is better than nested.
@@ -694,17 +722,25 @@ In addition, from the "Stop Writing Classes" video on [YouTube](https://www.yout
 - Ship features not code.
 - Customers love features, not code.
 
-Whether to use OOP depends on the above points. For my projects, I didn't need to. However, I may consider OOP later if I need to build projects that can be easily exported and imported. 
+Whether to use OOP depends on the above points. For my projects, I didn't need
+to. However, I may consider OOP later if I need to build projects that can be
+easily exported and imported.
 
 ### General cons of OOP
 
-- Hidden states within objects make it hard to reason about what is contained within an object from outside a function. By design, this is a feature known as encapsulation, a principle of OOP. It provides safety preventing external entities from directly changing the object's state.
-- OOP tends to give a feeling of being more organized, like an organization. It also means modules and tasks are more tightly coupled.
-- OOP tends to create boilerplate code such as getters and setters often employed in JAVA without adding significant value.
+- Hidden states within objects make it hard to reason about what is contained
+  within an object from outside a function. By design, this is a feature known
+  as encapsulation, a principle of OOP. It provides safety preventing external
+  entities from directly changing the object's state.
+- OOP tends to give a feeling of being more organized, like an organization. It
+  also means modules and tasks are more tightly coupled.
+- OOP tends to create boilerplate code such as getters and setters often
+  employed in JAVA without adding significant value.
 
 ### General pros of OOP
 
-- A well-designed object can be reused in other projects, like `ndarray` in NumPy.
+- A well-designed object can be reused in other projects, like `ndarray` in
+  NumPy.
 
 ### General OOP best practices
 
@@ -855,28 +891,28 @@ john = Employee('john', 'computer lab', 1000)
 
 ```python
 # Example source - https://www.geeksforgeeks.org/abstract-classes-in-python/
-from abc import ABC, abstractmethod 
-  
+from abc import ABC, abstractmethod
 
-class Polygon(ABC): 
-  
+
+class Polygon(ABC):
+
     @abstractmethod
-    def print_sides(self): 
+    def print_sides(self):
         pass
-  
-  
-class Triangle(Polygon): 
-  
-    # overriding abstract method 
-    def print_sides(self): 
-        print("I have 3 sides") 
-  
-  
-class Pentagon(Polygon): 
-  
-    # overriding abstract method 
-    def print_sides(self): 
-        print("I have 5 sides") 
+
+
+class Triangle(Polygon):
+
+    # overriding abstract method
+    def print_sides(self):
+        print("I have 3 sides")
+
+
+class Pentagon(Polygon):
+
+    # overriding abstract method
+    def print_sides(self):
+        print("I have 5 sides")
 ```
 
 #### Property decorator
@@ -938,7 +974,7 @@ Output
 >>>  print(human.temperature)
 >>>  print(human.to_fahrenheit())
 >>>  human.temperature = -300
-Output: 
+Output:
 Setting value...
 Getting value...
 37
@@ -971,8 +1007,8 @@ ValueError: Temperature below -273 is not possible
 
 ## References
 
-- https://www.youtube.com/watch?v=qUeud6DvOWI
-- https://google.github.io/styleguide/pyguide.html
-- https://www.programiz.com/python-programming/property
-- https://www.geeksforgeeks.org/python-property-decorator-property/
-- https://www.geeksforgeeks.org/abstract-classes-in-python/
+- <https://www.youtube.com/watch?v=qUeud6DvOWI>
+- <https://google.github.io/styleguide/pyguide.html>
+- <https://www.programiz.com/python-programming/property>
+- <https://www.geeksforgeeks.org/python-property-decorator-property/>
+- <https://www.geeksforgeeks.org/abstract-classes-in-python/>

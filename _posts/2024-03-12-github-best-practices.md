@@ -14,42 +14,50 @@ I will update the document as I learn more about GitHub and best practices.
 
 ## Project checklist
 
-The checklist below can be used to improve usability, marketability, and open-source development experience.
+The checklist below can be used to improve usability, marketability, and
+open-source development experience.
 
 - **Naming the project**
   - Have you chosen an easy-to-remember name for the project?
 - **Addressing the problem**
-  - Does the documentation clearly state the problem that the project addresses at the beginning?
+  - Does the documentation clearly state the problem that the project addresses
+    at the beginning?
 - **Project description**
   - Have you included a compelling one-liner for the project?
 - **Installation instructions**
   - Is there a one-line installation solution provided in the documentation?
 - **Visual guidance**
-  - Have you used GIFs or screenshots to visually demonstrate how to use the project or what the outputs look like?
+  - Have you used GIFs or screenshots to visually demonstrate how to use the
+    project or what the outputs look like?
 - **Roadmap**
-  - Is there a roadmap included in the documentation to outline future plans and features?
+  - Is there a roadmap included in the documentation to outline future plans and
+    features?
 - **Authors and acknowledgements**
-  - Have you listed the authors and provided acknowledgements to contributors or third-party resources?
+  - Have you listed the authors and provided acknowledgements to contributors or
+    third-party resources?
 - **License information**
   - Is the license clearly stated and included in the project documentation?
 - **Project status**
-  - Have you indicated the current status of the project (e.g., active development, maintenance mode)?
+  - Have you indicated the current status of the project (e.g., active
+    development, maintenance mode)?
 - **Contribution guidelines**
   - Are there clear guidelines on how to contribute to the project?
 - **Seeking help**
   - Have you provided instructions on how to ask for help or report issues?
 - **Version control** (Optional)
-  - Have you made a simple log or version control system visible or mentioned in the documentation?
+  - Have you made a simple log or version control system visible or mentioned in
+    the documentation?
 
 ## Pull request tips
 
 - Write small pull requests for faster and easier review
 - For major changes, consult with the maintainer via `Issues` first
 - Use or provide a pull request template like below
-  
+
 ### Template for pull request
 
-GitHub may display `pull_request_template.md` content when you request a pull request like here.
+GitHub may display `pull_request_template.md` content when you request a pull
+request like here.
 
 ![Pull request template](/files/blog/2024-03-12-github-best-practices/img/1.png)
 
@@ -83,10 +91,10 @@ GitHub may display `pull_request_template.md` content when you request a pull re
 
 ```bash
 # move to another existing branch
-git switch develop 
+git switch develop
 
 # create a new branch and move
-git switch -c new-feature 
+git switch -c new-feature
 
 # merge a branch into the current branch
 git merge branch-name
@@ -106,5 +114,5 @@ git checkout <hash> -- <name-of-file-to-revert-back>
 
 ## References
 
-- Git Reset and Revert Commands by Steve Griffith [YouTube](https://www.youtube.com/watch?v=ipav1TCV8BI)
-
+- Git Reset and Revert Commands by Steve Griffith
+  [YouTube](https://www.youtube.com/watch?v=ipav1TCV8BI)

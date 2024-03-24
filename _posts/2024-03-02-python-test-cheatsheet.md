@@ -6,23 +6,35 @@ categories: cheatsheet
 
 ## Note
 
-I am currently using this post as a cheatsheet for my development. In the future, I will turn this into a tutorial. This current document is updated constantly and is not meant to be used as a tutorial but rather a "cheatsheet".
+I am currently using this post as a cheatsheet for my development. In the
+future, I will turn this into a tutorial. This current document is updated
+constantly and is not meant to be used as a tutorial but rather a "cheatsheet".
 
 ## General practices
 
 ### Write tests before (Test-driven development)
 
-Instead of listing pass and fail cases as comments, writing tests first organizes action steps and serves as both a documentation and a checklist.
+Instead of listing pass and fail cases as comments, writing tests first
+organizes action steps and serves as both a documentation and a checklist.
 
-It follows 3 phases: A red phase, writing a failing test, a green phase, making the test pass, and a refactor phase.
+It follows 3 phases: A red phase, writing a failing test, a green phase, making
+the test pass, and a refactor phase.
 
 ### Avoid testing trivial code
 
-Over-testing can lead to a bloated test suite by testing trivial code (like getters/setters). Let's return to first principles: the goal of unit testing is to ensure robustness, not to achieve 100% coverage. However, writing tests before often prevent us writing bloated code despite the mental energy required to make a plan.
+Over-testing can lead to a bloated test suite by testing trivial code (like
+getters/setters). Let's return to first principles: the goal of unit testing is
+to ensure robustness, not to achieve 100% coverage. However, writing tests
+before often prevent us writing bloated code despite the mental energy required
+to make a plan.
 
 ### Integration testing is essential due to mocking
 
-While unit testing checks whether functions pass or fail based on criteria, integration testing—starting from scratch and checking the outputs by the end of the run—is crucial. Even if unit tests pass, possibly due to the use of mocking (jargon for "simulating" heavy latency tasks such as database connection) , the entire software system must remain integrated and functional.
+While unit testing checks whether functions pass or fail based on criteria,
+integration testing—starting from scratch and checking the outputs by the end of
+the run—is crucial. Even if unit tests pass, possibly due to the use of mocking
+(jargon for "simulating" heavy latency tasks such as database connection) , the
+entire software system must remain integrated and functional.
 
 ## Test types
 
@@ -32,7 +44,7 @@ While unit testing checks whether functions pass or fail based on criteria, inte
 assert full_occupancy_dir_cif_count == 2, "Not all expected files were copied."
 ```
 
-### Expect no error 
+### Expect no error
 
 ```python
 for cif_file_path in cif_file_path_list:
@@ -96,7 +108,7 @@ from util.folder import (
 def test_cif_folder_info():
     base_dir = "test/info_cif_files"
     csv_file_path = join(base_dir, "csv", "info_cif_files_info.csv")
-    
+
     # Setup
     remove_file(csv_file_path)
     initial_cif_file_count = get_cif_file_count_from_directory(base_dir)
@@ -123,7 +135,9 @@ def test_cif_folder_info():
 
 ### Pytest Collectonly
 
-In pytest, collectonly is a command-line option that allows you to quickly gather information about the test cases in your project without actually running them.
+In pytest, collectonly is a command-line option that allows you to quickly
+gather information about the test cases in your project without actually running
+them.
 
 ```bash
 pytest --collect-only
@@ -132,9 +146,16 @@ pytest --collectonly tests/test_fixture.py
 
 ### Pytest Fixture
 
-A fixture in pytest is a function that sets up a test environment before the tests run and cleans it up afterwards. This is extremely handy for handling repetitive tasks like establishing database connections, creating test data, or preparing system state before executing tests.
+A fixture in pytest is a function that sets up a test environment before the
+tests run and cleans it up afterwards. This is extremely handy for handling
+repetitive tasks like establishing database connections, creating test data, or
+preparing system state before executing tests.
 
-Our use of the `conftest.py` file is central to our fixture strategy. This special file is recognized by pytest and is used for sharing fixtures across multiple test files. By defining fixtures in conftest.py, we make them accessible to any test in the same directory or subdirectories without the need for imports.
+Our use of the `conftest.py` file is central to our fixture strategy. This
+special file is recognized by pytest and is used for sharing fixtures across
+multiple test files. By defining fixtures in conftest.py, we make them
+accessible to any test in the same directory or subdirectories without the need
+for imports.
 
 ```python
 #conftest.py
@@ -169,10 +190,13 @@ def test_using_fixture(resource_setup):
     assert resource_setup["data"] == 123
 ```
 
-> No need for a `del` statement to release resources in pytest fixtures. Resource management is handled by the setup and teardown logic encapsulated within the fixture itself, using the pattern of initializing resources before yield and cleaning them up after `yield`.
-
+> No need for a `del` statement to release resources in pytest fixtures.
+> Resource management is handled by the setup and teardown logic encapsulated
+> within the fixture itself, using the pattern of initializing resources before
+> yield and cleaning them up after `yield`.
 
 ### Get test coverage
+
 ```bash
 pip install pytest-cov
 pytest --cov
@@ -191,7 +215,10 @@ ERROR tests/test_supercell_size.py
 ERROR tests/test_tags.py
 ```
 
-If your project's directory isn't being recognized like above, you might need to add it to the PYTHONPATH environment variable. You can do this by running the following command in your terminal (adjust the path as necessary for your project):
+If your project's directory isn't being recognized like above, you might need to
+add it to the PYTHONPATH environment variable. You can do this by running the
+following command in your terminal (adjust the path as necessary for your
+project):
 
 ```bash
 export PYTHONPATH="${PYTHONPATH}:/Users/imac/Documents/GitHub/cif-cleaner-main"
@@ -273,12 +300,16 @@ def test_addition(input, expected):
 
 @pytest.mark.usefixtures("setup_database")
 def test_database_query():
-    # use the fixtures 
+    # use the fixtures
 ```
 
 ### GitHub Actions with Pytest and Codecov
 
-I use Python [Codecov](https://about.codecov.io/) to visualize the percentage of my lines of code covered with tests. The following is used for the GitHub Actions yaml file. If you are new to GitHub Actions, you may read my tutorial [here](https://bobleesj.github.io/tutorial/2024/03/03/github-actions.html). No tutorial has been covered on Codecov at the moment.
+I use Python [Codecov](https://about.codecov.io/) to visualize the percentage of
+my lines of code covered with tests. The following is used for the GitHub
+Actions yaml file. If you are new to GitHub Actions, you may read my tutorial
+[here](https://bobleesj.github.io/tutorial/2024/03/03/github-actions.html). No
+tutorial has been covered on Codecov at the moment.
 
 ```yaml
 name: Python Package using Pip and Venv
@@ -292,37 +323,37 @@ jobs:
       max-parallel: 5
 
     steps:
-    - uses: actions/checkout@v3
+      - uses: actions/checkout@v3
 
-    - name: Set up Python 3.12
-      uses: actions/setup-python@v3
-      with:
-        python-version: '3.12'
+      - name: Set up Python 3.12
+        uses: actions/setup-python@v3
+        with:
+          python-version: "3.12"
 
-    - name: Create virtual environment and install dependencies
-      run: |
-        python -m venv venv
-        source venv/bin/activate
-        pip install -r requirements.txt
+      - name: Create virtual environment and install dependencies
+        run: |
+          python -m venv venv
+          source venv/bin/activate
+          pip install -r requirements.txt
 
-    # - name: Lint with flake8
-    #   run: |
-    #     source venv/bin/activate
-    #     pip install flake8
-    #     flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-    #     flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
+      # - name: Lint with flake8
+      #   run: |
+      #     source venv/bin/activate
+      #     pip install flake8
+      #     flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
+      #     flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-    - name: Test with pytest and generate coverage report
-      run: |
-        source venv/bin/activate
-        pip install pytest pytest-cov
-        python -m pytest --cov=./ --cov-report=xml
-  
-    - name: Upload coverage reports to Codecov
-      uses: codecov/codecov-action@v4.0.1
-      with:
-        token: ${{ secrets.CODECOV_TOKEN }}
-        slug: bobleesj/cif-cleaner
+      - name: Test with pytest and generate coverage report
+        run: |
+          source venv/bin/activate
+          pip install pytest pytest-cov
+          python -m pytest --cov=./ --cov-report=xml
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: bobleesj/cif-cleaner
 ```
 
 ## References
@@ -332,5 +363,3 @@ I have collected the examples from many places.
 - [https://www.youtube.com/watch?v=mTMu8AtdG-E](https://www.youtube.com/watch?v=mTMu8AtdG-E)
 - [https://docs.pytest.org/](https://docs.pytest.org/)
 - ChatGPT
-
-

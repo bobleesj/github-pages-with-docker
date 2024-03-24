@@ -1,12 +1,17 @@
 ---
 layout: post
-title: Mechanical behavior of structural materials (MSAE 4215) course notes (Draft)
+title:
+  Mechanical behavior of structural materials (MSAE 4215) course notes (Draft)
 categories: coursework
 ---
 
 ## Motivation
 
-The following notes are derived from the MSAE 4215 course at Columbia University in Spring 2024 instructed by Dr. William Bailey. Equations and content were acquired from the instructor's note packet and slides. The primary goal of this page is to enhance understanding before the midterm and use it a future reference for my research.
+The **following** notes are derived from the MSAE 4215 course at Columbia
+University in Spring 2024 instructed by Dr. William Bailey. Equations and
+content were acquired from the instructor's note packet and slides. The primary
+goal of this page is to enhance understanding before the midterm and use it a
+future reference for my research.
 
 ## Lecture 2. Stress and torque tensor
 
@@ -22,39 +27,48 @@ $$
 \end{equation}
 $$
 
-Stress elements are assumed to be in equilibrium that there must be an equal and opposite stress acting on the parallel face. For a 3D problem, it should be then 9 instead of 18 due to symmetry. If there is no body force, we can further reduce down to 6 unique elements. In $\sigma_{ij}$, $i$ refers to the direction and $j$ refers to the plane.
-
+Stress elements are assumed to be in equilibrium that there must be an equal and
+opposite stress acting on the parallel face. For a 3D problem, it should be then
+9 instead of 18 due to symmetry. If there is no body force, we can further
+reduce down to 6 unique elements. In $\sigma_{ij}$, $i$ refers to the direction
+and $j$ refers to the plane.
 
 ### Torque for homogenous stresses
 
-Assume you have a cubic volume element of $\delta x^3$. The total torque is found using the below
+Assume you have a cubic volume element of $\delta x^3$. The total torque is
+found using the below
 
 $$
 \sum_i \textbf{r}_i \times \textbf{F}_i = \tau
 $$
 
-where $\textbf{r}_i$ is the distance from center of the cubic volume element. Using the right hand rule, the net torque applied on a 2D plane is the following.
+where $\textbf{r}_i$ is the distance from center of the cubic volume element.
+Using the right hand rule, the net torque applied on a 2D plane is the
+following.
 
 $$
 F = \sigma (\delta x^2)
 $$
 
 $$
-\tau = \textbf{r}_1 \times \textbf{F}_1 + \textbf{r}_2 \times \textbf{F}_2 + ... + \textbf{r}_i  \times \textbf{F}_i 
+\tau = \textbf{r}_1 \times \textbf{F}_1 + \textbf{r}_2 \times \textbf{F}_2 + ... + \textbf{r}_i  \times \textbf{F}_i
 $$
 
-In a 2D plane stress situation, there are four shear stress components to consider. It is important to note that the distance from the origin to the point of interest is $\delta x/2$. Additionally, pay careful attention to the signs of the shear stresses, as the resulting torque is determined using the cross product.
+In a 2D plane stress situation, there are four shear stress components to
+consider. It is important to note that the distance from the origin to the point
+of interest is $\delta x/2$. Additionally, pay careful attention to the signs of
+the shear stresses, as the resulting torque is determined using the cross
+product.
 
 $$
 \frac{\delta x}{2}(2 \sigma_{32} - 2\sigma_{23}) \delta x^2 = 0
 $$
 
-Now, if there is no other force applied on the cubic element, 
+Now, if there is no other force applied on the cubic element,
 
 $$
 \sigma_{23} = \sigma_{32}
 $$
-
 
 This can be generalized to
 
@@ -64,9 +78,11 @@ $$
 
 ### Torque for inhomoegenous stresses
 
-Let us consider a system where body torques such as gravitational forces and stresses are inhomogenous.
+Let us consider a system where body torques such as gravitational forces and
+stresses are inhomogenous.
 
-Now each stress is a function of both $x_i$ and the slight  Therefore the torque is the following.
+Now each stress is a function of both $x_i$ and the slight Therefore the torque
+is the following.
 
 $$
 \begin{equation}
@@ -77,11 +93,13 @@ $$
 \end{equation}
 $$
 
-Again, we are still looking at a cubic system. $\tau$ is the resulting net torque applied in the "1" direction.
+Again, we are still looking at a cubic system. $\tau$ is the resulting net
+torque applied in the "1" direction.
 
 Taylor-expand
 
 Recall
+
 $$
 y(x + ∆x) \approx y(x) + y'(x) ∆x
 $$
@@ -128,7 +146,10 @@ $$
 
 ### Tensor definition
 
-A 1-rank tensor is a 1D matrix, also known as a vector. A 2-rank tensor is a 2D matrix. A 3-rank tensor is a 3D matrix, and so on. Primarily, a tensor is used to transform vectors while maintaining a linear relationship between the two vectors.
+A 1-rank tensor is a 1D matrix, also known as a vector. A 2-rank tensor is a 2D
+matrix. A 3-rank tensor is a 3D matrix, and so on. Primarily, a tensor is used
+to transform vectors while maintaining a linear relationship between the two
+vectors.
 
 $$
 \begin{align}
@@ -136,7 +157,9 @@ $$
 \end{align}
 $$
 
-Now, the following example is the relationship between the applied electric field $\vec{E}$ and currenty density $\vec{J}$. Here $\sigma$ is not stress but electrical conductivitiy.
+Now, the following example is the relationship between the applied electric
+field $\vec{E}$ and currenty density $\vec{J}$. Here $\sigma$ is not stress but
+electrical conductivitiy.
 
 $$
 \begin{equation}
@@ -166,11 +189,12 @@ $$
     J_i = \sigma_{ij} E_i
 \end{align}
 $$
+
 Now, to calculate the current density in a particular direction,
 
 $$
 \begin{align}
-    J_1 = \sigma_{11} E_1 +  \sigma_{12} E_2 + \sigma_{13} E_3 
+    J_1 = \sigma_{11} E_1 +  \sigma_{12} E_2 + \sigma_{13} E_3
 \end{align}
 $$
 
@@ -178,7 +202,10 @@ $$
 
 #### Rotate about single axis
 
-On a 2D plane, assume a vector $\hat{x}_1$ points downwards and $\hat{x}_2$ points to the right, perpendicular to $\hat{x}_1$. Now, we want to rotate $\hat{x}_1$ and $\hat{x}_2$ about the normal to the plane axis $\hat{x}_3$ at a fixed angle. We want to know the resulting vectors transformed by the rotation.
+On a 2D plane, assume a vector $\hat{x}_1$ points downwards and $\hat{x}_2$
+points to the right, perpendicular to $\hat{x}_1$. Now, we want to rotate
+$\hat{x}_1$ and $\hat{x}_2$ about the normal to the plane axis $\hat{x}_3$ at a
+fixed angle. We want to know the resulting vectors transformed by the rotation.
 
 $$
 \begin{equation}
@@ -204,21 +231,21 @@ $$
 Recall we may set up the basis vector as
 
 $$
-\hat{x}_1 = 
+\hat{x}_1 =
 \begin{bmatrix}
     1 \\
     0 \\
     0
 \end{bmatrix}, \space
 
-\hat{x}_2 = 
+\hat{x}_2 =
 \begin{bmatrix}
     0 \\
     1 \\
     0
 \end{bmatrix}, \space
 
-\hat{x}_3 = 
+\hat{x}_3 =
 \begin{bmatrix}
     0 \\
     0 \\
@@ -228,7 +255,8 @@ $$
 
 #### Rotate about arbitrary axis
 
-If we want to find the vectors transformed by rotation about arbitrary axes x, y, and z,
+If we want to find the vectors transformed by rotation about arbitrary axes x,
+y, and z,
 
 $$
 \begin{equation}
@@ -301,9 +329,8 @@ $$
 \end{align}
 $$
 
-We want to find another matrix $\textbf{B}$ that transform $\textbf{p}'$ to $\textbf{p}$ with a matrix $\textbf{B}$.
-
-
+We want to find another matrix $\textbf{B}$ that transform $\textbf{p}'$ to
+$\textbf{p}$ with a matrix $\textbf{B}$.
 
 Given the transformation
 
@@ -329,7 +356,8 @@ $$
 \end{equation}
 $$
 
-For the identity transformation where $\textbf{p} = \textbf{I} \textbf{p}$, where $\textbf{I}$ is the identity matrix, it follows that
+For the identity transformation where $\textbf{p} = \textbf{I} \textbf{p}$,
+where $\textbf{I}$ is the identity matrix, it follows that
 
 $$
 \begin{equation}
@@ -337,7 +365,9 @@ $$
 \end{equation}
 $$
 
-Therefore, matrix $\textbf{B}$ must be the inverse of matrix $\textbf{A}$, i.e., $\textbf{B} = \textbf{A}^{-1}$, provided that $\textbf{A}$ is an invertible matrix.
+Therefore, matrix $\textbf{B}$ must be the inverse of matrix $\textbf{A}$, i.e.,
+$\textbf{B} = \textbf{A}^{-1}$, provided that $\textbf{A}$ is an invertible
+matrix.
 
 $$
 \begin{align}
@@ -360,25 +390,27 @@ $$
 \begin{bmatrix}
 p_x \\
 p_y \\
-p_z 
+p_z
 \end{bmatrix}
 =
 \begin{bmatrix}
 \sin \theta \cos \phi & \cos \theta \cos \phi & -\sin \phi \\
 \sin \theta \sin \phi & \cos \theta \sin \phi & \cos \phi \\
-\cos \theta & -\sin \theta & 0 
+\cos \theta & -\sin \theta & 0
 \end{bmatrix}
 \begin{bmatrix}
 p_r \\
 p_\theta \\
-p_\phi 
+p_\phi
 \end{bmatrix}
 \end{equation}
 $$
 
 ### Transformation beyond rank-1 tensor
 
-We have so far studied transforming vectors using matrix elements. If we want to transform second-rank tensors or beyond, we may follow the procedure below. However, this topic is not fully expounded upon.
+We have so far studied transforming vectors using matrix elements. If we want to
+transform second-rank tensors or beyond, we may follow the procedure below.
+However, this topic is not fully expounded upon.
 
 $$
 \begin{array}{|c|c|c|c|}
@@ -396,7 +428,8 @@ $$
 
 ### Principal axes
 
-In real space, we want to determine stress components applied to a system. There are 9 elements.
+In real space, we want to determine stress components applied to a system. There
+are 9 elements.
 
 $$
 \begin{equation}
@@ -408,7 +441,11 @@ $$
 \end{equation}
 $$
 
-Here, it both includes shear stress and normal stress. But we want to remove shear stress and  reorient the coordinate system to align with the principal axes. Here, the off-diagonal terms (shear stresses) become zero, and the only non-zero components are the normal stresses on the diagonal. These normal stresses are called the principal stresses.
+Here, it both includes shear stress and normal stress. But we want to remove
+shear stress and reorient the coordinate system to align with the principal
+axes. Here, the off-diagonal terms (shear stresses) become zero, and the only
+non-zero components are the normal stresses on the diagonal. These normal
+stresses are called the principal stresses.
 
 Starting with the eigenvalue problem:
 
@@ -434,7 +471,8 @@ $$
 \end{equation}
 $$
 
-We find the eigenvalues and eigenvectors of the matrix. The eigenvectors form a matrix Q, and the eigenvalues form a diagonal matrix such that:
+We find the eigenvalues and eigenvectors of the matrix. The eigenvectors form a
+matrix Q, and the eigenvalues form a diagonal matrix such that:
 
 We may find the eigenvalues using the standard method below.
 
@@ -448,7 +486,6 @@ $$
 = 0
 \end{equation}
 $$
-
 
 Where A is the original matrix and Q is the orthogonal matrix of eigenvectors.
 
@@ -471,19 +508,23 @@ I will type write later perhaps after the exam or after the semester.
 ![Free body diagram](/files/blog/2024-03-20-behavior-materials/img/image-1.png)
 ![Morh's circle derivation](/files/blog/2024-03-20-behavior-materials/img/image-2.png)
 
-
 ## Lecture 4. Strain tensor
 
-In previous lectures, we discussed how to determine principle axises via coordinate transformation or solving an eigenvalue problem. Here, we will discuss how strain elements are affected due to stresss. Strain is the response to stress.
+In previous lectures, we discussed how to determine principle axises via
+coordinate transformation or solving an eigenvalue problem. Here, we will
+discuss how strain elements are affected due to stresss. Strain is the response
+to stress.
 
 For uniform and unixial stress, we define tensile strain as
+
 $$
 \begin{equation}
     \varepsilon = \frac{\Delta l}{l_o}
 \end{equation}
 $$
 
-The above definition is general. We want to account for inhomogenous strains, shear strains, etc.
+The above definition is general. We want to account for inhomogenous strains,
+shear strains, etc.
 
 $$
 [\varepsilon] = \begin{bmatrix}
@@ -493,7 +534,10 @@ $$
 \end{bmatrix}
 $$
 
-Imagine on a 1-D string, you have points $P$ and $Q$ with a separated by $\delta x$. If you stretch the string the two points will be shifted to $P'$ and $Q'$. Then, the new vector between $P'$ and $Q'$. The initial displacement between $P$ and $O$ is $u_1(x_1)$.
+Imagine on a 1-D string, you have points $P$ and $Q$ with a separated by
+$\delta x$. If you stretch the string the two points will be shifted to $P'$ and
+$Q'$. Then, the new vector between $P'$ and $Q'$. The initial displacement
+between $P$ and $O$ is $u_1(x_1)$.
 
 $$
 \begin{equation}
@@ -503,7 +547,8 @@ $$
 
 $u(x_1)$ measures how much a point at $x_1$ has moved due to deformation.
 
-$u(x_1 + \delta x)$ measures the displacement of another point that was originally a small differnece $\delta x$ away from $x_1$.
+$u(x_1 + \delta x)$ measures the displacement of another point that was
+originally a small differnece $\delta x$ away from $x_1$.
 
 $$
 \begin{equation}
@@ -541,7 +586,7 @@ $$
 
 $$
 \begin{equation}
-\overline{P'Q'} - \overline{PQ} \approx  |\delta \textbf{x}|^{-1} (\delta u_1 \delta x_1 + \delta u_2 \delta x_2)  
+\overline{P'Q'} - \overline{PQ} \approx  |\delta \textbf{x}|^{-1} (\delta u_1 \delta x_1 + \delta u_2 \delta x_2)
 \end{equation}
 $$
 
@@ -553,6 +598,7 @@ $$
     \delta u_2 = \frac{\partial u_2}{\partial x_1} \delta x_1 + \frac{\partial u_2}{\partial x_2} \delta x_2
 \end{align}
 $$
+
 Let us introduce a strain term.
 
 $$
@@ -579,10 +625,11 @@ $$
     &=  | \delta \textbf{x}|^{-2} (\delta u_1 \delta x_1 + \delta u_2 \delta x_2) \\
     &= | \delta \textbf{x}|^{-2} [e_{11} \delta x_1^2 + e_{12} \delta x_1 \delta x_2  + e_{21} \delta x_2^2 + e_{22} \delta x_1 \delta x_2] \\
     &= | \delta \textbf{x}^{-2} | [ e_{11}(\delta x_2)^2 + e_{22} (\delta x_2)^2 + (e_{12} + e_{21}) \delta x_1 \delta x_2 ]
-\end{align} 
+\end{align}
 $$
 
-But we want to remove the antisymmetric terms. Define a strain tensor $\varepsilon_{ij}$ as
+But we want to remove the antisymmetric terms. Define a strain tensor
+$\varepsilon_{ij}$ as
 
 $$
 \begin{align}
@@ -631,10 +678,11 @@ e_{11} & \frac{1}{2}(e_{12} + e_{21}) & \frac{1}{2}(e_{13} + e_{31}) \\
 $$
 
 Express in terms of engineering stress $\gamma_{ij}$.
+
 $$
 \begin{equation}
 \begin{bmatrix}
-\varepsilon 
+\varepsilon
 \end{bmatrix}
 =
 \begin{bmatrix}
@@ -660,14 +708,15 @@ $$
 \end{equation}
 $$
 
-By insepction, notice that $e_{12} = \varepsilon_{12} + w_{12}$ and $e_{21} = \varepsilon_{12} - w_{12}$.
+By insepction, notice that $e_{12} = \varepsilon_{12} + w_{12}$ and
+$e_{21} = \varepsilon_{12} - w_{12}$.
 
 ### Dilation
 
 Just like a 2D stress tensor, we may convert strain tensor into principal axes.
 
 $$
-[\varepsilon] = 
+[\varepsilon] =
 \begin{bmatrix}
 \varepsilon_{11} & \varepsilon_{12} & \varepsilon_{13} \\
 \varepsilon_{21} & \varepsilon_{22} & \varepsilon_{23} \\
@@ -703,7 +752,8 @@ SKIP for now
 
 ## Lecture 6. Anisotropic elasticity
 
-We want to determine the strain based on the stress. We also need to form compliances $S_{ijkl}$, a 4th-rank tensor in 3D.
+We want to determine the strain based on the stress. We also need to form
+compliances $S_{ijkl}$, a 4th-rank tensor in 3D.
 
 $$
 \begin{align}
@@ -755,11 +805,12 @@ $$
 
 ### Finding invariant elements
 
-There are a total of $3^4=81$ elements in $S_{ijkl}$ or $C_{ijkl}$. This number reduces down to 21 even before we apply the crtystal symmetry of the system.
+There are a total of $3^4=81$ elements in $S_{ijkl}$ or $C_{ijkl}$. This number
+reduces down to 21 even before we apply the crtystal symmetry of the system.
 
 #### Experimental inaccessibility
 
-Recall 
+Recall
 
 $$
 \begin{equation}
@@ -771,13 +822,13 @@ Stress tensor elements are symmetric. We will not provide a proof at the moment.
 
 $$
 \begin{equation}
-    \therefore c_{ij\textbf{kl}} = c_{ij\textbf{lk}}
+    \therefore C_{ij\textbf{kl}} = C_{ij\textbf{lk}}
 \end{equation}
 $$
 
 $$
 \begin{equation}
-    \therefore c_{\textbf{ij}kl} = c_{\textbf{ji}kl}
+    \therefore C_{\textbf{ij}kl} = C_{\textbf{ji}kl}
 \end{equation}
 $$
 
@@ -785,9 +836,145 @@ Instead of 9 times 9 unique elements, there will be 6 times 6 unqiue elements.
 
 #### Thermodynamic restrictions
 
-Recall elastic energy is path-indepedent.
+We now want to further reduce from 36 unique elements to 21 elements using
+thermodynamics.
+
+For now, assume the following equation to be true.
+
+<!-- Add proof for section -->
 
 $$
-\sigma_{11} = \sigma
+\begin{equation}
+    C_{\textbf{ij}kl} = C_{kl\textbf{ij}}
+\end{equation}
 $$
 
+The above relationship indicates that
+
+$$
+\begin{gather}
+    \sigma_{ij} = C_{ijlk} \varepsilon_{kl} \\
+    \sigma_{kl} = C_{klij} \varepsilon_{ij} \\
+    \therefore \sigma_{11} = C_{1122} \varepsilon_{22} \\
+    \therefore \sigma_{22} = C_{2211} \varepsilon_{11} \\
+    \frac{\varepsilon_{11}}{\sigma_{22}} = \frac{\varepsilon_{22}}{\sigma_{11}}
+\end{gather}
+$$
+
+### Neumann's principle
+
+- Rotate strains and stresses to new axes.
+- If the rotation is an element of the point group, the elastic tensor is the
+  same. $[T]' = [T]$.
+
+To formally write:
+
+$$
+T_{ijkl} = a_{im}a_{jn}a_{ko}a_{lp} T_{mnop}
+$$
+
+Imagine we want to rotate $\theta= \pi/2$ about the z axis.
+
+$$
+\begin{equation}
+    a_{ij} =
+    \begin{bmatrix}
+        \cos \theta_3 & \sin \theta_3 & 0 \\
+        -\sin \theta_3 & \cos \theta_3 & 0 \\
+        0 & 0 & 1
+    \end{bmatrix} =
+        \begin{bmatrix}
+            0 & 1 & 0 \\
+            -1 & 0 & 0 \\
+            0 & 0 & 1
+        \end{bmatrix}
+\end{equation}
+$$
+
+$$
+\begin{equation}
+a_{12} = 1 \quad a_{21} = -1 \quad a_{33} = 1
+\end{equation}
+$$
+
+Consider $S_{1111}$ for a cubic system with a 90-fold rotation symmetry.
+
+$$
+S_{1111} = a_{1m} a_{1n} a_{1o} a_{1p} = S_{mnop}
+$$
+
+Notice that the only $a_{12}=1$ is available. Therefore,
+
+$$
+\begin{gather}
+    S_{1111} = a_{12} a_{12} a_{12} a_{12} S_{2222} \\
+    \therefore S_{1111} = S_{2222} \\
+    \therefore S_{11} = S_{22} = S_{33}
+\end{gather}
+$$
+
+Now, consider $S_{1122}$ and $S_{2211}$
+
+$$
+\begin{gather}
+    S_{1122} = a_{1m} a_{1n} a_{2o} a_{2p} S_{mnop} \\
+\end{gather}
+$$
+
+All elements are zero except $m=n=2$ and $o = p = 2$.
+
+$$
+\begin{gather}
+    S_{1122} = S_{2211} \\
+    \therefore S_{12} = S_{21}
+\end{gather}
+$$
+
+Now consider $S_{2233}$.
+
+$$
+S_{2233} = a_{2m} a_{2n} a_{3o} a_{3p} S_{mnop}
+$$
+
+All elements are zero except $m = n = 1$ and $o = p = 3$.
+
+Therefore,
+
+$$
+\begin{gather}
+    S_{2233} = S_{1133} \\
+    \therefore S_{23} = S_{13}
+\end{gather}
+$$
+
+Consider $S_{63} \equiv S_{1233}$
+
+$$
+\begin{equation}
+    S_{1233} = a_{1m} a_{2n} a_{3o} a_{3p} S_{mnop}
+\end{equation}
+$$
+
+Therefore, non-zero elements are when $m=2$, $n=1$, $o=p=2$.
+
+$$
+\begin{gather}
+    S_{1233} = 1 \times 1 \times -1 \times 1 = - S_{2133} \\
+    \therefore S_{1233} = - S_{2133}
+\end{gather}
+$$
+
+Recall the symmetry relation.
+
+$$
+\begin{equation}
+    S_{ijkl} = S_{jikl}
+\end{equation}
+$$
+
+$$
+\begin{gather}
+    S_{1233} = - S_{1233} \\
+    \therefore \boxed{S_{1233} = 0}
+\end{gather}
+$$
