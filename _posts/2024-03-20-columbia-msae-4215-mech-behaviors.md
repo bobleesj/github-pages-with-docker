@@ -6,7 +6,7 @@ categories: coursework
 
 ## Motivation
 
-The following notes are derived from the MSAE 4215 course at Columbia University in Spring 2024 instructed by Dr. William Bailey. Equations and content were acquired from the instructor's note packet and slides. The primary goal of this page is to enhance understanding before the midterm and use it a future reference for my research.
+The **following** notes are derived from the MSAE 4215 course at Columbia University in Spring 2024 instructed by Dr. William Bailey. Equations and content were acquired from the instructor's note packet and slides. The primary goal of this page is to enhance understanding before the midterm and use it a future reference for my research.
 
 ## Lecture 2. Stress and torque tensor
 
@@ -54,7 +54,6 @@ Now, if there is no other force applied on the cubic element,
 $$
 \sigma_{23} = \sigma_{32}
 $$
-
 
 This can be generalized to
 
@@ -771,13 +770,13 @@ Stress tensor elements are symmetric. We will not provide a proof at the moment.
 
 $$
 \begin{equation}
-    \therefore c_{ij\textbf{kl}} = c_{ij\textbf{lk}}
+    \therefore C_{ij\textbf{kl}} = C_{ij\textbf{lk}}
 \end{equation}
 $$
 
 $$
 \begin{equation}
-    \therefore c_{\textbf{ij}kl} = c_{\textbf{ji}kl}
+    \therefore C_{\textbf{ij}kl} = C_{\textbf{ji}kl}
 \end{equation}
 $$
 
@@ -785,9 +784,145 @@ Instead of 9 times 9 unique elements, there will be 6 times 6 unqiue elements.
 
 #### Thermodynamic restrictions
 
-Recall elastic energy is path-indepedent.
+We now want to further reduce from 36 unique elements to 21 elements using thermodynamics.
+
+For now, assume the following equation to be true.
+
+<!-- Add proof for section -->
+$$
+\begin{equation}
+    C_{\textbf{ij}kl} = C_{kl\textbf{ij}}
+\end{equation}
+$$
+
+
+The above relationship indicates that 
 
 $$
-\sigma_{11} = \sigma
+\begin{gather}
+    \sigma_{ij} = C_{ijlk} \varepsilon_{kl} \\
+    \sigma_{kl} = C_{klij} \varepsilon_{ij} \\
+    \therefore \sigma_{11} = C_{1122} \varepsilon_{22} \\
+    \therefore \sigma_{22} = C_{2211} \varepsilon_{11} \\
+    \frac{\varepsilon_{11}}{\sigma_{22}} = \frac{\varepsilon_{22}}{\sigma_{11}}
+\end{gather}
+$$
+
+### Neumann's principle
+
+- Rotate strains and stresses to new axes.
+- If the rotation is an element of the point group, the elastic tensor is the same. $[T]' = [T]$.
+
+To formally write:
+
+$$
+T_{ijkl} = a_{im}a_{jn}a_{ko}a_{lp} T_{mnop}
+$$
+
+Imagine we want to rotate $\theta= \pi/2$ about the z axis. 
+
+$$
+\begin{equation}
+    a_{ij} = 
+    \begin{bmatrix}
+        \cos \theta_3 & \sin \theta_3 & 0 \\
+        -\sin \theta_3 & \cos \theta_3 & 0 \\
+        0 & 0 & 1
+    \end{bmatrix} = 
+        \begin{bmatrix}
+            0 & 1 & 0 \\
+            -1 & 0 & 0 \\
+            0 & 0 & 1
+        \end{bmatrix}
+\end{equation}
+$$
+
+
+$$
+\begin{equation}
+a_{12} = 1 \quad a_{21} = -1 \quad a_{33} = 1
+\end{equation}
+$$
+
+Consider $S_{1111}$ for a cubic system with a 90-fold rotation symmetry.
+
+$$
+S_{1111} = a_{1m} a_{1n} a_{1o} a_{1p} = S_{mnop}
+$$
+
+Notice that the only $a_{12}=1$ is available. Therefore,
+
+$$
+\begin{gather}
+    S_{1111} = a_{12} a_{12} a_{12} a_{12} S_{2222} \\
+    \therefore S_{1111} = S_{2222} \\
+    \therefore S_{11} = S_{22} = S_{33}
+\end{gather}
+$$
+
+Now, consider $S_{1122}$ and $S_{2211}$
+
+$$
+\begin{gather}
+    S_{1122} = a_{1m} a_{1n} a_{2o} a_{2p} S_{mnop} \\
+\end{gather}
+$$
+
+All elements are zero except $m=n=2$ and $o = p = 2$.
+
+$$
+\begin{gather}
+    S_{1122} = S_{2211} \\
+    \therefore S_{12} = S_{21}
+\end{gather}
+$$
+
+Now consider $S_{2233}$.
+
+$$
+S_{2233} = a_{2m} a_{2n} a_{3o} a_{3p} S_{mnop}
+$$
+
+All elements are zero except $m = n = 1$ and $o = p = 3$.
+
+Therefore, 
+
+$$
+\begin{gather}
+    S_{2233} = S_{1133} \\
+    \therefore S_{23} = S_{13}
+\end{gather}
+$$
+
+Consider $S_{63} \equiv S_{1233}$
+
+$$
+\begin{equation}
+    S_{1233} = a_{1m} a_{2n} a_{3o} a_{3p} S_{mnop}
+\end{equation}
+$$
+
+Therefore, non-zero elements are when $m=2$, $n=1$, $o=p=2$.
+
+$$
+\begin{gather}
+    S_{1233} = 1 \times 1 \times -1 \times 1 = - S_{2133} \\
+    \therefore S_{1233} = - S_{2133}
+\end{gather}
+$$
+
+Recall the symmetry relation.
+
+$$
+\begin{equation}
+    S_{ijkl} = S_{jikl}
+\end{equation}
+$$
+
+$$
+\begin{gather}
+    S_{1233} = - S_{1233} \\
+    \therefore \boxed{S_{1233} = 0}
+\end{gather}
 $$
 
