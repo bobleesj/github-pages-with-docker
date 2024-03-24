@@ -1,0 +1,8 @@
+README.md
+setup.py
+src/bobtwine/__init__.py
+src/bobtwine/example.py
+src/bobtwine.egg-info/PKG-INFO
+src/bobtwine.egg-info/SOURCES.txt
+src/bobtwine.egg-info/dependency_links.txt
+src/bobtwine.egg-info/top_level.txt
