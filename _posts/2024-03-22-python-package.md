@@ -6,10 +6,10 @@ categories: tutorial
 
 ## Motivation
 
-This guide provides steps for packaging your Python code and installing it via `pip`.
+This guide provides steps for packaging your Python code and installing it via
+`pip`.
 
 The tutorial should not take more than 5 minutes to follow.
-
 
 ## Folder structure
 
@@ -63,7 +63,8 @@ print(value) # 4
 
 Install `twine`. `twine` helps upload files to PyPI.
 
-PyPI is an online repository for packages. pip communicates with PyPI to download packages.
+PyPI is an online repository for packages. pip communicates with PyPI to
+download packages.
 
 ```bash
 # Install twine
@@ -76,12 +77,14 @@ python setup.py sdist bdist_wheel
 twine upload dist/*
 ```
 
-Twine will prompt you for your API key. Register and generate an API key at [https://pypi.org/manage/account/](https://pypi.org/manage/account/) shown below.
+Twine will prompt you for your API key. Register and generate an API key at
+[https://pypi.org/manage/account/](https://pypi.org/manage/account/) shown
+below.
 
 ![](/files/blog/2024-03-22-python-package-distribution/img/1.png)
 
-
-Your Python package is available at [https://pypi.org/project/bobtwine/](https://pypi.org/project/bobtwine/).
+Your Python package is available at
+[https://pypi.org/project/bobtwine/](https://pypi.org/project/bobtwine/).
 
 ![](/files/blog/2024-03-22-python-package-distribution/img/2.png)
 

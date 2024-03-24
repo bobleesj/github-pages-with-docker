@@ -50,7 +50,8 @@ oeprations behind the scenes for us.
 
 We are now going to learn how to install and generate these features using CBFV.
 For complete beginners, download Visual Studio, a "text" editor that helps read
-and modify code easier. Download one here: [https://code.visualstudio.com/](https://code.visualstudio.com/)
+and modify code easier. Download one here:
+[https://code.visualstudio.com/](https://code.visualstudio.com/)
 
 ## Download CBFV
 

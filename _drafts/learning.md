@@ -367,11 +367,14 @@ where
 
 #### Average velocity
 
-$$ P*{\text{total}} = 1 = \sum*{i=1}^{N} P(v_i) \to \int_0^{\infty} f(v) \, dv
+$$
+P*{\text{total}} = 1 = \sum*{i=1}^{N} P(v_i) \to \int_0^{\infty} f(v) \, dv
 $$
 
-$$ \langle v \rangle = \sum\_{i=1}^{N} v_i \cdot P(v_i) \to \int_0^{\infty} v
-\cdot f(v) \, dv $$
+$$
+\langle v \rangle = \sum\_{i=1}^{N} v_i \cdot P(v_i) \to \int_0^{\infty} v
+\cdot f(v) \, dv
+$$
 
 ## Kinetics
 
