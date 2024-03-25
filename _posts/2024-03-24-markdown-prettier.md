@@ -77,4 +77,5 @@ the rules defined in your markdownlint configuration.
 
 You may see how the current website uses `Prettier` to format Markdown below.
 
-[GitHub](https://github.com/bobleesj/bobleesj.github.io) | [Markdown](https://github.com/bobleesj/bobleesj.github.io/blob/main/_posts/2024-03-24-markdown-prettier.md)
+[GitHub](https://github.com/bobleesj/bobleesj.github.io) |
+[Markdown](https://github.com/bobleesj/bobleesj.github.io/blob/main/_posts/2024-03-24-markdown-prettier.md)

@@ -102,4 +102,5 @@ python main.py  # This prints 4
 
 ## Source code
 
-[GitHub](https://github.com/bobleesj/bobleesj.github.io/tree/main/files/blog/2024-03-22-python-package-distribution/source-code) | [Markdown](https://github.com/bobleesj/bobleesj.github.io/blob/main/_posts/2024-03-22-python-package-distribution.md)
+[GitHub](https://github.com/bobleesj/bobleesj.github.io/tree/main/files/blog/2024-03-22-python-package-distribution/source-code) |
+[Markdown](https://github.com/bobleesj/bobleesj.github.io/blob/main/_posts/2024-03-22-python-package-distribution.md)
