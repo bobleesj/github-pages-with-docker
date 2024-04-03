@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Python unit test guide and cheatsheet
+title: Python unit test guide and cheatsheet (Ft. Pytest)
 categories: cheatsheet
 ---
 
@@ -194,6 +194,21 @@ def test_using_fixture(resource_setup):
 > Resource management is handled by the setup and teardown logic encapsulated
 > within the fixture itself, using the pattern of initializing resources before
 > yield and cleaning them up after `yield`.
+
+
+### Run test automatically
+
+Download `nodemon` via `npm`.
+
+```bash
+sudo npm install -g nodemon
+```
+
+Use `nodemon` to automatically run pytest when `.py` files change. The command should be as follows:
+
+```bash
+nodemon --exec "python -m pytest" --ext py
+```
 
 ### Get test coverage
 
