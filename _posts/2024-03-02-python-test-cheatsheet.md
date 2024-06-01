@@ -1,40 +1,31 @@
 ---
 layout: post
-title: Python unit test guide and cheatsheet (Ft. Pytest)
+title: Python unit test cheatsheet (Ft. Pytest)
 categories: cheatsheet
 ---
 
-## Note
+## Motivation
 
-I am currently using this post as a cheatsheet for my development. In the
-future, I will turn this into a tutorial. This current document is updated
-constantly and is not meant to be used as a tutorial but rather a "cheatsheet".
+It is the main reference for my own Python development for open-source development. All code snippets are written by me.
 
-## General practices
+## Why pytest
 
-### Write tests before (Test-driven development)
+- It avoids subclassing by using only functions, making the test structure flat and simple.
+- There is no need for direct execution with `__main__` since the script is executed by pytest.
+- pytest provides excellent state control with its fixture system, which is used for setting up and tearing down global resources.
+- It manages temporary folders efficiently using `tmp_path`, a built-in fixture, which allows access to a temporary folder in any test function.
+- pytest uses `caplog` to test log output
 
-Instead of listing pass and fail cases as comments, writing tests first
-organizes action steps and serves as both a documentation and a checklist.
 
-It follows 3 phases: A red phase, writing a failing test, a green phase, making
-the test pass, and a refactor phase.
+## Best practices for testing with pytest
 
-### Avoid testing trivial code
+- **Adopt test-driven development**: Write tests before implementing the functionality. Start with failing tests, then implement the function, make the tests pass, and refactor.
+- **Avoid over-testing trivial code**: Refrain from testing trivial code, such as getters and setters, to prevent a bloated test suite. Focus on ensuring robustness rather than achieving 100% coverage.
+- **Conduct integration testing**: Perform integration testing by starting from scratch and testing the outputs. Unit tests might pass due to the use of mocking, which simulates heavy latency tasks like database connections.
+- **Import specific functions**: Prefer importing specific functions to clarify exactly which parts of the codebase are under test.
+- **Use `Enum` to manage error messages**: Leverage `Enum` to organize and manage error messages consistently.
+- **Catch specific errors**: Always catch specific errors instead of general type errors.
 
-Over-testing can lead to a bloated test suite by testing trivial code (like
-getters/setters). Let's return to first principles: the goal of unit testing is
-to ensure robustness, not to achieve 100% coverage. However, writing tests
-before often prevent us writing bloated code despite the mental energy required
-to make a plan.
-
-### Integration testing is essential due to mocking
-
-While unit testing checks whether functions pass or fail based on criteria,
-integration testing—starting from scratch and checking the outputs by the end of
-the run—is crucial. Even if unit tests pass, possibly due to the use of mocking
-(jargon for "simulating" heavy latency tasks such as database connection) , the
-entire software system must remain integrated and functional.
 
 ## Test types
 
@@ -62,38 +53,124 @@ for cif_file_path in cif_file_path_list:
         preprocess_supercell_operation(cif_file_path)
 ```
 
-## Folder and file management
+## Test for file generation
+
+Often, it is difficult to test `.png`. But we can check whether the file exists and the size.
+
+A function for checking the size:
 
 ```python
-def get_file_count_from_directory(directory):
-    return len(glob.glob(join(directory, "*.pdf")))
+# folder.py
+def check_file_exists(file_path: str) -> bool:
+    """Check if the specified file exists."""
+    if not os.path.exists(file_path):
+        # Using enum value and formatting it with file_path
+        raise FileNotFoundError(
+            FileError.FILE_NOT_FOUND.value.format(file_path=file_path)
+        )
 ```
+
+Error message:
 
 ```python
-def get_file_path_list_from_directory(directory):
-    return glob.glob(os.path.join(directory, "*.pdf"))
+# utils/error_messages.py
+class FileError(Enum):
+    FILE_NOT_FOUND = "The file at {file_path} was not found."
+    FILE_IS_EMPTY = "The file at {file_path} is empty."
 ```
+
+Test file:
 
 ```python
-def remove_directories(directory_list):
-    for direcotry in directory_list:
-        if exists(direcotry):
-            rmtree(direcotry)
+# test_folder.py
+def test_check_file_exists(tmp_path):
+    # Setup: create a temporary file
+    test_file = tmp_path / "testfile.txt"
+    test_file.touch()  # This creates the file
+
+    # Test file exists
+    assert check_file_exists(test_file) == True
+
+    # Test file does not exist
+    non_existent_file = tmp_path / "nonexistent.txt"
+    with pytest.raises(FileNotFoundError) as e:
+        check_file_exists(str(non_existent_file))
+    assert str(e.value) == FileError.FILE_NOT_FOUND.value.format(
+        file_path=non_existent_file
+    )
 ```
+
+
+## Test log
+
+Function:
 
 ```python
-def move_files(to_directory, file_path_list):
-    for file_path in file_path_list:
-        move(file_path, to_directory)
+def log_save_file_message(file_type: str, file_path: str):
+    logging.info(f"{file_type} has been saved in {file_path}.")
 ```
+
+
+Test function: 
+
+Use the `caplog` input default by `pytest`.
+
 
 ```python
-def remove_file(file_path):
-    if exists(file_path):
-       os.remove(file_path)
+def log_save_file_message(caplog):
+    file_type = "Histogram"
+    file_path = "/path/to/histogram.png"
+
+    # Check that the log message as expected
+    with caplog.at_level(logging.INFO):
+        log_save_file_message(file_type, file_path)
+    assert f"{file_type} has been saved in {file_path}." == caplog.text
 ```
 
-A test script for one of my files.
+I discuss here [Intro to Python logging for beginners](https://bobleesj.github.io/tutorial/2024/05/23/python-logging.html)
+
+
+## Test random numbers
+
+```python
+def generate_random_numbers(
+    count: int, low: int | float, high: int | float, is_float=True
+):
+    random.seed(42)
+    """
+    Generate a list of random numbers (floating-point or integer).
+    """
+    if is_float:
+        return [random.uniform(low, high) for _ in range(count)]
+    else:
+        return [random.randint(int(low), int(high)) for _ in range(count)]
+```
+
+
+```python
+def test_generate_random_numbers():
+    count = 10
+    low = 20
+    high = 30
+    float_results = generate_random_numbers(count, low, high)
+    int_results = generate_random_numbers(count, low, high, is_float=False)
+    # Test bound
+    assert all(low <= x <= high for x in float_results)
+    assert all(low <= x <= high for x in int_results)
+
+    # Test type and lengths
+    assert (
+        all(isinstance(x, int) for x in int_results) and len(int_results) == 10
+    )
+    assert (
+        all(isinstance(x, float) for x in float_results)
+        and len(float_results) == 10
+    )
+```
+
+
+## Test CSV
+
 
 ```python
 import pandas as pd
@@ -132,6 +209,26 @@ def test_cif_folder_info():
     # Cleanup
     remove_file(csv_file_path)
 ```
+
+### Test log
+
+```python
+def print_save_file_message(caplog):
+    file_type = "Histogram"
+    file_path = "/path/to/histogram.png"
+    with caplog.at_level(logging.INFO):
+        print_save_file_message(file_type, file_path)
+
+    # Check that the log message as expected
+    assert (
+        f"{file_type} has been saved in {file_path}." in caplog.text
+    )
+
+
+def print_save_file_message(file_type: str, file_path: str):
+    logging.info(f"{file_type} has been saved in {file_path}.")
+```
+
 
 ### Pytest Collectonly
 
@@ -241,18 +338,11 @@ export PYTHONPATH="${PYTHONPATH}:/Users/imac/Documents/GitHub/cif-cleaner-main"
 
 ## Concept of `yield`
 
+`fixture` provides a centralized source of data across all of the test files.
+`yield` is used to 
+
 ```python
-import pytest
 
-@pytest.fixture
-def setup_database():
-    # Setup code for database, e.g., creating a temp test database
-    print("Setting up database")
-
-    yield  # Here you can return a database connection if needed
-
-    # Teardown code for database, e.g., deleting the test database
-    print("Tearing down database")
 ```
 
 ## Cheatsheet for command line
@@ -316,59 +406,6 @@ def test_addition(input, expected):
 @pytest.mark.usefixtures("setup_database")
 def test_database_query():
     # use the fixtures
-```
-
-### GitHub Actions with Pytest and Codecov
-
-I use Python [Codecov](https://about.codecov.io/) to visualize the percentage of
-my lines of code covered with tests. The following is used for the GitHub
-Actions yaml file. If you are new to GitHub Actions, you may read my tutorial
-[here](https://bobleesj.github.io/tutorial/2024/03/03/github-actions.html). No
-tutorial has been covered on Codecov at the moment.
-
-```yaml
-name: Python Package using Pip and Venv
-
-on: [push]
-
-jobs:
-  build-linux:
-    runs-on: ubuntu-latest
-    strategy:
-      max-parallel: 5
-
-    steps:
-      - uses: actions/checkout@v3
-
-      - name: Set up Python 3.12
-        uses: actions/setup-python@v3
-        with:
-          python-version: "3.12"
-
-      - name: Create virtual environment and install dependencies
-        run: |
-          python -m venv venv
-          source venv/bin/activate
-          pip install -r requirements.txt
-
-      # - name: Lint with flake8
-      #   run: |
-      #     source venv/bin/activate
-      #     pip install flake8
-      #     flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
-      #     flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
-
-      - name: Test with pytest and generate coverage report
-        run: |
-          source venv/bin/activate
-          pip install pytest pytest-cov
-          python -m pytest --cov=./ --cov-report=xml
-
-      - name: Upload coverage reports to Codecov
-        uses: codecov/codecov-action@v4.0.1
-        with:
-          token: ${{ secrets.CODECOV_TOKEN }}
-          slug: bobleesj/cif-cleaner
 ```
 
 ## References

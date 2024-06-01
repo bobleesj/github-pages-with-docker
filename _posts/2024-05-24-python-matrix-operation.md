@@ -1,18 +1,20 @@
 ---
 layout: post
-title: Python matrix operations and linear algebra cheatsheet
+title: Python matrix operations and linear algebra cheatsheet (Ft. NumPy)
 categories: tutorial
 ---
 
 ## Motivation
 
-The utility of a matrix lies in its ability to algebraically manipulate a system of equations. The more concisely and clearly we write mathematical expressions, the less time is required for debugging and the less mental effort is needed to understand the code. Therefore, I am always looking to optimize my writing and coding.
+A matrix represents a set of values. Matrices are used in solving a system of equations, representing graphs, etc. The more concisely and clearly we represent matrices in scripts, the less time is required for debugging.
 
-I have decided to document the methods I use in my research and coursework for optimizing parameters in solutions to the Schrödinger equation. The following is meant to serve as a concise reference for my research.
+Here I document `NumPy` matrix functions. In coursework, I used them for training neural networks and approximating a solution to the Schrödinger equation. 
 
-Examples are based on my own work or borrowed from the links provided at the bottom
+The document serves as a concise reference for my research. Examples are based on my own work or borrowed from the links referenced.
 
 ### Group operations
+
+Assume `X` and `Y` represent matrices and `vec` is an 1-D array.
 
 ```python
 np.add(X,Y)       # Add

@@ -67,12 +67,28 @@ jobs:
       #     flake8 . --count --select=E9,F63,F7,F82 --show-source --statistics
       #     flake8 . --count --exit-zero --max-complexity=10 --max-line-length=127 --statistics
 
-      - name: Test with pytest
+      - name: Test with pytest and generate coverage report
         run: |
           source venv/bin/activate
-          pip install pytest
-          python -m pytest
+          pip install pytest pytest-cov
+          python -m pytest --cov=./ --cov-report=xml
+
+      - name: Upload coverage reports to Codecov
+        uses: codecov/codecov-action@v4.0.1
+        with:
+          token: ${{ secrets.CODECOV_TOKEN }}
+          slug: bobleesj/cif-cleaner
 ```
+
+
+
+### GitHub Actions with Pytest and Codecov
+
+I use Python [Codecov](https://about.codecov.io/) to visualize the percentage of
+my lines of code covered with tests. The following is used for the GitHub
+Actions yaml file. If you are new to GitHub Actions, you may read my tutorial
+[here](https://bobleesj.github.io/tutorial/2024/03/03/github-actions.html). No
+tutorial has been covered on Codecov at the moment.
 
 ## Understand keywords
 

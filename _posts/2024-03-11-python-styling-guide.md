@@ -1,19 +1,20 @@
 ---
 layout: post
-title: Python styling guide automation tool (Ft. Black)
+title: Python styling automation tool (Ft. Black)
 categories: tutorial
 ---
 
-### Motivation
+## Motivation
 
-I began factoring my code and implement tests at a project level. I shall check
-my work agaisnt the convention followed by the Python community.
+I strive to write reusable, well-tested, and modular scripts. It is recommended to write code that follows the general principles and standards shared by the community, such as the [PEP 8](https://peps.python.org/pep-0008/).
 
-### Automate formatting
+In contrast, we must prioritize value. Well-formatted code with no unique value is time misspent, whereas ill-formatted code that provides tremendous value is used. Therefore, formatting is secondary, and we must automate it, similar to generating references.
 
-First, it is best to follow a tool that automates formatting on behalf.
 
-I encountered two auto Python formatting tools known as `yapf` and `black`. They
+
+## Automate style guide
+
+Here we have styling guide formatting tools known as `yapf` and `black`. They
 are installed via
 
 ```bash
@@ -60,6 +61,8 @@ To lint multiple files and folders,
 ```bash
 black -l 80 postprocess preprocess tests util main.py filter
 ```
+
+
 
 ### Line-width debate
 

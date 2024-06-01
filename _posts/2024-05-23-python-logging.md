@@ -1,15 +1,15 @@
 ---
 layout: post
-title: Intro to Python logging for beginners
+title: Intro to Python logging for beginners (Ft. logging)
 categories: tutorial
 ---
 
 ## Motivation
 
-Logs record activities, which can be used for debugging and analyzing user behavior. While `print()` serves as a perfectly good solution for simple programs, there are specific needs that it cannot fulfill:
+Logs record activities. They are used for debugging and analyzing user behavior. While `print()` serves as a perfectly good solution for simple programs, there are specific needs that it cannot fulfill:
 
 - Saving logs in a separate folder or periodically
-- Turning on/off certain types of logs
+- Turning on/off certain types of logs globally
 - Providing information on line numbers, file names, etc.
 - Categorizing logs into `DEBUG`, `INFO`, `WARNING`, `ERROR`, and `CRITICAL`
 
@@ -89,11 +89,12 @@ Modify the `basicConfig` by adding `filename` and `filemode`.
 ```python
 logging.basicConfig(
     level=logging.DEBUG,  
-    filename='app.log',   # Filename
-    filemode='w',         # 'w' to write, 'a' to append
+    filename='app.log',   
+    filemode='w',  # 'w' to write, 'a' to append
     format='%(asctime)s - %(levelname)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
 )
+
 ```
 
 As of this writing, I currently have no further solutions needed beyond the above at the current level. I may add more details if more advanced functionalities from the `logging` library are needed for my projects.
