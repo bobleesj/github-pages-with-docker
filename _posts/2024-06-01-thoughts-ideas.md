@@ -5,13 +5,17 @@ categories: personal
 ---
 
 
-### Embrace duality
+### Embrace duality for excellence
 
 An electron can be modeled with states such as "spin up" and "spin down," among others described by quantum numbers. These varying states coexist in superposition until one of the states is observed with a certain probability. 
 
 Similarly, multiple states of emotions and thoughts may coexist. Our mental state is not binary. We may express a specific mental state—either happy or sad—only when we state it, similar to how an electron manifests a single energetic state when measured. The written or verbal mental statement may not depict the superposed states. The expressed state merely has a higher probability than other states, similar to the probable observation of the lowest energy state at room temperature in electrons.
 
 Elite athletes, such as Michael Jordan (MJ), exemplify both confidence and humility. MJ scored game-winning points in NBA and NCAA championship games. Yet, he also displayed humility by working to improve his three-point shooting percentage and transform into a mid-range shooter with his trainer, Tim Grover, for nearly two decades. MJ showed a willingness to listen and adhere to practice and diet routines. In practice, he was ruthless, yet he could not hold back his tears after winning his sixth championship, cradling the trophy in his arms. Duality and plurality of emotions may coexist. The probability of each emotional state is merely altered by circumstances, similar to how temperature influences the distribution of electronic states.
+
+I build open-source programs that help experimentalists analyze synthesized crystal data. I design data structures for crystal geometries, develop command-line user interfaces, and generate publication-quality figures. I am proud and confident in my ability to deliver results. Nonetheless, I recognize that my craftsmanship can still be elevated compared to other open-source projects. Kobe Bryant said, "Once you know what it is in life that you want to do, then the world basically becomes your library. Everything you view, you can view from that perspective, which makes everything a learning asset for you."
+
+I could enhance my code by using matrices to compute atomic distances instead of relying on for-loops. I could improve the flow of the command-line interface by seeking feedback from users without programming expertise. My goal is not just to create good programs that merely work. I aim to craft phenomenal inventions that are loved by my users. I invest my time—a part of my life—in learning and applying unit testing, static type checking, continuous integration, and any other practices that elevate my craft. No audience watches elite athletes' individual practices in the morning, but that is where their legacy begins.
 
 June 2, 2024, 160 Claremont, New York
 
