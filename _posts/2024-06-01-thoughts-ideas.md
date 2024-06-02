@@ -16,13 +16,21 @@ Elite athletes, such as Michael Jordan (MJ), exemplify both confidence and humil
 
 ### Writing principles
 
-A sentence is ordered based on priority. For example, to write an outline of the overall paper, instead of "The role of titanium is discussed in the first section," I write, "First, we discuss the role of titanium."
+Words in a sentence are ordered based on purpose. While the following sentence, "The role of titanium is discussed in the first section," is clear in meaning, the first 4 words do not address the purpose of informing the structure of the paper. I instead write, "First, we discuss the role of titanium."
 
-A sentence requires precise words to avoid miscommunication. In fields such as the military and medicine, professionals avoid colloquial words. Surgeons use the term "correct" instead of "right" during procedures. I recently rewrote "Find the number of atoms in a formula" to "Count unique elements in a chemical formula." In this context, "formula" could refer to a mathematical formula, and "Find the number" is replaced with "count." "Elements" refers to unique atom types.
+A sentence requires precise words to avoid miscommunication. In fields such as the military and medicine, professionals avoid colloquial words. Surgeons use the term "correct" instead of "right" during procedures. I recently rewrote "Find the number of atoms in a formula" to "Count the unique elements in a chemical formula." In this context, "formula" could refer to a mathematical formula, and "Find the number" is replaced with "count." "Elements" refers to unique atom types.
 
-A sentence is abridged with the correct noun-verb pair. Adjectives describe nouns, and adverbs describe verbs. Adjectives and adverbs may not be necessary when the noun-verb pair adequately conveys the meaning.
+A sentence is abridged with the correct noun-verb pair. Adjectives describe nouns. Adverbs describe verbs. Adjectives and adverbs may not be necessary when the noun-verb pair adequately conveys the meaning.
 
 A sentence should not start with symbols. If an acronym is unfamiliar to the audience, the full name should be used multiple times.
+
+A sentence must be clear, descriptive, and concise in that order. 
+
+I avoid connecting two or more full sentences with conjunctions as a single sentence is easier to read. A conjunction should be used sparingly; as Steve Jobs said, "Less is more."
+
+In programming, we refactor comments, names, and structures after the function is implemented. In writing, words, sentences, paragraphs, and outlines are refactored after the meaning is conveyed.
+
+Repetition is not harmful if it enhances clarity.
 
 ### Purpose of research
 
