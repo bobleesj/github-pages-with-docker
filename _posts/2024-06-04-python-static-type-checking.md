@@ -42,12 +42,7 @@ def return_hello_world(name: str) -> str:
 
 ## Practical examples
 
-Now, let's look at a more practical example from research code:
-
-I wanted to create a function that generates a list of random numbers with
-decimal places or integers.
-
-This function generates a list of random numbers, either as `float` or `int`.
+Now, let's look at a more practical example from research code. The following returns a list of random numbers, either as `float` or `int`.
 
 ```python
 def generate_random_numbers(
