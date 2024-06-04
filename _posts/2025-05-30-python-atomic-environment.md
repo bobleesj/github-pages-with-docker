@@ -4,7 +4,6 @@ title: Python calcuclate atomic environment with .cif (Ft. ASE)
 categories: tutorial
 ---
 
-
 ### Installation
 
 ```bash
@@ -12,7 +11,6 @@ pip install ase
 ```
 
 ### Example 1. Find all pair distances
-
 
 ```python
 from ase.io import read, write

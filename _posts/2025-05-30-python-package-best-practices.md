@@ -6,8 +6,11 @@ categories: cheatsheet
 
 ## Motivation
 
-We write software by writing lines of code. Software development requires unique algorithms and brainstorming. In the end, those mere ideas and dreams are materialized through the keyboards and alphabets we press on the keyboard. We want to express the algorithms, ideas, and unique points through the alphabetics that we use.
-
+We write software by writing lines of code. Software development requires unique
+algorithms and brainstorming. In the end, those mere ideas and dreams are
+materialized through the keyboards and alphabets we press on the keyboard. We
+want to express the algorithms, ideas, and unique points through the alphabetics
+that we use.
 
 ### 1. Write commands
 
@@ -17,14 +20,14 @@ We write software by writing lines of code. Software development requires unique
 
 > Count the number of atoms in a supercell. (Best)
 
-
-A source code documentation is as an instruction manual, not an encyclopedia. Users want clear action steps.
-
+A source code documentation is as an instruction manual, not an encyclopedia.
+Users want clear action steps.
 
 ### 2. Every word matters
 
-Use the minimum number of words without losing information. It means choosing the correct and precious nouns and verbs. Always avoid ambigous and colloquaislism. 
-
+Use the minimum number of words without losing information. It means choosing
+the correct and precious nouns and verbs. Always avoid ambigous and
+colloquaislism.
 
 > Find the number of atoms in a formula. (Ok)
 
@@ -32,7 +35,8 @@ Use the minimum number of words without losing information. It means choosing th
 
 > Count unique elements in a formula. (Best)
 
-Replace "find the number" with "count". While "atoms" could be interpreted as individual particles, "elements" refers to the types of atoms.
+Replace "find the number" with "count". While "atoms" could be interpreted as
+individual particles, "elements" refers to the types of atoms.
 
 Language matters. Precision and clarity save time, the most important resource.
 
@@ -42,7 +46,6 @@ Language matters. Precision and clarity save time, the most important resource.
 "Compute the Euclidean distance between two Cartesian coordinates"
 ```
 
-
 ### 3. Use one word, if there is a precious terminology.
 
 ### 4. Use simple words, if no greater value is added by other words.
@@ -51,4 +54,6 @@ Language matters. Precision and clarity save time, the most important resource.
 
 ### 6.. Focus on purpose
 
-Use a precise verb. Explain the why and purpose beyond the functionality We want to communicate why we are adding extra lines of code. Justification of its existence is more important than any.
+Use a precise verb. Explain the why and purpose beyond the functionality We want
+to communicate why we are adding extra lines of code. Justification of its
+existence is more important than any.

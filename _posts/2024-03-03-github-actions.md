@@ -80,8 +80,6 @@ jobs:
           slug: bobleesj/cif-cleaner
 ```
 
-
-
 ### GitHub Actions with Pytest and Codecov
 
 I use Python [Codecov](https://about.codecov.io/) to visualize the percentage of

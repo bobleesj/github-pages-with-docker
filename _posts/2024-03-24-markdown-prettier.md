@@ -6,17 +6,24 @@ categories: tutorial
 
 ## Motivation
 
-Similar to the post on the Python automatic styling tool, Black, in my tutorial [here](https://bobleesj.github.io/tutorial/2024/03/11/python-styling-guide.html), we want to improve the readability and consistency of Markdown files using `Prettier`.
+Similar to the post on the Python automatic styling tool, Black, in my tutorial
+[here](https://bobleesj.github.io/tutorial/2024/03/11/python-styling-guide.html),
+we want to improve the readability and consistency of Markdown files using
+`Prettier`.
 
 This tutorial should take less than 5 minutes to complete.
 
 ### Step 1: Download and Install Node.js
 
-Broadly speaking, Node.js is analogous to `Conda`. `npm` is analogous to `pip`. Download Node.js from the [Node.js official website](https://nodejs.org/en/download). `npm` will be installed automatically.
+Broadly speaking, Node.js is analogous to `Conda`. `npm` is analogous to `pip`.
+Download Node.js from the
+[Node.js official website](https://nodejs.org/en/download). `npm` will be
+installed automatically.
 
 ### Step 2: Install Prettier
 
-With Node.js and `npm` installed, install Prettier globally or in your project directory:
+With Node.js and `npm` installed, install Prettier globally or in your project
+directory:
 
 ```bash
 npm install prettier
@@ -32,7 +39,8 @@ npx prettier --write "**/*.md"
 
 ### Step 4: Configure Prettier
 
-Create a `.prettierrc` file in your project's root directory with the following settings:
+Create a `.prettierrc` file in your project's root directory with the following
+settings:
 
 ```json
 {

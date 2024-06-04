@@ -6,11 +6,16 @@ categories: tutorial
 
 ## Motivation
 
-A matrix represents a set of values. Matrices are used in solving a system of equations, representing graphs, etc. The more concisely and clearly we represent matrices in scripts, the less time is required for debugging.
+A matrix represents a set of values. Matrices are used in solving a system of
+equations, representing graphs, etc. The more concisely and clearly we represent
+matrices in scripts, the less time is required for debugging.
 
-Here I document `NumPy` matrix functions. In coursework, I used them for training neural networks and approximating a solution to the Schrödinger equation. 
+Here I document `NumPy` matrix functions. In coursework, I used them for
+training neural networks and approximating a solution to the Schrödinger
+equation.
 
-The document serves as a concise reference for my research. Examples are based on my own work or borrowed from the links referenced.
+The document serves as a concise reference for my research. Examples are based
+on my own work or borrowed from the links referenced.
 
 ### Group operations
 
@@ -47,7 +52,6 @@ np.trace(X)        # Sum of the elements on the diagonal
 np.linalg.matrix_rank(X)  # Rank of the matrix
 np.linalg.det(X)   # Determinant of the matrix
 ```
-
 
 ### Individual manipulation
 
@@ -133,7 +137,7 @@ np.set_printoptions(
     precision=3,   # Set decimal places
     suppress=True, # Avoid scientific notations
     threshold=100, # Max number of elements to be printed
-    linewidth=80,  
+    linewidth=80,
     edgeitems=2    # Show two values per edge when truncated
 )
 ```

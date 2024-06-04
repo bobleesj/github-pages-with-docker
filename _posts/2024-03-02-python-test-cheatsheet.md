@@ -6,26 +6,38 @@ categories: cheatsheet
 
 ## Motivation
 
-It is the main reference for my own Python development for open-source development. All code snippets are written by me.
+It is the main reference for my own Python development for open-source
+development. All code snippets are written by me.
 
 ## Why pytest
 
-- It avoids subclassing by using only functions, making the test structure flat and simple.
-- There is no need for direct execution with `__main__` since the script is executed by pytest.
-- pytest provides excellent state control with its fixture system, which is used for setting up and tearing down global resources.
-- It manages temporary folders efficiently using `tmp_path`, a built-in fixture, which allows access to a temporary folder in any test function.
+- It avoids subclassing by using only functions, making the test structure flat
+  and simple.
+- There is no need for direct execution with `__main__` since the script is
+  executed by pytest.
+- pytest provides excellent state control with its fixture system, which is used
+  for setting up and tearing down global resources.
+- It manages temporary folders efficiently using `tmp_path`, a built-in fixture,
+  which allows access to a temporary folder in any test function.
 - pytest uses `caplog` to test log output
-
 
 ## Best practices for testing with pytest
 
-- **Adopt test-driven development**: Write tests before implementing the functionality. Start with failing tests, then implement the function, make the tests pass, and refactor.
-- **Avoid over-testing trivial code**: Refrain from testing trivial code, such as getters and setters, to prevent a bloated test suite. Focus on ensuring robustness rather than achieving 100% coverage.
-- **Conduct integration testing**: Perform integration testing by starting from scratch and testing the outputs. Unit tests might pass due to the use of mocking, which simulates heavy latency tasks like database connections.
-- **Import specific functions**: Prefer importing specific functions to clarify exactly which parts of the codebase are under test.
-- **Use `Enum` to manage error messages**: Leverage `Enum` to organize and manage error messages consistently.
-- **Catch specific errors**: Always catch specific errors instead of general type errors.
-
+- **Adopt test-driven development**: Write tests before implementing the
+  functionality. Start with failing tests, then implement the function, make the
+  tests pass, and refactor.
+- **Avoid over-testing trivial code**: Refrain from testing trivial code, such
+  as getters and setters, to prevent a bloated test suite. Focus on ensuring
+  robustness rather than achieving 100% coverage.
+- **Conduct integration testing**: Perform integration testing by starting from
+  scratch and testing the outputs. Unit tests might pass due to the use of
+  mocking, which simulates heavy latency tasks like database connections.
+- **Import specific functions**: Prefer importing specific functions to clarify
+  exactly which parts of the codebase are under test.
+- **Use `Enum` to manage error messages**: Leverage `Enum` to organize and
+  manage error messages consistently.
+- **Catch specific errors**: Always catch specific errors instead of general
+  type errors.
 
 ## Test types
 
@@ -55,7 +67,8 @@ for cif_file_path in cif_file_path_list:
 
 ## Test for file generation
 
-Often, it is difficult to test `.png`. But we can check whether the file exists and the size.
+Often, it is difficult to test `.png`. But we can check whether the file exists
+and the size.
 
 A function for checking the size:
 
@@ -100,7 +113,6 @@ def test_check_file_exists(tmp_path):
     )
 ```
 
-
 ## Test log
 
 Function:
@@ -110,11 +122,9 @@ def log_save_file_message(file_type: str, file_path: str):
     logging.info(f"{file_type} has been saved in {file_path}.")
 ```
 
-
-Test function: 
+Test function:
 
 Use the `caplog` input default by `pytest`.
-
 
 ```python
 def log_save_file_message(caplog):
@@ -127,8 +137,8 @@ def log_save_file_message(caplog):
     assert f"{file_type} has been saved in {file_path}." == caplog.text
 ```
 
-I discuss here [Intro to Python logging for beginners](https://bobleesj.github.io/tutorial/2024/05/23/python-logging.html)
-
+I discuss here
+[Intro to Python logging for beginners](https://bobleesj.github.io/tutorial/2024/05/23/python-logging.html)
 
 ## Test random numbers
 
@@ -145,7 +155,6 @@ def generate_random_numbers(
     else:
         return [random.randint(int(low), int(high)) for _ in range(count)]
 ```
-
 
 ```python
 def test_generate_random_numbers():
@@ -168,9 +177,7 @@ def test_generate_random_numbers():
     )
 ```
 
-
 ## Test CSV
-
 
 ```python
 import pandas as pd
@@ -228,7 +235,6 @@ def print_save_file_message(caplog):
 def print_save_file_message(file_type: str, file_path: str):
     logging.info(f"{file_type} has been saved in {file_path}.")
 ```
-
 
 ### Pytest Collectonly
 
@@ -292,7 +298,6 @@ def test_using_fixture(resource_setup):
 > within the fixture itself, using the pattern of initializing resources before
 > yield and cleaning them up after `yield`.
 
-
 ### Run test automatically
 
 Download `nodemon` via `npm`.
@@ -301,7 +306,8 @@ Download `nodemon` via `npm`.
 sudo npm install -g nodemon
 ```
 
-Use `nodemon` to automatically run pytest when `.py` files change. The command should be as follows:
+Use `nodemon` to automatically run pytest when `.py` files change. The command
+should be as follows:
 
 ```bash
 nodemon --exec "python -m pytest" --ext py
@@ -339,7 +345,7 @@ export PYTHONPATH="${PYTHONPATH}:/Users/imac/Documents/GitHub/cif-cleaner-main"
 ## Concept of `yield`
 
 `fixture` provides a centralized source of data across all of the test files.
-`yield` is used to 
+`yield` is used to
 
 ```python
 

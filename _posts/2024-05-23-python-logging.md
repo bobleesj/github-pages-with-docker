@@ -6,7 +6,9 @@ categories: tutorial
 
 ## Motivation
 
-Logs record activities. They are used for debugging and analyzing user behavior. While `print()` serves as a perfectly good solution for simple programs, there are specific needs that it cannot fulfill:
+Logs record activities. They are used for debugging and analyzing user behavior.
+While `print()` serves as a perfectly good solution for simple programs, there
+are specific needs that it cannot fulfill:
 
 - Saving logs in a separate folder or periodically
 - Turning on/off certain types of logs globally
@@ -57,16 +59,17 @@ if __name__ == "__main__":
 
 ## Understand log levels
 
-The log level `DEBUG` is the lowest, meaning all messages from all severity levels (`DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`) will be logged. Refer to the table below:
+The log level `DEBUG` is the lowest, meaning all messages from all severity
+levels (`DEBUG`, `INFO`, `WARNING`, `ERROR`, `CRITICAL`) will be logged. Refer
+to the table below:
 
-
-| Log Level Set | Messages Printed                           |
-|---------------|--------------------------------------------|
-| DEBUG         | DEBUG, INFO, WARNING, ERROR, CRITICAL      |
-| INFO          | INFO, WARNING, ERROR, CRITICAL             |
-| WARNING       | WARNING, ERROR, CRITICAL                   |
-| ERROR         | ERROR, CRITICAL                            |
-| CRITICAL      | CRITICAL                                   |
+| Log Level Set | Messages Printed                      |
+| ------------- | ------------------------------------- |
+| DEBUG         | DEBUG, INFO, WARNING, ERROR, CRITICAL |
+| INFO          | INFO, WARNING, ERROR, CRITICAL        |
+| WARNING       | WARNING, ERROR, CRITICAL              |
+| ERROR         | ERROR, CRITICAL                       |
+| CRITICAL      | CRITICAL                              |
 
 For example, if you modify from `logging.DEBUG` to `logging.ERROR`
 
@@ -88,8 +91,8 @@ Modify the `basicConfig` by adding `filename` and `filemode`.
 
 ```python
 logging.basicConfig(
-    level=logging.DEBUG,  
-    filename='app.log',   
+    level=logging.DEBUG,
+    filename='app.log',
     filemode='w',  # 'w' to write, 'a' to append
     format='%(asctime)s - %(levelname)s - %(message)s',
     datefmt='%Y-%m-%d %H:%M:%S'
@@ -97,4 +100,6 @@ logging.basicConfig(
 
 ```
 
-As of this writing, I currently have no further solutions needed beyond the above at the current level. I may add more details if more advanced functionalities from the `logging` library are needed for my projects.
+As of this writing, I currently have no further solutions needed beyond the
+above at the current level. I may add more details if more advanced
+functionalities from the `logging` library are needed for my projects.

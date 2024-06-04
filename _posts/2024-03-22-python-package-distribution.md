@@ -100,7 +100,9 @@ pip install bobtwine==0.1
 python main.py  # This prints 4
 ```
 
-Now, if you want to simply make changes your `bobtwine` locally and update the function called in `main.py` without the need to re-upload and download from PyPI:
+Now, if you want to simply make changes your `bobtwine` locally and update the
+function called in `main.py` without the need to re-upload and download from
+PyPI:
 
 ```bash
 # To install your package locally and make it editable
@@ -115,5 +117,6 @@ pip uninstall bobtwine
 
 ## Source code
 
-[GitHub](https://github.com/bobleesj/bobleesj.github.io/tree/main/files/blog/2024-03-22-python-package-distribution/source-code) |
+[GitHub](https://github.com/bobleesj/bobleesj.github.io/tree/main/files/blog/2024-03-22-python-package-distribution/source-code)
+|
 [Markdown](https://github.com/bobleesj/bobleesj.github.io/blob/main/_posts/2024-03-22-python-package-distribution.md)
