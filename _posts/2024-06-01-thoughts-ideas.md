@@ -4,6 +4,38 @@ title: Personal essays and philosophy
 categories: personal
 ---
 
+### Goal
+
+Tiger Woods hung a poster of Jack Nicklaus in his room. Kobe Bryant wanted to
+retire with seven rings, one more than Michael Jordan’s six. Kobe Bryant proved
+to himself that, without Shaquille O'Neal, he could win championships. I have
+goals. I think about my most cherished goal every few hours. I sleep and wake up
+with it.
+
+This goal serves as a guiding star, providing a sense of direction regardless of
+the circumstances. Thinking about the goal itself is magical. It generates a
+sense of purpose. All my actions and time are directed towards it. Any work that
+may seem trivial on its own is no longer trivial. It is a step required to
+achieve the goal.
+
+The goal itself does not provide detailed action plans. Instead, my brain
+subconsciously explores options and proposes action steps required to achieve
+the goal. New action steps materialize when I am resting. I record them on a
+device. I use my conscious brain to filter and prioritize them.
+
+I record what I need to accomplish today, this week, this month, this quarter,
+this semester, and this year. I have daily to-dos. I do not always check off all
+the list items. I focus on what I have accomplished. As my brain is explorative
+with ideas and action steps, there are always more than I can complete in a day.
+If there aren’t enough, I ask for more.
+
+For my daily hours, I utilize a 50-minute focus, 10-minute rest technique,
+averaging 10 to 12 hours a day at home with no distractions. I play basketball
+or listen to music between sessions. I prioritize my physical health above all
+else. I do not need to force myself. I just consistently work towards the goal.
+
+June 9, 2024, 160 Claremont, New York
+
 ### Embrace duality for excellence
 
 An electron can be modeled with states such as "spin up" and "spin down," among

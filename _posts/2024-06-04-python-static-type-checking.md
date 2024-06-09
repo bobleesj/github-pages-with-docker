@@ -39,10 +39,10 @@ def return_hello_world(name: str) -> str:
     return f"Hello, {name}!"
 ```
 
-
 ## Practical examples
 
-Now, let's look at a more practical example from research code. The following returns a list of random numbers, either as `float` or `int`.
+Now, let's look at a more practical example from research code. The following
+returns a list of random numbers, either as `float` or `int`.
 
 ```python
 def generate_random_numbers(
@@ -57,7 +57,8 @@ def generate_random_numbers(
         return [random.randint(int(low), int(high)) for _ in range(count)]
 ```
 
-The type information `int | float` provided in the function specifies explicitly whether it returns a `float` or an `int`.
+The type information `int | float` provided in the function specifies explicitly
+whether it returns a `float` or an `int`.
 
 ```python
 min_dists = generate_random_numbers(100, 2.0, 4.0)  # float
@@ -75,9 +76,11 @@ my_name = None
 my_name = "Bob" # Dynamically typed as 'Str'
 ```
 
-In Python, this is called dynamic typing, where the type of `my_name` is not assigned initially but determined later as `str`.
+In Python, this is called dynamic typing, where the type of `my_name` is not
+assigned initially but determined later as `str`.
 
-In `Swift`, the type must be known and cannot change after complied, illustrating static type checking:
+In `Swift`, the type must be known and cannot change after complied,
+illustrating static type checking:
 
 ```python
 let my_name = "Bob"  # Static type inference
@@ -85,9 +88,12 @@ let my_name = "Bob"  # Static type inference
 
 ## Benefits of static type checking
 
-Static type checking enhances the development experience by providing autocomplete and function signatures in IDEs, as demonstrated in the `generate_random_numbers` example above.
+Static type checking enhances the development experience by providing
+autocomplete and function signatures in IDEs, as demonstrated in the
+`generate_random_numbers` example above.
 
-Additionally, static type checking may improve performance, potentially improving performance by allowing the compiler to optimize based on known types.
+Additionally, static type checking may improve performance, potentially
+improving performance by allowing the compiler to optimize based on known types.
 
 ## Automate
 
@@ -102,7 +108,8 @@ pip install mypy
 mypy folder_path
 ```
 
-`mypy` prints any potential errors found in the code. It is simple and straightforward to use.
+`mypy` prints any potential errors found in the code. It is simple and
+straightforward to use.
 
 ## Another example
 
