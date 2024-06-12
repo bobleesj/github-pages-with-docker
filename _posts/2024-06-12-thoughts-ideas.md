@@ -4,19 +4,59 @@ title: Personal essays and philosophy
 categories: personal
 ---
 
+### Two types of innovation and evaluation
+
+In Christensen's [disruptive innovation theory](#innovators-dilemma), innovation
+is categorized into two types. The first type improves on earlier metrics
+established by the community. In quantum physics and chemistry, scientists
+develop approximation techniques that solve the Schrödinger equation and match
+experimental results. The performance of neural networks for image
+classification was measured based on metrics from the CIFAR-10 and CIFAR-100
+image datasets.
+
+The next type of innovation, while underperforms in the primary performance,
+introduces a secondary performance. This secondary performance appeals to a
+niche group. Density Functional Theory (DFT) has introduced a new performance
+measure of computational efficiency by using the three coordinates as electron
+density to solve the Schrödinger equation. DFT has enabled materials scientists
+to employ the tool for phase transitions and kinetics.
+
+With the two types of innovation discussed, we strive to measure performance
+with both objective and subjective measures. For the second type, this is
+difficult. Jensen Huang from Nvidia said, “I find KPIs hard to understand.”
+“What’s a good KPI?” “Gross margins, that’s not a KPI. That’s a result.” Nvidia
+is known for investing in new fields such as computational drug discovery and
+materials science, beyond its origins as a computer-graphics chip design firm.
+
+There are established measurables in academia and finance for evaluation. These
+are results. Results are goals. We do not constantly measure goals; they are our
+guiding stars. We observe and decide which star to follow. The destination is
+not the star itself; we use it as a tool to navigate our lives. Instead, we
+measure our velocity and operation aligned with these stars.
+
+Hence, I must develop my own subjective criteria to evaluate my progress for the
+second type of research. There is no checklist. I ask open-ended questions and
+determine my progress based on my confidence in answering these questions.
+
+First, I ask whether my research output provides immediate value to a niche
+group of scientists. Second, I consider whether it has the potential to attract
+users beyond the existing community. The commonality between DFT and personal
+computing is their ability to attract a new cohort of users with secondary
+performance measures—efficiency for DFT and ease of use for personal computing.
+Lastly, I assess whether my research outcomes have the potential to be adopted
+by the existing scientific community.
+
+
+June 12, 2024, 160 Claremont, New York
+
 ### Goal
 
-Tiger Woods hung a poster of Jack Nicklaus in his room. Kobe Bryant wanted to
-retire with seven rings, one more than Michael Jordan’s six. Kobe Bryant proved
-to himself that, without Shaquille O'Neal, he could win championships. I have
-goals. I think about my most cherished goal every few hours. I sleep and wake up
-with it.
-
-This goal serves as a guiding star, providing a sense of direction regardless of
-the circumstances. Thinking about the goal itself is magical. It generates a
-sense of purpose. All my actions and time are directed towards it. Any work that
-may seem trivial on its own is no longer trivial. It is a step required to
-achieve the goal.
+I have goals. I think about my most cherished goal every few hours. I sleep and
+wake up with it. This goal serves as a guiding star, providing a sense of
+direction regardless of the circumstances. Thinking about the goal itself is
+magical. It generates a sense of purpose. All my actions and time are directed
+towards it. Any work that may seem trivial on its own is no longer trivial. It
+is a step required to achieve the goal.
 
 The goal itself does not provide detailed action plans. Instead, my brain
 subconsciously explores options and proposes action steps required to achieve
@@ -284,6 +324,8 @@ transformation.
 Fall 2021, EID 367, The Cooper Union
 
 ### The Innovator’s Dilemma: When New Technologies Cause Great Firms to Fail - Clayton M. Christensen
+
+<a id="innovators-dilemma"></a>
 
 Despite seemingly sound managerial practices, such as listening to existing
 customers and continued investment in technology, great companies are often
