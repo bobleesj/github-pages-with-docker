@@ -113,19 +113,6 @@ interact -n 64 -t 8:00:00
 module avail mkl
 ```
 
-### Phonopy
-
-```bash
-# Save
-phonopy-vasp-born > BORN
-
-# To add non-analytic correction
-phonopy -p --nac mesh.conf
-
-# draw a band
-phonopy-bandplot -o "frequency-born.png" band.yaml
-```
-
 ### Unix-like OS commands
 
 ####

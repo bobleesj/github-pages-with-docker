@@ -4,6 +4,90 @@ title: Personal essays and philosophy
 categories: personal
 ---
 
+- [Failure framework: experimental, expensive, pivotal, and avoidable](#failure-framework-experimental-expensive-pivotal-and-avoidable)
+- [Two types of innovation and evaluation](#two-types-of-innovation-and-evaluation)
+- [Goal](#goal)
+- [Embrace duality for excellence](#embrace-duality-for-excellence)
+- [Writing principles](#writing-principles)
+- [Purpose of research](#purpose-of-research)
+- ["Good luck!"](#good-luck)
+- [The Structure of Scientific Revolutions - Thomas S. Kuhn](#the-structure-of-scientific-revolutions---thomas-s-kuhn)
+- [The Innovator’s Dilemma: When New Technologies Cause Great Firms to Fail - Clayton M. Christensen](#the-innovators-dilemma-when-new-technologies-cause-great-firms-to-fail---clayton-m-christensen)
+- [The Discoverers: A History of Man’s Search to Know His World and Himself - Daniel J. Boorstin](#the-discoverers-a-history-of-mans-search-to-know-his-world-and-himself---daniel-j-boorstin)
+- [The Two Cultures and the Scientific Revolution - C. P. Snow](#the-two-cultures-and-the-scientific-revolution---c-p-snow)
+
+### Failure framework: experimental, expensive, pivotal, and avoidable
+
+Failure is the inability to meet an expectation. The _expectation_ is the key
+component. The position of the expectation dictates the outcome as a success or
+a failure. The position is associated with quality, standards, regulations, and
+laws. Individuals, organizations, and nations set different positions.
+
+The exepectation sets the state of the outcome. The analogy of a glass being
+half-empty or half-full is an expectation-based result. If I expected the glass
+to be full, I view it as half-full. If I expected it to be empty, then it's
+half-empty. The state is based on the expectation before observing the water
+level.
+
+Not all failures are the same due to differences in resource allocation, the
+magnitude, and the reversibility of the consequences. For example, the failure
+to maintain a server for financial applications is incomparable to other server
+failures. While the functional expectation is the same, the reversibility and
+magnitude of the consequence differ. Here, I present four types:
+
+The first type is _experimental failure_, characterized by a high level of
+reversibility and repeatability with minimal resources. It is commonly observed
+in the research and development stage. Examples include receiving bug reports
+from users and collaborators. As a student, I strategically use experimental
+failure for exam preparations by writing exam-like questions on flashcards. I am
+expected to know the answers a day before the exam. Discovering problems I am
+unable to solve, I repeat the problems until I meet the expectation with
+confidence. The phrase, “fail fast, fail often,” is appropriate here. It is a
+great way to test one's product and software integrity, provided the
+consequences are minimal and the process is repeatable.
+
+The second type is _expensive failure_. “Expensive” often relates to value. I
+prefer it over "costly," which solely connotes negativity. Not all failures are
+expensive, as they require substantial resource allocations. In machine
+learning, this could be attaining sub-optimal performance in trained models. In
+simulations, it is failing to reach convergence after a weeks-long effort. In
+experimental work, it is the failure to validate a hypothesis after 3 to 6
+months of dedicated work. For researchers, it includes manuscript and grant
+rejections. For students, it could be poor midterm and final exam grades. As a
+junior in college, I enrolled in a graduate-level electrical engineering course
+called Deep Learning. Despite failing to meet my grade expectation, the failure
+was accompanied by tremendous knowledge gained.
+
+Professionals encounter expensive failures. While the consequences are
+significant and could potentially cost one's job, it is important to recognize
+that such failures require a substantial mental commitment to achieve high
+expectations. Those who achieve these expectations often reap benefits not
+available to those who do not attempt to do so. Therefore, although deciding to
+take on such risks involves potential downsides, I believe that (1) the
+willingness to allocate substantial resources to achieve high expectations, (2)
+the ability to take ownership of failures, and (3) the capacity to make
+improvements are prerequisites for success.
+
+The third type is _pivotal failure_. This failure significantly affects one's
+life trajectory and is often associated with a great magnitude of consequence
+and irreversibility. Examples might include failing to find a job in a specific
+industry, being rejected from programs, failing licensing exams, or losing an
+election as a politician. Those with high expectations may encounter this
+pivotal failure more frequently due to the scarcity of available resources.
+
+The fourth type is _avoidable failure_. These failures are best avoided as they
+are not only irreversible but also costly. They involve failing to achieve
+expectations set by regulations, laws, and practices. Examples include failing
+to meet safety checks required to operate a lab, committing academic plagiarism,
+or failing to comply with regulations and laws. These failures result in wasted
+resources and are best learned from the mistakes of predecessors.
+
+This framework offers a way to categorize and understand failure. However, the
+four types of failure can coexist in varying proportions. For instance, some
+experimental failures may also be avoidable or even pivotal.
+
+June 16, 2024, 160 Claremont, New York
+
 ### Two types of innovation and evaluation
 
 In Christensen's [disruptive innovation theory](#innovators-dilemma), innovation
@@ -45,7 +129,6 @@ computing is their ability to attract a new cohort of users with secondary
 performance measures—efficiency for DFT and ease of use for personal computing.
 Lastly, I assess whether my research outcomes have the potential to be adopted
 by the existing scientific community.
-
 
 June 12, 2024, 160 Claremont, New York
 
