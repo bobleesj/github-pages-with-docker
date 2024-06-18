@@ -107,7 +107,6 @@ For verbose output during linting:
 
 ```bash
 tox -e lint -vv
-
 ```
 
 ## Best practices
