@@ -46,14 +46,6 @@ Language matters. Precision and clarity save time, the most important resource.
 "Compute the Euclidean distance between two Cartesian coordinates"
 ```
 
-### 3. Use one word, if there is a precious terminology.
+### 3. Use dependency control
 
-### 4. Use simple words, if no greater value is added by other words.
-
-### 5. Every sentence is clear, descriptive, and concise (CDC) in order.
-
-### 6.. Focus on purpose
-
-Use a precise verb. Explain the why and purpose beyond the functionality We want
-to communicate why we are adding extra lines of code. Justification of its
-existence is more important than any.
+### 4. Include paths
