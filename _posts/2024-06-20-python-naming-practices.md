@@ -32,7 +32,7 @@ Automation tools such as MyPy ([tutorial](https://bobleesj.github.io/python/2024
 
 Software for science often contains names that are long. In my code, I have a set of variables that compute the minimum, maximum, and average coordination numbers within a class. These variables are primarily used by the end-users.
 
-```python
+```
 # Naming method 1
 CN_min, CN_max, CN_avg
 
