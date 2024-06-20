@@ -46,7 +46,7 @@ max_CN, min_CN, avg_CN
 
 - Using non-standardized abbreviations: One might choose to write `min` for `minimum` and `std` for `standard deviation`.
 - Using words that conflict with Python keywords: Avoid names like `list`, `str`, `dict`.
-- Using long words without purpose*: For example, `users_with_access_to_database` can be simplified to `authorized_users`, and `number_of_items` can be more succinctly expressed as `item_count`.
+- Using long words without purpose: For example, `users_with_access_to_database` can be `authorized_users`, and `number_of_items`  can be `item_count`.
 - Using general names: Names such as `data`, `info`, or `my_string` do not provide context.
 
 ### Last remarks
