@@ -228,15 +228,18 @@ audience, the full name should be used multiple times.
 
 A sentence must be clear, descriptive, and concise in that order.
 
-I avoid connecting two or more full sentences with conjunctions. A single
-sentence is easier to read. A conjunction should be used sparingly. "Less is
-more," Steve Jobs said.
+I do not connect two or more full sentences with conjunctions. A single sentence
+is easier to read. A conjunction should be used sparingly. "Less is more," Steve
+Jobs said.
 
 In programming, we refactor comments, names, and structures after the function
 is implemented. In writing, words, sentences, paragraphs, and outlines are
 refactored after the meaning is conveyed.
 
 Repetition is not harmful if it enhances clarity.
+
+I avoid using adjectives and adverbs to prevent miscommunication between
+colleagues and readers. These parts of speech are immeasurable.
 
 June 1, 2024, 160 Claremont, New York
 
