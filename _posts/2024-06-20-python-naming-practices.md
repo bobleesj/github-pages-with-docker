@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Python naming best practices
-categories: python
+categories: tutorial
 ---
 
 ## Motivation

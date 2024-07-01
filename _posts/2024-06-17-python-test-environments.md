@@ -1,7 +1,7 @@
 ---
 layout: post
 title: Test dependencies and environments in Python (Ft. Tox)
-categories: python
+categories: tutorial
 ---
 
 ## Motivation

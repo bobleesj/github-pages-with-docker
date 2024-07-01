@@ -14,6 +14,9 @@ misspent, whereas ill-formatted code that provides tremendous value is used.
 Therefore, formatting is secondary, and we must automate it, similar to
 generating references.
 
+Update: I now use `ruff` instead of `black` due to speed. Please read the new
+tutorial [here](https://bobleesj.github.io/tutorial/2024/07/01/ruff.html).
+
 ## Automate style guide
 
 Here we have styling guide formatting tools known as `yapf` and `black`. They
