@@ -14,12 +14,15 @@ Here, `pre-commit` is a simple Python library that checks formatting and linting
 so that contributors must follow the shared practices to maintain code quality
 agreed upon by members.
 
+## Overview
+
 ## Installation
 
 When you run `git init`, it generates files containing `.git/hooks/pre-commit`.
 
 This folder contains `.sh` scripts that allow you to execute a set of tasks to
-check for issues, like running tests for formatting and linting the code.
+check for issues, like running tests for formatting and linting the code before
+`git commit`.
 
 Of course, `pre-commit` will automate the above process.
 
