@@ -8,11 +8,10 @@ categories: tutorial
 
 I strive to write reusable, well-tested, and modular scripts. It is recommended
 to write code that follows the general principles and standards shared by the
-community, such as the [PEP 8](https://peps.python.org/pep-0008/).
-
-In contrast, we must prioritize value. Well-formatted code with no unique value
-is time misspent, whereas ill-formatted code that provides tremendous value is
-used. Therefore, formatting is secondary, and we must automate it, similar to
+community, such as the [PEP 8](https://peps.python.org/pep-0008/). In contrast,
+we must prioritize value. Well-formatted code with no unique value is time
+misspent, whereas ill-formatted code that provides tremendous value is used.
+Therefore, formatting is secondary, and we must automate it, similar to
 generating references.
 
 ## Automate style guide
