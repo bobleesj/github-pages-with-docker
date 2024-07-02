@@ -22,55 +22,61 @@ permalink: /publications/
 <script>
 const journalList = [
     {
-        authors: "S. Lee, C. Chen, G. Garcia, A. O. Oliynyk",
+        authors: "E. I. Jaffal‡, S. Lee‡, D. Shiryaev, A. Vtorov, N. K. Barua, H. Kleinke, A. O. Oliynyk*",
+        title: "Composition and structure analyzer/featurizer for explainable machine-learning models to predict solid state structures",
+        journal: "Submitted to Digital Discovery, under review",
+        volume: "",
+        pages: "",
+        year: "2024",
+        doi: "",
+        gscholar: ""
+    },
+    {
+        authors: "S. Lee*, C. Chen, G. Garcia, A. O. Oliynyk*",
         title: "Machine learning descriptors in materials chemistry used in multiple experimentally validated studies: Oliynyk elemental property dataset",
         journal: "Data in Brief",
         volume: "54",
         pages: "110178",
         year: "2024",
         doi: "https://doi.org/10.1016/j.dib.2024.110178",
-        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&citation_for_view=L07HlVsAAAAJ:IjCSPb-OGe4C",
-        citations: "" // Add citation count if available
+        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&citation_for_view=L07HlVsAAAAJ:IjCSPb-OGe4C"
     },
     {
-        authors: "K. P. McGuinness, A. O. Oliynyk, S. Lee, B. Molero-Sanchez, P. K. Addo",
+        authors: "K. P. McGuinness, A. O. Oliynyk, S. Lee, B. Molero-Sanchez, P. K. Addo*",
         title: "Machine-learning prediction of thermal expansion coefficient for perovskite oxides with experimental validation",
         journal: "Physical Chemistry Chemical Physics",
         volume: "25",
         pages: "32123–32131",
         year: "2023",
         doi: "10.1039/D3CP04017H",
-        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&authuser=1&citation_for_view=L07HlVsAAAAJ:2osOgNQ5qMEC",
-        citations: "" // Add citation count if available
+        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&authuser=1&citation_for_view=L07HlVsAAAAJ:2osOgNQ5qMEC"
     },
     {
-        authors: "Y. Tyvanchuk, V. Babizhetskyy, S. Baran, A. Szytula, V. Smetana, S. Lee, A. O. Oliynyk, A. Mudring",
+        authors: "Y. Tyvanchuk, V. Babizhetskyy, S. Baran, A. Szytula, V. Smetana, S. Lee, A. O. Oliynyk, A. Mudring*",
         title: "The crystal and electronic structure of RE<sub>23</sub>Co<sub>6.7</sub>In<sub>20.3</sub> (RE = Gd–Tm, Lu): A new structure type based on intergrowth of AlB<sub>2</sub>- and CsCl-type related slabs",
         journal: "Journal of Alloys and Compounds",
         volume: "976",
         pages: "173241",
         year: "2024",
         doi: "10.1016/j.jallcom.2023.173241",
-        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&authuser=1&citation_for_view=L07HlVsAAAAJ:qjMakFHDy7sC",
-        citations: "" // Add citation count if available
+        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&authuser=1&citation_for_view=L07HlVsAAAAJ:qjMakFHDy7sC"
     },
     {
-        authors: "S. Lee, M. Patel, and R. Patel",
+        authors: "S. Lee, M. Patel, and R. Patel*",
         title: "Electrospun nanofiber nerve guidance conduits for peripheral nerve regeneration: A review",
         journal: "European Polymer Journal",
         volume: "181",
         pages: "111663",
         year: "2022",
         doi: "10.1016/j.eurpolymj.2022.111663",
-        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&authuser=1&citation_for_view=L07HlVsAAAAJ:u5HHmVD_uO8C",
-        citations: ""
+        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&authuser=1&citation_for_view=L07HlVsAAAAJ:u5HHmVD_uO8C"
     }
     // Add other entries in the same format if needed
 ];
 
 const preprintList = [
     {
-        authors: "S. Lee, C. Chen, G. Garcia, A. O. Oliynyk",
+        authors: "S. Lee, C. Chen, G. Garcia, A. O. Oliynyk*",
         title: "Machine learning descriptors in materials chemistry: prediction and experimental validation synthesis of novel intermetallic UCd<sub>3</sub>",
         year: "2023",
         doi: "10.26434/chemrxiv-2023-0nlzl",
@@ -143,7 +149,7 @@ const presentationContributedList = [
 
 const bookChapterList = [
     {
-        authors: "R. Q. Topper, S. L. Topper, and S. Lee",
+        authors: "R. Q. Topper*, S. L. Topper, and S. Lee",
         title: "TransRot: A Portable Software Package for Simulated Annealing Monte Carlo Geometry Optimization of Atomic and Molecular Clusters",
         year: "2023",
         editors: "T A. Hopkins, C A. Parish",
@@ -156,6 +162,7 @@ const bookChapterList = [
     }
 ]
 
+
 function displayJournalList() {
     const container = document.getElementById('journalList');
     const ol = document.createElement('ol'); // Create an ordered list element
@@ -166,13 +173,27 @@ function displayJournalList() {
         li.classList.add('journal-entry'); // Add class for styling
 
         const formattedAuthors = entry.authors.replace('S. Lee', '<strong>S. Lee</strong>');
-        const citationString = entry.citations ? ` (${entry.citations})` : ''; // Conditionally add citations
+        
+        // Building the details string with conditional data
+        let details = `<em>${entry.journal}</em>`;
+        if (entry.volume) {
+            details += `, ${entry.volume}`;
+        }
+        if (entry.pages) {
+            details += `, (${entry.pages})`;
+        }
+        if (entry.year) {
+            details += ` (${entry.year})`;
+        }
 
+        const doiLink = entry.doi ? `<a href="https://doi.org/${entry.doi}">DOI</a>` : '';
+        const gScholarLink = entry.gscholar ? `<a href="${entry.gscholar}">Google Scholar</a>` : '';
+        
         li.innerHTML = `
-            <strong>${entry.title}</strong> </br>
-            ${formattedAuthors} </br>
-            ${entry.journal}, ${entry.volume}, ${entry.pages} (${entry.year})</br>
-            <a href="https://doi.org/${entry.doi}">DOI</a> | <a href="${entry.gscholar}">Google Scholar</a> ${citationString}
+            <strong>${entry.title}</strong><br>
+            ${formattedAuthors}<br>
+            ${details}<br>
+            ${doiLink}${doiLink && gScholarLink ? ' | ' : ''}${gScholarLink}
         `;
         ol.appendChild(li); // Append the list item to the ordered list
     });
@@ -318,6 +339,8 @@ window.onload = function() {
 
 };
 </script>
+
+‡ – these authors contributed equally to the work; * – corresponding author
 
 ### Journals
 
