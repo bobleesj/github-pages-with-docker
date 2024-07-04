@@ -50,6 +50,8 @@ the reef was on a map. I ask myself why I navigated toward the reef and whether
 I can avoid it next time. I seek advice from mentors and books on how they have
 navigated the path. Then, I embark again.
 
+July 4, 2024, 160 Claremont, New York
+
 ### Failure framework: experimental, expensive, pivotal, and avoidable
 
 Failure is the inability to meet an expectation. The _expectation_ is the key
