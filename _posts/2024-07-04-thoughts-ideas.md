@@ -4,6 +4,7 @@ title: Personal essays and philosophy
 categories: personal
 ---
 
+- [Thoughts on rejection](#thoughts-on-rejection)
 - [Failure framework: experimental, expensive, pivotal, and avoidable](#failure-framework-experimental-expensive-pivotal-and-avoidable)
 - [Two types of innovation and evaluation](#two-types-of-innovation-and-evaluation)
 - [Goal](#goal)
@@ -15,6 +16,39 @@ categories: personal
 - [The Innovator’s Dilemma: When New Technologies Cause Great Firms to Fail - Clayton M. Christensen](#the-innovators-dilemma-when-new-technologies-cause-great-firms-to-fail---clayton-m-christensen)
 - [The Discoverers: A History of Man’s Search to Know His World and Himself - Daniel J. Boorstin](#the-discoverers-a-history-of-mans-search-to-know-his-world-and-himself---daniel-j-boorstin)
 - [The Two Cultures and the Scientific Revolution - C. P. Snow](#the-two-cultures-and-the-scientific-revolution---c-p-snow)
+
+### Thoughts on rejection
+
+Rejection is a form of failure. Failure is the inability to meet expectations.
+Here, I present two types of rejections and how I navigate my life.
+
+As of this writing, I encounter rejections every one or two months. My recent
+paper was rejected by a journal, and my request for collaboration was declined.
+As I further advance my career in academia, I expect these intervals to
+decrease.
+
+I do not use the phrase "don’t take it personally." There is nothing more
+personal than spending one's invaluable and finite resource called time.
+
+Nonetheless, rejection is inevitable. We compete for finite resources provided
+at each level of our career.
+
+We are on a ship called a career. I view rejection as a reef in the ocean. When
+the ship hits the reef, there are two outcomes: it either sinks the ship or
+alters its velocity with broken parts.
+
+The first type of rejection may destroy the ship and provide no further
+opportunity to advance one's career. In most cases, however, we encounter the
+second type of rejection, which alters the velocity of one's career and requires
+repairs. Not to mention, some ships are equipped with special radars called
+mentors and knowledge that prevent the ship from encountering the reef. However,
+once the ship enters uncharted territory, it will inevitably encounter a reef at
+some point.
+
+When I hit the reef, I retreat and reflect. During the repairs, I locate where
+the reef was on a map. I ask myself why I navigated toward the reef and whether
+I can avoid it next time. I seek advice from mentors and books on how they have
+navigated the path. Then, I embark again.
 
 ### Failure framework: experimental, expensive, pivotal, and avoidable
 

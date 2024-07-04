@@ -340,7 +340,7 @@ window.onload = function() {
 };
 </script>
 
-‡ – these authors contributed equally to the work; * – corresponding author
+‡ – these authors contributed equally to the work; \* – corresponding author
 
 ### Journals
 
