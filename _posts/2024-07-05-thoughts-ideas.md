@@ -4,6 +4,7 @@ title: Personal essays and philosophy
 categories: personal
 ---
 
+- [My approach to daily work](#my-approach-to-daily-work)
 - [Thoughts on rejection](#thoughts-on-rejection)
 - [Failure framework: experimental, expensive, pivotal, and avoidable](#failure-framework-experimental-expensive-pivotal-and-avoidable)
 - [Two types of innovation and evaluation](#two-types-of-innovation-and-evaluation)
@@ -16,6 +17,64 @@ categories: personal
 - [The Innovator’s Dilemma: When New Technologies Cause Great Firms to Fail - Clayton M. Christensen](#the-innovators-dilemma-when-new-technologies-cause-great-firms-to-fail---clayton-m-christensen)
 - [The Discoverers: A History of Man’s Search to Know His World and Himself - Daniel J. Boorstin](#the-discoverers-a-history-of-mans-search-to-know-his-world-and-himself---daniel-j-boorstin)
 - [The Two Cultures and the Scientific Revolution - C. P. Snow](#the-two-cultures-and-the-scientific-revolution---c-p-snow)
+
+### My approach to daily work
+
+“Slow but steady wins the race” is the moral of The Tale of the Turtle and the
+Rabbit. Unfortunately, the phrase is contradictory in practice. If we are slow
+and steady with no acceleration, we do not win the race. This was a random
+thought.
+
+We run a race called a day. A day has no finish line but a timeline. To me,
+winning the day means improving my skills, feeling fulfilled, and staying
+motivated for the next day. After years of trial and error since I returned as a
+full-time student four years ago, I am proud to say I have developed techniques
+and mindsets that allow me to win daily. Here is my approach.
+
+My race begins the night before. I sleep 8 hours and usually wake up without an
+alarm. I have examined the number of hours of sleep my body needs to wake up
+naturally and stay productive throughout the day. It is 8 hours. Sleeping fewer
+hours than needed indicates I am not productive during the day or I lack time
+management skills.
+
+During the race, I eliminate visual and sensory cues that might derail me. The
+book “_The Power of Habit_” states that most of our actions are cued
+subconsciously from the environment. I remove these root cues. I have no email
+or group messaging apps on my tablet. The apps are installed on my mobile phone,
+which remains muted and out of sight. I willfully check emails and messaging
+platforms only during breaks. This way, my actions remain controlled, rewarding
+myself with checking information at the allowed time by following the focus
+technique next.
+
+I focus for 4-hour blocks using the 50-minute focus and 10-minute rest
+technique. I view the brain like any other muscle in the body. Fortunately, the
+brain can be used in full mode for an extended time. However, if I were to
+maximize the number of pull-ups in 24 hours, I would space out the sessions.
+During the 4 hours, I turn on a video available on my desktop of a person
+conducting a 4-hour session on my side monitor with time provided. The person on
+the monitor provides great accountability for staying in the race and serves as
+an internal clock. For each session, I record in a plain text editor the time
+and tasks I have accomplished. I do not use Notion or full-featured note-taking
+apps to avoid cues. The plain text file filled with completed tasks provides a
+sense of achievement and momentum.
+
+Every 50 minutes, I take a 10-minute rest to allow my eyes and brain to both
+relax and consolidate information. During the 10-minute rest, I listen to music
+or play mini basketball at home. On a normal day, I conduct 2 sets of 4-hour
+blocks. Beyond the timed sessions, I explore ideas, gain new knowledge, write
+blog posts, and learn a foreign language without tracking the time. I exercise,
+either between the two blocks or after the two blocks, by playing basketball or
+doing a compound body workout of pull-ups and dips.
+
+During weekends and holidays, I do not force myself; a regular race does not
+apply. I work at less than half the intensity without tracking time. I relax,
+read books, and enjoy time with my family. I am happy to rest because I have had
+a fulfilling week. We need to rest to remain happy, appreciated, and fulfilled.
+Relaxation is often accompanied by daydreaming and the exploration of ideas.
+When I have good ideas, I record them briefly on my phone. I give myself
+permission to rest and strategize for my goals. Then, I begin my race again.
+
+July 5, 2024, 160 Claremont, New York
 
 ### Thoughts on rejection
 
