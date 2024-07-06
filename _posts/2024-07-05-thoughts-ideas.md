@@ -69,7 +69,7 @@ doing a compound body workout of pull-ups and dips.
 During weekends and holidays, I do not force myself; a regular race does not
 apply. I work at less than half the intensity without tracking time. I relax,
 read books, and enjoy time with my family. I am happy to rest because I have had
-a fulfilling week. We need to rest to remain happy, appreciated, and fulfilled.
+a fulfilling week. We need to rest to remain happy, appreciative, and fulfilled.
 Relaxation is often accompanied by daydreaming and the exploration of ideas.
 When I have good ideas, I record them briefly on my phone. I give myself
 permission to rest and strategize for my goals. Then, I begin my race again.
