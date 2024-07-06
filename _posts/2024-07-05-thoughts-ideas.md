@@ -74,7 +74,7 @@ Relaxation is often accompanied by daydreaming and the exploration of ideas.
 When I have good ideas, I record them briefly on my phone. I give myself
 permission to rest and strategize for my goals. Then, I begin my race again.
 
-July 5, 2024, 160 Claremont, New York
+July 5, 2024, 160 Claremont Ave, New York
 
 ### Thoughts on rejection
 
@@ -109,7 +109,7 @@ the reef was on a map. I ask myself why I navigated toward the reef and whether
 I can avoid it next time. I seek advice from mentors and books on how they have
 navigated the path. Then, I embark again.
 
-July 4, 2024, 160 Claremont, New York
+July 4, 2024, 160 Claremont Ave, New York
 
 ### Failure framework: experimental, expensive, pivotal, and avoidable
 
@@ -181,7 +181,7 @@ This framework offers a way to categorize and understand failure. However, the
 four types of failure can coexist in varying proportions. For instance, some
 experimental failures may also be avoidable or even pivotal.
 
-June 16, 2024, 160 Claremont, New York
+June 16, 2024, 160 Claremont Ave, New York
 
 ### Two types of innovation and evaluation
 
@@ -225,7 +225,7 @@ performance measures—efficiency for DFT and ease of use for personal computing
 Lastly, I assess whether my research outcomes have the potential to be adopted
 by the existing scientific community.
 
-June 12, 2024, 160 Claremont, New York
+June 12, 2024, 160 Claremont Ave, New York
 
 ### Goal
 
@@ -252,7 +252,7 @@ averaging 10 to 12 hours a day at home with no distractions. I play basketball
 or listen to music between sessions. I prioritize my physical health above all
 else. I do not need to force myself. I just consistently work towards the goal.
 
-June 9, 2024, 160 Claremont, New York
+June 9, 2024, 160 Claremont Ave, New York
 
 ### Embrace duality for excellence
 
@@ -297,7 +297,7 @@ applying unit testing, static type checking, continuous integration, and any
 other practices that elevate my craft. No audience watches elite athletes'
 individual practices in the morning, but that is where their legacy begins.
 
-June 2, 2024, 160 Claremont, New York
+June 2, 2024, 160 Claremont Ave, New York
 
 ### Writing principles
 
@@ -336,7 +336,7 @@ Repetition is not harmful if it enhances clarity.
 I avoid using adjectives and adverbs to prevent miscommunication between
 colleagues and readers. These parts of speech are immeasurable.
 
-June 1, 2024, 160 Claremont, New York
+June 1, 2024, 160 Claremont Ave, New York
 
 ### Purpose of research
 
@@ -358,7 +358,7 @@ from this knowledge. This is evident in recent history, particularly from the
 1940s onwards. Hence, research is a sacred activity; it is a human activity,
 aimed at advancing our civilization by producing new knowledge.
 
-June 1, 2024, 160 Claremont, New York
+June 1, 2024, 160 Claremont Ave, New York
 
 ### "Good luck!"
 
@@ -378,7 +378,7 @@ term "serendipity" encapsulates this sense of self-initiative and direction
 towards solving a problem. So, when I say "Good luck," it has a meaningful
 context too.
 
-June 1, 2024, 160 Claremont, New York
+June 1, 2024, 160 Claremont Ave, New York
 
 ### The Structure of Scientific Revolutions - Thomas S. Kuhn
 
