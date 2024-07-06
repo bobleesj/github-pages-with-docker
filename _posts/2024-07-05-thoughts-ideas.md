@@ -40,7 +40,7 @@ management skills.
 During the race, I eliminate visual and sensory cues that might derail me. The
 book “_The Power of Habit_” states that most of our actions are cued
 subconsciously from the environment. I remove these root cues. I have no email
-or group messaging apps on my tablet. The apps are installed on my mobile phone,
+or group messaging apps. The apps are only installed on my mobile phone,
 which remains muted and out of sight. I willfully check emails and messaging
 platforms only during breaks. This way, my actions remain controlled, rewarding
 myself with checking information at the allowed time by following the focus
