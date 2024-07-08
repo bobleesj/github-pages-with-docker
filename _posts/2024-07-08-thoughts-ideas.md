@@ -27,11 +27,11 @@ and their ability to apply core concepts.
 
 Regrettably, practice demands time and stamina. In Fall 2023, I enrolled in a
 course on Phonons. One practice problem asked to analytically express the
-expected position of an anharmonic oscillator from the hamiltonian. It was
-agonizing. My initial attempt had 3-4 pages of unorganized derivations. A
-mistake early on could necessitate redoing the entire set of derivations. Once I
-understood the overall scheme, I refused to engage in another practice run. Each
-practice run was associated with physical pain.
+expected position of an anharmonic oscillator from the hamiltonian. My initial
+attempt had 3-4 pages of unorganized derivations. A mistake early on could
+necessitate redoing the entire set of derivations. Once I understood the overall
+scheme, I refused to engage in another practice run. Each practice run was
+associated with physical pain.
 
 I paused. I had to minimize the physical labor, time, and potential areas for
 mistakes. I stared at my written work. I used my index fingers to locate
@@ -672,9 +672,9 @@ Although it is often believed that the widespread of technological innovation is
 created through individual genius, the acceptance and rejection of a technology
 are affected by elements in which the creator has no control over. These
 elements are referred to as human dimensions. The historical accounts presented
-in *The Discoverers: A History of Man’s Search to Know His World and Himself *by
-Daniel J. Boorstin indicates that human dimensions such as political, religious,
-and social factors influence the acceptance and rejection of a technology.
+by Daniel J. Boorstin indicates that human dimensions such as political,
+religious, and social factors influence the acceptance and rejection of a
+technology.
 
 In early fifteenth century Portugal, innovation in shipbuilding was stimulated
 by the political influence of Prince Henry, also known as Henry the Navigator.
