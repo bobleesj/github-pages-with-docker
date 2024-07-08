@@ -4,6 +4,7 @@ title: Personal essays and philosophy
 categories: personal
 ---
 
+- [Practice is costly](#practice-is-costly)
 - [My approach to daily work](#my-approach-to-daily-work)
 - [Thoughts on rejection](#thoughts-on-rejection)
 - [Failure framework: experimental, expensive, pivotal, and avoidable](#failure-framework-experimental-expensive-pivotal-and-avoidable)
@@ -17,6 +18,48 @@ categories: personal
 - [The Innovator’s Dilemma: When New Technologies Cause Great Firms to Fail - Clayton M. Christensen](#the-innovators-dilemma-when-new-technologies-cause-great-firms-to-fail---clayton-m-christensen)
 - [The Discoverers: A History of Man’s Search to Know His World and Himself - Daniel J. Boorstin](#the-discoverers-a-history-of-mans-search-to-know-his-world-and-himself---daniel-j-boorstin)
 - [The Two Cultures and the Scientific Revolution - C. P. Snow](#the-two-cultures-and-the-scientific-revolution---c-p-snow)
+
+### Practice is costly
+
+The term "practice" in school is associated with "exams" and "problems". They
+serves as a checkpoint to gauge a student's understanding of learning material
+and their ability to apply core concepts.
+
+Regrettably, practice demands time and stamina. In Fall 2023, I enrolled in a
+course on Phonons. One practice problem asked to analytically express the
+expected position of an anharmonic oscillator from the hamiltonian. It was
+agonizing. My initial attempt had 3-4 pages of unorganized derivations. A
+mistake early on could necessitate redoing the entire set of derivations. Once I
+understood the overall scheme, I refused to engage in another practice run. Each
+practice run was associated with physical pain.
+
+I paused. I had to minimize the physical labor, time, and potential areas for
+mistakes. I stared at my written work. I used my index fingers to locate
+sections where I could re-express them in symbolic forms while ensuring clarity
+for the grader. To reduce strain and increase efficiency during practice, I
+switched to using a whiteboard. Before each run, I spent more time on the
+evaluation process. At the end, I streamlined the derivations to 1-2 pages. The
+day before the exam, I practiced again, to check my preparedness. Yet, I
+minimized the time required to practice by solving problems with my eyes closed.
+On exam day, I left the classroom early. I had attained the desired academic
+performance.
+
+My experience underscores that practice itself is not the goal. The objective of
+practice is to identify the flaws and inefficiencies in our current techniques.
+Between practice runs, we consciously refine, reinforce, and eliminate the
+current technique through imagination, discussions with colleagues, and
+literature surveys.
+
+The ideal goal is to allocate the least amount of resources to practice runs yet
+perform at the expected level. Abraham Lincoln famously said, “If I had six
+hours to chop down a tree, I'd spend the first four hours sharpening the axe.”
+If Abraham Lincoln were to participate in a chopping competition, he would have
+experimented with different materials for the axe, modified the saw's shape, and
+adjusted the weight balance during those four hours daily. Refinement through
+the evaluation process between practice runs is what allows us to protect our
+finite resources and perform at the highest level.
+
+July 8, 2024, 160 Claremont Ave, New York
 
 ### My approach to daily work
 
@@ -40,11 +83,11 @@ management skills.
 During the race, I eliminate visual and sensory cues that might derail me. The
 book “_The Power of Habit_” states that most of our actions are cued
 subconsciously from the environment. I remove these root cues. I have no email
-or group messaging apps. The apps are only installed on my mobile phone,
-which remains muted and out of sight. I willfully check emails and messaging
-platforms only during breaks. This way, my actions remain controlled, rewarding
-myself with checking information at the allowed time by following the focus
-technique next.
+or group messaging apps. The apps are only installed on my mobile phone, which
+remains muted and out of sight. I willfully check emails and messaging platforms
+only during breaks. This way, my actions remain controlled, rewarding myself
+with checking information at the allowed time by following the focus technique
+next.
 
 I focus for 4-hour blocks using the 50-minute focus and 10-minute rest
 technique. I view the brain like any other muscle in the body. Fortunately, the
