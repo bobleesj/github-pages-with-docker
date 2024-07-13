@@ -4,6 +4,7 @@ title: Personal essays and philosophy
 categories: personal
 ---
 
+- [The value of poster presentations in scientific conferences](#the-value-of-poster-presentations-in-scientific-conferences)
 - [Practice is costly](#practice-is-costly)
 - [My approach to daily work](#my-approach-to-daily-work)
 - [Thoughts on rejection](#thoughts-on-rejection)
@@ -18,6 +19,91 @@ categories: personal
 - [The Innovator’s Dilemma: When New Technologies Cause Great Firms to Fail - Clayton M. Christensen](#the-innovators-dilemma-when-new-technologies-cause-great-firms-to-fail---clayton-m-christensen)
 - [The Discoverers: A History of Man’s Search to Know His World and Himself - Daniel J. Boorstin](#the-discoverers-a-history-of-mans-search-to-know-his-world-and-himself---daniel-j-boorstin)
 - [The Two Cultures and the Scientific Revolution - C. P. Snow](#the-two-cultures-and-the-scientific-revolution---c-p-snow)
+
+### The value of poster presentations in scientific conferences
+
+We share scientific value with the broader scientific community in three main
+ways: on peer-reviewed platforms, non-peer-reviewed platforms, and through
+research presentations. Here, I focus on one form of the third method: poster
+presentations. In July 2024, I will deliver a two-hour poster presentation daily
+for a week. This blog post is written to understand the nature of a poster
+presentation, my goals through the poster presentation, and my strategy during
+the poster presentation.
+
+First, I discuss the nature of a poster presentation. A journal paper is passive
+and objective, while a poster presentation is dynamic and personal. A journal is
+a final product, pre-compiled. In contrast, a poster presentation is a
+one-on-one or one-to-few session that we can tailor on the fly. With each
+sentence and paragraph, we introduce new words or concepts and receive feedback
+through facial expressions, voice, words, and body language. This gives us a
+unique chance to customize our value to the engaged person based on immediate
+feedback. A poster session requires soft skills, such as self-awareness. Each
+person has a different level of familiarity with the topic, making each poster
+session a new talk with a different audience.
+
+Unlike an oral presentation, the audience has the freedom to decide to stop by
+the poster. This freedom allows participants to be more engaged and feel more
+personal during the session than during an oral presentation, where asking
+questions may be difficult due to fear of revealing a lack of understanding to
+the wider audience. Topics during an oral presentation may not interest the
+audience.
+
+Next, I discuss the goal of a poster presentation. A successful journal paper
+impacts the field and is cited by other journals. A successful poster transforms
+the interaction into a professional relationship that serves the interests of
+both parties during and after the conference. We attend conferences to build new
+relationships and reinforce existing ones. A poster session is an integral part
+of achieving this goal. In June 2024, I attended a four-day workshop. Training
+and tutorial videos were available online from previous years, but they lacked
+the experience of forming interpersonal relationships. During meals, I attempt
+to initiate shallow interpersonal relationships by discussing non-science topics
+and remain as a pleasant person. This is important for my strategy next.
+
+I, first, identify two types of audiences: those to whom I can provide value for
+their studies or careers, and potential colleagues working on similar problems
+in my field to discuss ideas and seek feedback. These audiences may turn into
+trusted professional relationships, which we aim to cultivate.
+
+During my poster session, I create an environment where both parties can feel
+vulnerable. I start by sharing my own vulnerabilities and weaknesses, making the
+other person more comfortable sharing theirs. For example, I mention the work I
+have done and the work of others, highlighting why they were helpful due to my
+lack of skill. Vulnerability helps us understand each other’s needs.
+Complementary skill sets form a professional relationship. Additionally,
+discussing non-science topics during breakfast, lunch, or between sessions is
+important because we are more likely to be vulnerable with people we have talked
+and shared jokes with.
+
+I observe non-verbal cues. Poster sessions have no set timeline. Engagement time
+depends on the other person. A simple way to gauge interest is by the direction
+of their feet and side-eye movement. If they are pointed away from the poster,
+the person is not engaged, and it's time to either ask about their interests or
+end the presentation.
+
+It is difficult for the audience to read the sentences on the poster and listen
+to the content simultaneously. The goal is to be interactive and identify how
+both parties can benefit each other, not one-directional like an oral
+presentation. We pause, ask questions, seek their feedback, and inquire about
+their interests, creating a back-and-forth dialogue.
+
+A QR code or URL is not enough. If possible, a poster should have a demo. For
+open-source tools, I bring my own laptop, place it on a round cocktail table,
+and demonstrate. The demo must be intuitive, useful, and flawless. For
+non-harmful materials, I believe it's a good idea to bring the materials and
+share them with the audience on the spot. I recall a materials science course
+where the instructor brought different types of materials, and we could sense
+and feel them. That is engaging and intriguing for most.
+
+By the end, the poster must have a clear call-to-action. If I have identified
+the two types of audiences mentioned, I would invite them to stay connected and
+exchange contact information, have lunch or dinner afterward to build trust.
+
+To reiterate, we attend in-person events to cultivate professional relationships
+that benefit each other’s careers. A poster is a session that allows one to
+identify a group of audiences that may turn into a professional network. During
+a poster, we remain open, interactive, and vulnerable to identify each other’s
+needs and find complementary skills. If both agree, we collaborate to advance
+each other’s careers.
 
 ### Practice is costly
 
