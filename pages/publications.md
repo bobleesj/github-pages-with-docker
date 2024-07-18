@@ -92,7 +92,7 @@ const presentationList = [
         conference: "2024 Gordon Research Conference on Solid State Chemistry (July 2024)",
         type: "Poster",
         location: "New London, NH ",
-        document: "",
+        document: "2024-GRC-poster.pdf",
         abstract: ""
     },
     {
