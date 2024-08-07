@@ -27,6 +27,7 @@ I will continue to update the document.
 - [GitHub: Stage](#github-stage)
 - [GitHub: Delete remote branch](#github-delete-remote-branch)
 - [GitHub: Handle commit mistake 1](#github-handle-commit-mistake-1)
+- [GitHub: Make changes before PR merged](#github-make-changes-before-pr-merged)
 - [GitHub: Pull request best practices](#github-pull-request-best-practices)
 - [GitHub: Clean commit history with Rebase](#github-clean-commit-history-with-rebase)
 - [Conda: Create an environment and download files](#conda-create-an-environment-and-download-files)
@@ -38,8 +39,11 @@ I will continue to update the document.
 ## GitHub: Jargon
 
 First, we need to use the community technical jargon to facilitate
-communication. `origin` refers to your forked repository. `upstream` refers to
-the repo you’ve forked.
+communication.
+
+- `origin` refers to your forked repository.
+- `upstream` refers to the repo you’ve forked.
+- `PR` refers to pull request
 
 ## GitHub: Clone origin
 
@@ -138,6 +142,18 @@ git push --force
 This is a valid practice for a personal project and you are working on a branch
 alone. However, `--hard` and `--force` should not be used on shared branches.
 
+## GitHub: Make changes before PR merged
+
+The best practice is to make a separate branch from `main` instead of from the
+branch that was just used for the PR. The goal is to make the reviewe process
+modular and manageable without having commits from the previous PR.
+
+```bash
+git checkout main
+git pull origin main
+git checkout -b new-feature
+```
+
 ## GitHub: Pull request best practices
 
 - Separate PRs for file relocation and modification
@@ -192,7 +208,6 @@ cp -n -r ../doc/source/* <destination-path>
 
 # Copy the folder of "source"
 cp -n -r ../doc/source <destination-path>
-
 ```
 
 - `n` "no-clobber" is used to prevent overwriting existing files, `r` refers to
