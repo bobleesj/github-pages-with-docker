@@ -13,13 +13,26 @@ this blog post.
 
 First, I have recently joined Prof. Simon Billinge’s group
 ([https://github.com/Billingegroup](https://github.com/Billingegroup)). The
-group manages highly cited and used open-source projects.
+group manages highly cited open-source projects.
 
 As I began to make a contribution and receive feedback, I decided to write this
 blog post to document my learning from Prof. Billinge. He maintains all of the
 repositories and merges all pull requests.
 
 I will continue to update the document.
+
+- [GitHub: Jargon](#github-jargon)
+- [GitHub: Clone origin](#github-clone-origin)
+- [GitHub: Clone upstream branch](#github-clone-upstream-branch)
+- [GitHub: Stage](#github-stage)
+- [GitHub: Delete remote branch](#github-delete-remote-branch)
+- [GitHub: Handle commit mistake 1](#github-handle-commit-mistake-1)
+- [GitHub: Pull request best practices](#github-pull-request-best-practices)
+- [GitHub: Clean commit history with Rebase](#github-clean-commit-history-with-rebase)
+- [Conda: Create an environment and download files](#conda-create-an-environment-and-download-files)
+- [Pre-committer: Run all files](#pre-committer-run-all-files)
+- [Unix Commands: Copy files](#unix-commands-copy-files)
+- [CHANGELOG](#changelog)
 
 ## GitHub: Jargon
 
@@ -112,7 +125,7 @@ git push origin --delete branch_name
 git branch -D branch_name
 ```
 
-## GitHub: Handle mistake 1
+## GitHub: Handle commit mistake 1
 
 You’ve made a commit. Now, you want to re-visit the previous commit.
 
@@ -124,6 +137,12 @@ git push --force
 
 This is a valid practice for a personal project and you are working on a branch
 alone. However, `--hard` and `--force` should not be used on shared branches.
+
+## GitHub: Pull request best practices
+
+- Separate PRs for file relocation and modification
+- Be in the reviewer's shoes. Keep a PR request reasonably short and concise
+- Push a few commits in a PR for an easier review process
 
 ## GitHub: Clean commit history with Rebase
 
@@ -154,6 +173,15 @@ Visit
 [https://github.com/diffpy/diffpy.snmf](https://github.com/diffpy/diffpy.snmf)
 to see the specific `.txt` and `yml` files.
 
+## Pre-committer: Run all files
+
+Refer to https://bobleesj.github.io/tutorial/2024/07/01/precommiter for a
+tutorial
+
+```bash
+pre-commit run --all-files
+```
+
 ## Unix Commands: Copy files
 
 You may need to copy files systematically. See the details.
@@ -170,6 +198,8 @@ cp -n -r ../doc/source <destination-path>
 - `n` "no-clobber" is used to prevent overwriting existing files, `r` refers to
   copying files recursively.
 
-## Changelog
+## CHANGELOG
+
+The document is constantly updated.
 
 - Aug 7, 2024 - posted a blog
