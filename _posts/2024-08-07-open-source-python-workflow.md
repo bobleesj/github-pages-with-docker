@@ -33,6 +33,7 @@ I will continue to update the document.
 - [Pre-committer: Run all files](#pre-committer-run-all-files)
 - [Unix Commands: Copy files](#unix-commands-copy-files)
 - [CHANGELOG](#changelog)
+- [References](#references)
 
 ## GitHub: Jargon
 
@@ -44,7 +45,7 @@ the repo you’ve forked.
 
 Let us clone the `origin` repository.
 
-```python
+```bash
 # Method 1. Git clone (main branch) and download all branches
 git clone <repo-URL>
 git fetch --all
@@ -57,7 +58,6 @@ git branch -a
 
 # Checkout the branch called "cookie"
 git checkout cookie
-
 ```
 
 ## GitHub: Clone upstream branch
@@ -96,7 +96,7 @@ The `-b` flag is to create a new branch.
 Once you modify the project files, `git add` is used to track/index files before
 `git commit`.
 
-```python
+```bash
 # stage specific file format
 git add *.rst
 
@@ -154,7 +154,7 @@ TBA
 
 ## Conda: Create an environment and download files
 
-```python
+```bash
 # Create an environment
 conda env create -f environment.yml
 
@@ -200,6 +200,11 @@ cp -n -r ../doc/source <destination-path>
 
 ## CHANGELOG
 
-The document is constantly updated.
+The blog post is constantly updated.
 
 - Aug 7, 2024 - posted a blog
+
+## References
+
+- https://github.com/diffpy/diffpy.snmf/pull/56
+- https://github.com/diffpy/diffpy.snmf/pull/54
