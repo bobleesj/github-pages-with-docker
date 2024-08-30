@@ -127,6 +127,15 @@ const presentationList = [
 const presentationContributedList = [
 
     {
+        authors: "R. Q. Topper, S. Topper, S. Lee, U. Hassan, A. Kim, J. Frost, W. Wang",
+        title: "TransRot: An open-source project for simulated annealing Monte Carlo calculations of molecular clusters, microhydrated species, and surface adsorbates",
+        conference: "ACS Fall 2024 [PHYS] Division of Physical Chemistry",
+        type: "Oral",
+        location: "Denver, CO",
+        document: "",
+        abstract: "https://acs.digitellinc.com/p/s/transrot-an-open-source-project-for-simulated-annealing-monte-carlo-calculations-of-molecular-clusters-microhydrated-species-and-surface-adsorbates-610290"
+    },
+    {
         authors: "A. O. Oliynyk, S. Lee, N. K. Barua",
         title: "TiNiSi-type vs. ZrNiAl-type: One More Time with Interpretable ML and Experimental Validation",
         conference: "North American Solid State Chemistry Conference (NASSCC) 2023",

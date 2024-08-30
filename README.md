@@ -19,3 +19,7 @@ gem install bundler:2.3.7
 bundle install
 bundle exec jekyll serve --livereload
 ```
+
+## Combine
+
+npx prettier --write "\*_/_.md" && bundle exec jekyll serve --livereload
