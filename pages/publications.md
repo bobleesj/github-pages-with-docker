@@ -22,9 +22,19 @@ permalink: /publications/
 <script>
 const journalList = [
     {
+        authors: "S. Lee*, A. O. Oliynyk*",
+        title: "cifkit: A user-friendly Python package for high-throughput CIF analysis",
+        journal: "Submitted",
+        volume: "",
+        pages: "",
+        year: "2024",
+        doi: "",
+        gscholar: ""
+    },
+    {
         authors: "E. I. Jaffal‡, S. Lee‡, D. Shiryaev, A. Vtorov, N. K. Barua, H. Kleinke, A. O. Oliynyk*",
         title: "Composition and structure analyzer/featurizer for explainable machine-learning models to predict solid state structures",
-        journal: "Submitted to Digital Discovery, under review",
+        journal: "Submitted",
         volume: "",
         pages: "",
         year: "2024",
