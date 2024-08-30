@@ -127,13 +127,13 @@ const presentationList = [
 const presentationContributedList = [
 
     {
-        authors: "R. Q. Topper, S. Topper, S. Lee, U. Hassan, A. Kim, J. Frost, W. Wang",
+        authors: "R. Q. Topper, S. L. Topper, S. Lee, U. Hassan, A. Kim, J. Frost, W. Wang",
         title: "TransRot: An open-source project for simulated annealing Monte Carlo calculations of molecular clusters, microhydrated species, and surface adsorbates",
         conference: "ACS Fall 2024 [PHYS] Division of Physical Chemistry",
         type: "Oral",
         location: "Denver, CO",
         document: "",
-        abstract: "https://acs.digitellinc.com/p/s/transrot-an-open-source-project-for-simulated-annealing-monte-carlo-calculations-of-molecular-clusters-microhydrated-species-and-surface-adsorbates-610290"
+        abstract_URL: "https://acs.digitellinc.com/p/s/transrot-an-open-source-project-for-simulated-annealing-monte-carlo-calculations-of-molecular-clusters-microhydrated-species-and-surface-adsorbates-610290"
     },
     {
         authors: "A. O. Oliynyk, S. Lee, N. K. Barua",
@@ -255,6 +255,7 @@ function displayPresentationList() {
             }
             links += `<a href="/files/presentation/${entry.abstract}">Abstract</a>`;
         }
+
         if (entry.video) {
             if (links.length > 0) {
                 links += ' | ';
@@ -287,7 +288,6 @@ function displayContributedPresentationList() {
             }
             return author;
         }).join(', ');
-        // authorsFormatted = `<u>${authorsFormatted.split[', '](0)}</u>${authorsFormatted.substring(authorsFormatted.indexOf(','))}`; // Underline the first author
 
         let links = '';
         if (entry.document) {
@@ -299,11 +299,18 @@ function displayContributedPresentationList() {
             }
             links += `<a href="/files/presentation/${entry.abstract}">Abstract</a>`;
         }
+
+        if (entry.abstract_URL) {
+            if (links.length > 0) {
+                links += ' | ';
+            }
+            links += `<a href="${entry.abstract_URL}" target="_blank">Abstract</a>`;
+        }
         if (entry.video) {
             if (links.length > 0) {
                 links += ' | ';
             }
-            links += `<a href="${entry.video}" target="_blank">YouTube</a>`; // Add video link
+            links += `<a href="${entry.video}" target="_blank">YouTube</a>`;
         }
 
         li.innerHTML = `
