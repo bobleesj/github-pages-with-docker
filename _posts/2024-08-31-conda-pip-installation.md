@@ -1,6 +1,6 @@
 ---
 layout: post
-title: Why there are two Python installation methods on GitHub repos (Feat. Conda and pip)
+title: Why there are two Python installation methods (Feat. Conda and pip)
 categories: tutorial
 ---
 
@@ -62,7 +62,7 @@ bother uploading the Python code both on PyPI and conda-forge?
 
 While I am still learning, here is the workflow used in the research group.
 
-### For package maintainers:
+### For package developers:
 
 For a complex program, for any `README.md`, I would always provide an
 instruction to create a Conda environment like here
@@ -85,7 +85,7 @@ matplotlib-base
 Then, as the second option, I would also provide an instruction using `pip` for
 those without prior experience with Conda.
 
-### For package users
+### For package users:
 
 If the package provides a package hosted on `conda-forge`, then, I would try to
 download all of the packages using `conda install ...` as shown above. And then,
