@@ -1,8 +1,7 @@
 ---
 layout: post
 title:
-  Python open-source project workflow at Billinge group (Ft. GitHub, Unix,
-  Conda)
+  Python open-source project workflow at Billinge group
 
 categories: tutorial
 ---
