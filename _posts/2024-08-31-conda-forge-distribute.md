@@ -21,7 +21,9 @@ please read my tutorial on
 
 ## Step 1: Make a "recipe"
 
-A recipe contains information on dependencies, package version, and metadata including the license, documentation link, and the maintainer(s) for the package.
+A recipe is a folder containing files to build a conda package including `meta.yaml` . `meta.yaml` contains information on dependencies, package version, license, documentation link, and the maintainer(s) for the package. The file we need to modify is `meta.yaml` and the rest is provided. Check the `meta.yaml` file of a Python package: [https://github.com/conda-forge/staged-recipes/pull/15860/files](https://github.com/conda-forge/staged-recipes/pull/15860/files).
+
+To make the recipe:
 
 - Fork and clone the [https://github.com/conda-forge/staged-recipes](https://github.com/conda-forge/staged-recipes) repository.
 - Create a new branch named `<package-name>`.
@@ -32,7 +34,8 @@ A recipe contains information on dependencies, package version, and metadata inc
 
 ## Step 2. Maintain a “feedstock”
 
-Once a conda-forge community member merges the PR, a new repository at `https://github.com/conda-forge/<package-name>-feedstock` will be automatically generated.
+Once a conda-forge community member merges the PR, a new repository at `https://github.com/conda-forge/<package-name>-feedstock` will be automatically generated and the Conda package will be now available. Check [https://github.com/conda-forge/bg-mpl-stylesheets-feedstock](https://github.com/conda-forge/bg-mpl-stylesheets-feedstock).
+
 
 ### How to update a Conda package version
 
@@ -45,7 +48,7 @@ sha256: hash_value_for_new_PyPI_version
 
 Then, follow the steps:
 
-1. Fork/clone the feedstock repository.
+1. Fork and clone the feedstock repository.
 2. Create a PR with the updated `sha256` and `version`.
 3. **Important** - In the PR, write `@conda-forge-admin please rerender` as a new comment.
 4. Wait for CI tests to pass.
@@ -53,9 +56,21 @@ Then, follow the steps:
 
 Once the PR is merged, the cond-forge CI infrastructure automatically updates the Conda package version.
 
-### How to add a maintainer to the feedstock repository
+Check: [https://anaconda.org/conda-forge/bg-mpl-stylesheets](https://anaconda.org/conda-forge/bg-mpl-stylesheets)
 
-- Create an issue.
+Now, one can download the package with
+
+```bash
+conda install <package-name>
+```
+
+## Other tips
+
+### How to add a maintainer
+
+You may want to add a maintainer to the feedstock repository. `conda-forge` provides a GitHub bot.
+
+- Create an issue in the feedstock repository.
 - Add a new comment: `@conda-forge-admin, please add user @bobleesj`. For an example, see [this issue](https://github.com/conda-forge/bg-mpl-stylesheets-feedstock/issues/19).
 - Wait for a new PR to appear.
 - Merge the PR.
