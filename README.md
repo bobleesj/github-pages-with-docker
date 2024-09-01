@@ -12,7 +12,7 @@ If you have questions, please feel free to email me via <sl5400@columbia.edu>!
 npx prettier --write "**/*.md"
 ```
 
-## Instllation
+## Installation
 
 ```bash
 gem install bundler:2.3.7
@@ -20,6 +20,10 @@ bundle install
 bundle exec jekyll serve --livereload
 ```
 
-## Combine
+## Single command
 
+To format markdowns and run the server locally:
+
+```bash
 npx prettier --write "\*_/_.md" && bundle exec jekyll serve --livereload
+```

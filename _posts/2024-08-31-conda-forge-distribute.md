@@ -66,6 +66,31 @@ conda install <package-name>
 
 ## Other tips
 
+### Python script for conda-forge update
+
+I created a script called `cf_release.py`. You can download here and read more here [https://github.com/Billingegroup/release-scripts/pull/14](https://github.com/Billingegroup/release-scripts/pull/14).
+
+The script automates the process of updating a PyPI package version and its `SHA256 hash` in a `meta.yaml` file. Behind the scenes, it enters the feedstock repository, checks out and syncs with the upstream `main` branch, and creates a pull request (PR) from a new branch. Once a maintainer merges the PR, the Conda package version is automatically updated.
+
+Folder setup:
+
+1. Ensure the feedstock and release-scripts repositories are in the same folder. For example:
+`…/dev/<package-name>-feedstock/` and `…/dev/release-scripts/`
+
+Running the release script:
+
+1. Execute the script using its absolute path:
+`python .../dev/release-scripts/cf_release.py`
+2. The script will ask:
+    1. PyPI package name (e.g., `diffpy.pdfgui`)
+    2. Python version (e.g., `0.1.3`)
+
+Re-rendering the feedstock repository:
+
+1. If you've manually modified any parts of the feedstock folder, add a new comment to the PR: `@conda-forge-admin please rerender`. If not, no action is needed.
+
+Finally, wait for the CI tests to pass. Then, tag the maintainer to merge the PR.
+
 ### How to add a maintainer
 
 You may want to add a maintainer to the feedstock repository. `conda-forge` provides a GitHub bot.
