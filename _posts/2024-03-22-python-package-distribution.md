@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to distribute Python package via pip (Ft. Twine)
+title: How to distribute Python package via pip (Ft. Twine, PyPI)
 categories: tutorial
 ---
 
