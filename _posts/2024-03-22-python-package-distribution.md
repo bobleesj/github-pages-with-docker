@@ -115,6 +115,25 @@ To uninstall
 pip uninstall bobtwine
 ```
 
+## Latest update (Sep 3, 2024)
+
+Follow the current step. This current blog post will be updated using `pyprojet.toml`.
+
+```bash
+# Install if needed
+pip install build
+
+# Create the distribution files
+python -m build
+
+# Upload to PyPI
+twine upload dist/*   
+
+# Remove previous build files if needed
+rm -rf build dist
+```
+
+
 ## Source code
 
 [GitHub](https://github.com/bobleesj/bobleesj.github.io/tree/main/files/blog/2024-03-22-python-package-distribution/source-code)
