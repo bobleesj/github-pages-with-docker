@@ -1,6 +1,6 @@
 ---
 layout: post
-title: How to distribute Python package via pip (Ft. Twine, PyPI)
+title: How to distribute Python package via pip (Ft. Twine, PyPI, Test PyPI)
 categories: tutorial
 ---
 
@@ -133,6 +133,23 @@ twine upload dist/*
 rm -rf build dist
 ```
 
+## Test on Test PyPI
+
+Test PyPI is an alternative place for you to host Python packages for testing puposes.
+
+Visit https://test.pypi.org/, register, and create an API token like the steps above.
+
+Build the package from the source:
+
+```bash
+python -m build
+```
+
+Upload to www.test.pypi.org instead:
+
+```bash
+twine upload --repository testpypi dist/*
+```
 
 ## Source code
 
