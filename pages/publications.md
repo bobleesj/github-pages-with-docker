@@ -32,13 +32,13 @@ const journalList = [
         gscholar: ""
     },
     {
-        authors: "E. I. Jaffal‡, S. Lee‡, D. Shiryaev, A. Vtorov, N. K. Barua, H. Kleinke, A. O. Oliynyk*",
+        authors: "E. I. Jaffal‡, S. Lee‡*, D. Shiryaev, A. Vtorov, N. K. Barua, H. Kleinke, A. O. Oliynyk*",
         title: "Composition and structure analyzer/featurizer for explainable machine-learning models to predict solid state structures",
-        journal: "Submitted",
+        journal: "Preprint",
         volume: "",
         pages: "",
         year: "2024",
-        doi: "",
+        doi: "https://doi.org/10.26434/chemrxiv-2024-rrbhc",
         gscholar: ""
     },
     {
