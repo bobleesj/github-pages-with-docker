@@ -28,8 +28,7 @@ const journalList = [
         volume: "54",
         pages: "110178",
         year: "2024",
-        doi: "https://doi.org/10.1016/j.dib.2024.110178",
-        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&citation_for_view=L07HlVsAAAAJ:IjCSPb-OGe4C"
+        doi: "10.1016/j.dib.2024.110178",
     },
     {
         authors: "K. P. McGuinness, A. O. Oliynyk, S. Lee, B. Molero-Sanchez, P. K. Addo*",
@@ -39,7 +38,6 @@ const journalList = [
         pages: "32123–32131",
         year: "2023",
         doi: "10.1039/D3CP04017H",
-        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&authuser=1&citation_for_view=L07HlVsAAAAJ:2osOgNQ5qMEC"
     },
     {
         authors: "Y. Tyvanchuk, V. Babizhetskyy, S. Baran, A. Szytula, V. Smetana, S. Lee, A. O. Oliynyk, A. Mudring*",
@@ -49,7 +47,6 @@ const journalList = [
         pages: "173241",
         year: "2024",
         doi: "10.1016/j.jallcom.2023.173241",
-        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&authuser=1&citation_for_view=L07HlVsAAAAJ:qjMakFHDy7sC"
     },
     {
         authors: "S. Lee, M. Patel, and R. Patel*",
@@ -59,7 +56,6 @@ const journalList = [
         pages: "111663",
         year: "2022",
         doi: "10.1016/j.eurpolymj.2022.111663",
-        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&authuser=1&citation_for_view=L07HlVsAAAAJ:u5HHmVD_uO8C"
     }
     // Add other entries in the same format if needed
 ];
