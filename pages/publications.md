@@ -22,26 +22,6 @@ permalink: /publications/
 <script>
 const journalList = [
     {
-        authors: "S. Lee*, A. O. Oliynyk*",
-        title: "cifkit: A user-friendly Python package for high-throughput CIF analysis",
-        journal: "Submitted",
-        volume: "",
-        pages: "",
-        year: "2024",
-        doi: "",
-        gscholar: ""
-    },
-    {
-        authors: "E. I. Jaffal‡, S. Lee‡*, D. Shiryaev, A. Vtorov, N. K. Barua, H. Kleinke, A. O. Oliynyk*",
-        title: "Composition and structure analyzer/featurizer for explainable machine-learning models to predict solid state structures",
-        journal: "Preprint",
-        volume: "",
-        pages: "",
-        year: "2024",
-        doi: "https://doi.org/10.26434/chemrxiv-2024-rrbhc",
-        gscholar: ""
-    },
-    {
         authors: "S. Lee*, C. Chen, G. Garcia, A. O. Oliynyk*",
         title: "Machine learning descriptors in materials chemistry used in multiple experimentally validated studies: Oliynyk elemental property dataset",
         journal: "Data in Brief",
@@ -86,11 +66,24 @@ const journalList = [
 
 const preprintList = [
     {
+        authors: "S. Lee*, A. O. Oliynyk*",
+        title: "cifkit: A user-friendly Python package for high-throughput CIF analysis",
+        year: "2024",
+        url: "https://joss.theoj.org/papers/9016ae27b8c6fddffaae5aeb8be18d19#",
+        citations: "" // Add citation count if available
+    },
+    {
+        authors: "E. I. Jaffal‡, S. Lee‡*, D. Shiryaev, A. Vtorov, N. K. Barua, H. Kleinke, A. O. Oliynyk*",
+        title: "Composition and structure analyzer/featurizer for explainable machine-learning models to predict solid state structures",
+        year: "2023",
+        url: "https://doi.org/10.26434/chemrxiv-2024-rrbhc",
+        citations: "" // Add citation count if available
+    },
+    {
         authors: "S. Lee, C. Chen, G. Garcia, A. O. Oliynyk*",
         title: "Machine learning descriptors in materials chemistry: prediction and experimental validation synthesis of novel intermetallic UCd<sub>3</sub>",
         year: "2023",
-        doi: "10.26434/chemrxiv-2023-0nlzl",
-        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&citation_for_view=L07HlVsAAAAJ:UeHWp8X0CEIC",
+        url: "https://doi.org/10.26434/chemrxiv-2023-0nlzl",
         citations: "" // Add citation count if available
     }
 ]
@@ -232,7 +225,7 @@ function displayPreprintList() {
         li.innerHTML = `
             <div><strong>${entry.title}</strong></div>
             <div>${formattedAuthors}</div>
-            <div><a href="https://doi.org/${entry.doi}">ChemRxiv</a> | <a href="${entry.gscholar}">Google Scholar</a> </div>
+            <div><a href="${entry.url}">Preprint</a>
         `;
         ol.appendChild(li); // Append the list item to the ordered list
     });
@@ -368,7 +361,11 @@ window.onload = function() {
 
 ‡ – these authors contributed equally to the work; \* – corresponding author
 
-### Journals
+### Preprint
+
+<div id="preprintList"></div>
+
+### Peer-reviewed journals
 
 <div id="journalList"></div>
 
@@ -376,9 +373,7 @@ window.onload = function() {
 
 <div id="bookChapter"></div>
 
-### Preprint
 
-<div id="preprintList"></div>
 
 ### Presentations
 
