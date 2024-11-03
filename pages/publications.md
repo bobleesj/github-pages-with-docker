@@ -165,7 +165,6 @@ const bookChapterList = [
         volume: 1429,
         isbn13: 9780841297432,
         doi: "10.1021/bk-2022-1428.ch002",
-        gscholar: "https://scholar.google.com/citations?view_op=view_citation&hl=en&user=L07HlVsAAAAJ&authuser=1&citation_for_view=L07HlVsAAAAJ:d1gkVwhDpl0C",
         citations: "" // Add citation count if available
     }
 ]
@@ -339,7 +338,7 @@ function displayBookChapterList() {
             <div>Physical Chemistry Research at Undergraduate Institutions: Innovative and Impactful Approaches, Volume 1, 2, 19-38</div>
             <div>ACS Publications (2022)</div>
             <div>ISBN13: ${entry.isbn13}</div>
-            <div><a href="https://doi.org/${entry.doi}">DOI</a> | <a href="${entry.gscholar}">Google Scholar</a></div>
+            <div><a href="https://doi.org/${entry.doi}">DOI</a></div>
         `;
         ol.appendChild(li); // Append the list item to the ordered list
     });
