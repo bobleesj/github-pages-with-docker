@@ -4,6 +4,9 @@ title: Research
 permalink: /research/
 ---
 
+## Current research
+
+I am advised by Prof. Simon Billinge at Columbia University. My research topic, titled “ActionGraph,” attempts to build an open-source database infrastructure for time-series materials synthesis data, intended for integration with self-driving labs. I am expected to graduate in May 2025 with the research goal of using graph neural networks to address the inverse problem of predicting simulated synthesis recipes, constrained by inputs (ingredients) and outputs (physical properties). More updates to come.
 
 ## **Reseach Area 1. First principles & computational materials science**
 
