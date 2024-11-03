@@ -117,7 +117,8 @@ pip uninstall bobtwine
 
 ## Latest update (Sep 3, 2024)
 
-Follow the current step. This current blog post will be updated using `pyprojet.toml`.
+Follow the current step. This current blog post will be updated using
+`pyprojet.toml`.
 
 ```bash
 # Install if needed
@@ -127,7 +128,7 @@ pip install build
 python -m build
 
 # Upload to PyPI
-twine upload dist/*   
+twine upload dist/*
 
 # Remove previous build files if needed
 rm -rf build dist
@@ -135,9 +136,11 @@ rm -rf build dist
 
 ## Test on Test PyPI
 
-Test PyPI is an alternative place for you to host Python packages for testing puposes.
+Test PyPI is an alternative place for you to host Python packages for testing
+puposes.
 
-Visit https://test.pypi.org/, register, and create an API token like the steps above.
+Visit https://test.pypi.org/, register, and create an API token like the steps
+above.
 
 Build the package from the source:
 

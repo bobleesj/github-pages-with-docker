@@ -368,8 +368,6 @@ window.onload = function() {
 
 <div id="bookChapter"></div>
 
-
-
 ### Presentations
 
 <div id="presentationList"></div>

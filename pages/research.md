@@ -4,13 +4,30 @@ title: Research
 permalink: /research/
 ---
 
-## **Reseach Area 1. First Principles & Computational Materials Science**
 
-### 1. Quasiparticle phonons analysis with neural network potential
+## **Reseach Area 1. First principles & computational materials science**
 
-Current research at Columbia University as a master's student - to be added
+### 1. Raman mode quasiparticle frequencies across the H-bond symmetrization in δ-AlOOH
 
-**Keywords:** phonons, deep potential, LAMMPS, Snakemake, HPC
+![](/files/research/wentzcovitch-AIOOH/phonon-dispersions.png)
+
+During the first year of my MS program advised Dr. Renata Wentzovitch and with guidance from Chenxing Luo, I
+validated the DeePMD-trained force field by generating phonon frequencies for
+AlOOH using PhonoLAMMPS, Dynaphopy, and Phonopy. I also automated a series of
+necessary computations using Snakemake and Bash on HPC.
+
+Abstract: δ-AlOOH is a prototypical deep mantle hydrous phase that undergoes a
+pressure-induced H-bond disorder-symmetrization transition from P21nm to Pnnm at
+300 K and approximately 9.0 GPa. This second-order (or near second-order)
+transition is characterized by significant anharmonicity. The precise transition
+pressure remains somewhat uncertain in static compression studies, but Raman
+frequency measurements provide valuable insights, revealing mode softening that
+cannot be fully captured by harmonic phonon calculations. In this study, we
+combine molecular dynamics and phonon calculations using DeePMD to obtain phonon
+quasiparticle properties, enabling us to examine the softening of Raman mode
+frequencies across the H-bond disorder-symmetrization transition.
+
+**Keywords:** phonons, anharmonicty, deep potential, LAMMPS, Snakemake, HPC
 
 <br>
 
@@ -26,7 +43,7 @@ behavior of ammonium chloride solvated in two to eight water molecules.
 For geometry optimization, the group developed an open-source geometry optimizer
 called “TransRot”. I validated the accuracy and reliability of the open-source
 software by implementing water models such as TIP4P and TIP4P/2005. I used the
-TransRot software and conducted ab initio calculations in Psi4, ORCA, and
+TransRot software and conducted _ab initio_ calculations in Psi4, ORCA, and
 SPARTAN to study the formation behavior with ammonium by determining the binding
 energy as one water molecule is added to the complex.
 
@@ -38,9 +55,9 @@ energy as one water molecule is added to the complex.
 
 <br>
 
-## **Research Area 2. Data-driven Methods for Materials Discovery**
+## **Research Area 2. Data-driven materials discovery**
 
-### 1. High-throughput geometric crystal featurizer for binary and ternary compounds
+### 1. High-throughput geometric crystal featurizer for .cif files
 
 ![Crystal data extraction schematic from raw CIF files and crystal databases by Dr. Anton Oliynyk](/files/research/oliynyk-cif-structure-featurizer/1.png)
 
@@ -71,7 +88,7 @@ engineering, solid-state
 
 <br>
 
-### 2. Machine learning descriptors in materials chemistry used in multiple experimentally validated studies: Oliynyk elemental property dataset
+### 2. ML descriptors for materials chemistry with multiple experimentally validated studies
 
 ![Crystal prediction with compositional data](/files/research/oliynyk-composition-featurizer/2.png)
 

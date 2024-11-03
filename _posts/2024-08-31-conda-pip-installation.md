@@ -6,8 +6,8 @@ categories: tutorial
 
 ## Motivation
 
-The blog post attempst to answer the question: Why is it necessary for an open-source project to provide two installation
-methods for a Python package?
+The blog post attempst to answer the question: Why is it necessary for an
+open-source project to provide two installation methods for a Python package?
 
 ```bash
 pip install bobkit
@@ -21,8 +21,8 @@ conda install bobkit
 
 ## Prerequsites
 
-Recall that `conda install bobkit` downloads the package from
-`conda-forge` most likely. If the previous sentence is unclear to you, read
+Recall that `conda install bobkit` downloads the package from `conda-forge` most
+likely. If the previous sentence is unclear to you, read
 [Distinguish key components in the Conda ecosystem (Ft. mamba, conda-forge, Miniconda, Anaconda, miniforge, and more)](https://bobleesj.github.io/tutorial/2024/08/30/conda-ecosystem.html).
 If you are new to Conda and its motivation, read
 [How to use the Python package manager for beginners (Ft. Conda with Cheat sheet)](https://bobleesj.github.io/tutorial/2024/02/26/intro-to-python-package-manager.html)
@@ -33,7 +33,8 @@ If you are new to Conda and its motivation, read
 
 - `pip` is the simplest solution to build and maintain a Python package. e.g.,
   `pip install -e .` for install in editable mode.
-- `Conda` is the community's solution to install packages written in any programming languages.
+- `Conda` is the community's solution to install packages written in any
+  programming languages.
 
 Here is what they do not attempt to do:
 
@@ -43,8 +44,8 @@ Here is what they do not attempt to do:
 The confusion often starts here, which is the main point of this blog post:
 
 - `pip` communicates with `PyPI` to upload and download Python packages.
-- `conda` communicates with repositories like `conda-forge` to upload and download packages, including but not limited to Python packages.
-
+- `conda` communicates with repositories like `conda-forge` to upload and
+  download packages, including but not limited to Python packages.
 
 When you make a `Conda` environment, you can still download Python packages
 using `pip install <package-name>` or `conda install <package-name>`. So why

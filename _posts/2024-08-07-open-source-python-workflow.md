@@ -1,7 +1,6 @@
 ---
 layout: post
-title:
-  Python open-source project workflow at Billinge group
+title: Python open-source project workflow at Billinge group
 
 categories: tutorial
 ---
