@@ -22,11 +22,16 @@ permalink: /publications/
 <script>
 const journalList = [
     {
+        authors: "S. Lee*, A. O. Oliynyk*",
+        title: "cifkit: A Python package for coordination geometry and atomic site analysis",
+        journal: "Journal of Open Source Software (JOSS)",
+        year: "2024",
+        doi: "10.21105/joss.07205",
+    },
+    {
         authors: "S. Lee*, C. Chen, G. Garcia, A. O. Oliynyk*",
         title: "Machine learning descriptors in materials chemistry used in multiple experimentally validated studies: Oliynyk elemental property dataset",
         journal: "Data in Brief",
-        volume: "54",
-        pages: "110178",
         year: "2024",
         doi: "10.1016/j.dib.2024.110178",
     },
@@ -34,8 +39,6 @@ const journalList = [
         authors: "K. P. McGuinness, A. O. Oliynyk, S. Lee, B. Molero-Sanchez, P. K. Addo*",
         title: "Machine-learning prediction of thermal expansion coefficient for perovskite oxides with experimental validation",
         journal: "Physical Chemistry Chemical Physics",
-        volume: "25",
-        pages: "32123–32131",
         year: "2023",
         doi: "10.1039/D3CP04017H",
     },
@@ -43,8 +46,6 @@ const journalList = [
         authors: "Y. Tyvanchuk, V. Babizhetskyy, S. Baran, A. Szytula, V. Smetana, S. Lee, A. O. Oliynyk, A. Mudring*",
         title: "The crystal and electronic structure of RE<sub>23</sub>Co<sub>6.7</sub>In<sub>20.3</sub> (RE = Gd–Tm, Lu): A new structure type based on intergrowth of AlB<sub>2</sub>- and CsCl-type related slabs",
         journal: "Journal of Alloys and Compounds",
-        volume: "976",
-        pages: "173241",
         year: "2024",
         doi: "10.1016/j.jallcom.2023.173241",
     },
@@ -52,8 +53,6 @@ const journalList = [
         authors: "S. Lee, M. Patel, and R. Patel*",
         title: "Electrospun nanofiber nerve guidance conduits for peripheral nerve regeneration: A review",
         journal: "European Polymer Journal",
-        volume: "181",
-        pages: "111663",
         year: "2022",
         doi: "10.1016/j.eurpolymj.2022.111663",
     }
@@ -61,13 +60,6 @@ const journalList = [
 ];
 
 const preprintList = [
-    {
-        authors: "S. Lee*, A. O. Oliynyk*",
-        title: "cifkit: A user-friendly Python package for high-throughput CIF analysis",
-        year: "2024",
-        url: "https://joss.theoj.org/papers/9016ae27b8c6fddffaae5aeb8be18d19#",
-        citations: "" // Add citation count if available
-    },
     {
         authors: "E. I. Jaffal‡, S. Lee‡*, D. Shiryaev, A. Vtorov, N. K. Barua, H. Kleinke, A. O. Oliynyk*",
         title: "Composition and structure analyzer/featurizer for explainable machine-learning models to predict solid state structures",
@@ -183,12 +175,6 @@ function displayJournalList() {
         
         // Building the details string with conditional data
         let details = `<em>${entry.journal}</em>`;
-        if (entry.volume) {
-            details += `, ${entry.volume}`;
-        }
-        if (entry.pages) {
-            details += `, (${entry.pages})`;
-        }
         if (entry.year) {
             details += ` (${entry.year})`;
         }
