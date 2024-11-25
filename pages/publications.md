@@ -116,7 +116,15 @@ const presentationList = [
 ];
 
 const presentationContributedList = [
-
+    {
+        authors: "C Luo, S. Lee, H. Wang, R. Wentzcovitch",
+        title: "H-bond disorder-symmetrization in δ-AlOOH under pressure: a view from phonon quasiparticles",
+        conference: "American Geophysical Union (AGU) Annual Meeting 2024",
+        type: "Poster",
+        location: "Washington DC",
+        document: "",
+        abstract_URL: "https://agu.confex.com/agu/agu24/meetingapp.cgi/Paper/1628525"
+    },
     {
         authors: "R. Q. Topper, S. L. Topper, S. Lee, U. Hassan, A. Kim, J. Frost, W. Wang",
         title: "TransRot: An open-source project for simulated annealing Monte Carlo calculations of molecular clusters, microhydrated species, and surface adsorbates",
