@@ -22,6 +22,13 @@ permalink: /publications/
 <script>
 const journalList = [
     {
+        authors: "N. K. Barua, S. Lee, A. O. Oliynyk, H. Kleinke*",
+        title: "Thermoelectric Material Performance (zT) Predictions with Machine Learning",
+        journal: "ACS Applied Materials & Interfaces",
+        year: "2024",
+        doi: "10.1021/acsami.4c19149",
+    },
+    {
         authors: "S. Lee*, A. O. Oliynyk*",
         title: "cifkit: A Python package for coordination geometry and atomic site analysis",
         journal: "Journal of Open Source Software (JOSS)",
@@ -354,7 +361,7 @@ window.onload = function() {
 
 <div id="preprintList"></div>
 
-### Peer-reviewed journals
+### Journals
 
 <div id="journalList"></div>
 
