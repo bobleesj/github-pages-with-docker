@@ -22,6 +22,13 @@ permalink: /publications/
 <script>
 const journalList = [
     {
+        authors: "E. I. Jaffal‡, S. Lee‡*, D. Shiryaev, A. Vtorov, N. K. Barua, H. Kleinke, A. O. Oliynyk*",
+        title: "Composition and structure analyzer/featurizer for explainable machine-learning models to predict solid state structures",
+        journal: "Digitial Discovery (accepted)",
+        year: "2024",
+        doi: "https://doi.org/10.26434/chemrxiv-2024-rrbhc",
+    },
+    {
         authors: "N. K. Barua, S. Lee, A. O. Oliynyk, H. Kleinke*",
         title: "Thermoelectric Material Performance (zT) Predictions with Machine Learning",
         journal: "ACS Applied Materials & Interfaces",
@@ -67,13 +74,6 @@ const journalList = [
 ];
 
 const preprintList = [
-    {
-        authors: "E. I. Jaffal‡, S. Lee‡*, D. Shiryaev, A. Vtorov, N. K. Barua, H. Kleinke, A. O. Oliynyk*",
-        title: "Composition and structure analyzer/featurizer for explainable machine-learning models to predict solid state structures",
-        year: "2023",
-        url: "https://doi.org/10.26434/chemrxiv-2024-rrbhc",
-        citations: "" // Add citation count if available
-    },
     {
         authors: "S. Lee, C. Chen, G. Garcia, A. O. Oliynyk*",
         title: "Machine learning descriptors in materials chemistry: prediction and experimental validation synthesis of novel intermetallic UCd<sub>3</sub>",
