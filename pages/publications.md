@@ -24,7 +24,7 @@ const journalList = [
     {
         authors: "E. I. Jaffal‡, S. Lee‡*, D. Shiryaev, A. Vtorov, N. K. Barua, H. Kleinke, A. O. Oliynyk*",
         title: "Composition and structure analyzer/featurizer for explainable machine-learning models to predict solid state structures",
-        journal: "Digitial Discovery (accepted)",
+        journal: "Digital Discovery (accepted)",
         year: "2024",
         doi: "https://doi.org/10.26434/chemrxiv-2024-rrbhc",
     },
